@@ -1,0 +1,53 @@
+\hypertarget{class_stage_data}{}\doxysection{Stage\+Data Class Reference}
+\label{class_stage_data}\index{StageData@{StageData}}
+
+
+Scriptable Object that holds the data for each separate stage, notably the tile types and dimensions of the tiles for the stage Only serializable information can be stored here because its a Scriptable\+Object so beware  
+
+
+Inheritance diagram for Stage\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stage_data}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_stage_data_1_1_stage_layout_row}{Stage\+Layout\+Row}}
+\begin{DoxyCompactList}\small\item\em Since we can\textquotesingle{}t serialize multidimensional arrays, we make a helper class to essentially store an array in a wrapper \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_stage_data_a5244c1db64f9806f55fe751af01083d4}\label{class_stage_data_a5244c1db64f9806f55fe751af01083d4}} 
+void {\bfseries Set\+Data} (Tile.\+Tile\+Type\mbox{[},\mbox{]} tile\+Types, Vector2\+Int stage\+Dimensions)
+\begin{DoxyCompactList}\small\item\em Transforms a multidimensional array of tile information into a serialization format and stores it \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_stage_data_ad15b5a2be3938e85acdcd35720e9f73b}\label{class_stage_data_ad15b5a2be3938e85acdcd35720e9f73b}} 
+string {\bfseries Stage\+Title}
+\begin{DoxyCompactList}\small\item\em The in-\/game name of the stage; filename is not stored with \mbox{\hyperlink{class_stage_data}{Stage\+Data}} object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_stage_data_a8b6492474cf680fb186bc28d6a784557}\label{class_stage_data_a8b6492474cf680fb186bc28d6a784557}} 
+int {\bfseries Width}
+\item 
+\mbox{\Hypertarget{class_stage_data_a119ec3af690cb7a41e3f6cfe265cbcf2}\label{class_stage_data_a119ec3af690cb7a41e3f6cfe265cbcf2}} 
+int {\bfseries Height}
+\item 
+\mbox{\Hypertarget{class_stage_data_a5aa3de4bc6718dcc351f88b162dc5cfc}\label{class_stage_data_a5aa3de4bc6718dcc351f88b162dc5cfc}} 
+\mbox{\hyperlink{class_stage_data_1_1_stage_layout_row}{Stage\+Layout\+Row}}\mbox{[}$\,$\mbox{]} {\bfseries tile\+Type\+Matrix}
+\begin{DoxyCompactList}\small\item\em Hidden array of tile information using wrapper class for serialization. Yes, I know it\textquotesingle{}s public and thus not hidden, but it won\textquotesingle{}t serialize otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_stage_data_ad9f47bda36594e4cc4e14bbc3b98823a}\label{class_stage_data_ad9f47bda36594e4cc4e14bbc3b98823a}} 
+Tile.\+Tile\+Type\mbox{[},\mbox{]} {\bfseries Tile\+Types}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Public accessor to tile information multidimensional array \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scriptable Object that holds the data for each separate stage, notably the tile types and dimensions of the tiles for the stage Only serializable information can be stored here because its a Scriptable\+Object so beware 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Stages/Stage\+Data.\+cs\end{DoxyCompactItemize}

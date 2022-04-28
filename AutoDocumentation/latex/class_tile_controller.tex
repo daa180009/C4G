@@ -1,0 +1,55 @@
+\hypertarget{class_tile_controller}{}\doxysection{Tile\+Controller Class Reference}
+\label{class_tile_controller}\index{TileController@{TileController}}
+Inheritance diagram for Tile\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tile_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_controller_a84e7d79c5cda935124f4757ed3ec5861}\label{class_tile_controller_a84e7d79c5cda935124f4757ed3ec5861}} 
+void {\bfseries Register\+Hovered\+CB} (Action$<$ \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a method to be called when the tile is hovered over by the user\textquotesingle{}s mouse cursor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a84f798ca52e91b1dd8719fc45e191ffc}\label{class_tile_controller_a84f798ca52e91b1dd8719fc45e191ffc}} 
+void {\bfseries Hover} ()
+\begin{DoxyCompactList}\small\item\em Called when the tile is hovered over by the user\textquotesingle{}s mouse cursor. Sets hovered to true and calls hovered callback \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_controller_a549a192ec44274b45bb2f334e24f099b}\label{class_tile_controller_a549a192ec44274b45bb2f334e24f099b}} 
+Game\+Object {\bfseries Cube}
+\begin{DoxyCompactList}\small\item\em The main cube of the tile graphic \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a47f78f9a3a110ffb7ea27b06694e768f}\label{class_tile_controller_a47f78f9a3a110ffb7ea27b06694e768f}} 
+Game\+Object {\bfseries Directions\+Display}
+\begin{DoxyCompactList}\small\item\em The flat quad used to display the enemy path direction of the tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a366afa5cea71264a49540233c520b964}\label{class_tile_controller_a366afa5cea71264a49540233c520b964}} 
+Material {\bfseries Corner\+Material}
+\begin{DoxyCompactList}\small\item\em The material for the enemy path display going from one side of the tile to one not straight across \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a95f81eb8a627b512c7ea105455a62b85}\label{class_tile_controller_a95f81eb8a627b512c7ea105455a62b85}} 
+Material {\bfseries Across\+Material}
+\begin{DoxyCompactList}\small\item\em The material for the enemy path display for going straight across the tile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a15f0ee5628130ad39d741241ff96d635}\label{class_tile_controller_a15f0ee5628130ad39d741241ff96d635}} 
+Dictionary$<$ Tile.\+Tile\+Direction, \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$ {\bfseries Neighbors} = new Dictionary$<$Tile.\+Tile\+Direction, \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}}$>$()
+\begin{DoxyCompactList}\small\item\em The tiles in each direction from the tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a891c69a2541d7d345038d2a51cb9a74c}\label{class_tile_controller_a891c69a2541d7d345038d2a51cb9a74c}} 
+\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} {\bfseries Present\+Tower}
+\begin{DoxyCompactList}\small\item\em The tower currently placed on this tile. Should only support one at a time probably \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_controller_a3d04a5fea8824e246bc74f87ce523ca7}\label{class_tile_controller_a3d04a5fea8824e246bc74f87ce523ca7}} 
+bool {\bfseries Parity}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the X + Y of the tile is even or odd. Used to create the checker pattern of tiles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a80e1f2f36af5bfea206915efe8870acb}\label{class_tile_controller_a80e1f2f36af5bfea206915efe8870acb}} 
+Tile.\+Tile\+Type {\bfseries Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Tile\+Type of the tile. Setting this publically automatically updates the tile\textquotesingle{}s graphics accordingly \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_af56718bfc375f392ed8298afa90790ef}\label{class_tile_controller_af56718bfc375f392ed8298afa90790ef}} 
+Tile.\+Tile\+Direction Tile.\+Tile\+Direction to {\bfseries Directions}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Prefabs/\+Tile/Tile\+Controller.\+cs\end{DoxyCompactItemize}

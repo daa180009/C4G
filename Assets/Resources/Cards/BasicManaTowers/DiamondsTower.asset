@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eae0be279bdd5f4caf48bac1284a64f, type: 3}
+  m_Name: DiamondsTower
+  m_EditorClassIdentifier: 
+  CardTitle: Diamonds Tower
+  ManaCosts: 0200000000000000000000000000000000000000
+  canBuildWith: 1
+  hasLeftBonus: 0
+  Type: 1
+  TowerSubtypes: 1
+  SpellSubtypes: 0
+  SkillSubtypes: 0
+  CardEffects: []
+  TowerPrefab: {fileID: 1820236534691553018, guid: 8ced6092f872ffb49bdc892c996f33e0, type: 3}
+  LeftTowerPrefab: {fileID: 0}
+  references:
+    version: 1

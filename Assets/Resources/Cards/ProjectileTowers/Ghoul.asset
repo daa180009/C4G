@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eae0be279bdd5f4caf48bac1284a64f, type: 3}
+  m_Name: Ghoul
+  m_EditorClassIdentifier: 
+  CardTitle: Ghoul
+  ManaCosts: 0100000001000000000000000000000000000000
+  canBuildWith: 1
+  hasLeftBonus: 1
+  Type: 1
+  TowerSubtypes: 2
+  SpellSubtypes: 0
+  SkillSubtypes: 0
+  CardEffects: []
+  CardEffectsLeft: []
+  TowerPrefab: {fileID: 8690978864182515900, guid: 1d71b54df69ab37469ef9836769a5ec6, type: 3}
+  LeftTowerPrefab: {fileID: 1540968588547369608, guid: 614b5379dfdbb724f932744b433ce8ff, type: 3}
+  references:
+    version: 1
