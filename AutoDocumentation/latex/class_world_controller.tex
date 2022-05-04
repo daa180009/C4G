@@ -6,29 +6,92 @@ Inheritance diagram for World\+Controller\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_world_controller}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_world_controller_ab07820a237cf6a954ae0b085d3e6a7b0}\label{class_world_controller_ab07820a237cf6a954ae0b085d3e6a7b0}} 
+void {\bfseries Spawn\+Tower} (Game\+Object tower\+Prefab, \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} parent\+Tile, Tile.\+Tile\+Direction facing\+Direction, \mbox{\hyperlink{class_card_data}{Card\+Data}} card\+Data=null)
+\begin{DoxyCompactList}\small\item\em Creates a new tower object with the parameters as settings and places it in the world \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_world_controller_a74f49d9be85184e6b5a9f9de49c28ce7}\label{class_world_controller_a74f49d9be85184e6b5a9f9de49c28ce7}} 
+List$<$ \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$\mbox{[}$\,$\mbox{]} {\bfseries Get\+Area\+Around\+Tile} (\mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} tile, \mbox{\hyperlink{class_area_of_effect}{Area\+Of\+Effect}} area, Tile.\+Tile\+Direction direction=Tile.\+Tile\+Direction.\+None)
+\item 
+\mbox{\Hypertarget{class_world_controller_a6141bf44f0f11d7b194617d726d390c1}\label{class_world_controller_a6141bf44f0f11d7b194617d726d390c1}} 
+void {\bfseries Save\+Level\+Data} ()
+\item 
+\mbox{\Hypertarget{class_world_controller_a0b672b233c0dd63c4449f26a924261b3}\label{class_world_controller_a0b672b233c0dd63c4449f26a924261b3}} 
+void {\bfseries Load\+Level\+Data} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_world_controller_a33bb396ebb0b7b9f6e3f49679daf8975}\label{class_world_controller_a33bb396ebb0b7b9f6e3f49679daf8975}} 
-Game\+Object {\bfseries tile\+Prefab}
+\mbox{\Hypertarget{class_world_controller_acd3ab05db28cf638ba47bf24a7121c32}\label{class_world_controller_acd3ab05db28cf638ba47bf24a7121c32}} 
+Game\+Object {\bfseries floor\+Prefab}
 \item 
-\mbox{\Hypertarget{class_world_controller_a88d88b7959d23cf023c28beb9b3fa62f}\label{class_world_controller_a88d88b7959d23cf023c28beb9b3fa62f}} 
-\mbox{\hyperlink{class_stage_data}{Stage\+Data}} {\bfseries stage\+Data}
+\mbox{\Hypertarget{class_world_controller_a3a83e390e305518ec83dad219b1ea739}\label{class_world_controller_a3a83e390e305518ec83dad219b1ea739}} 
+Game\+Object {\bfseries raised\+Prefab}
 \item 
-\mbox{\Hypertarget{class_world_controller_a801e1e640e2e99efb690e1438184fdcc}\label{class_world_controller_a801e1e640e2e99efb690e1438184fdcc}} 
-Game\+Object {\bfseries camera\+Controller}
+\mbox{\Hypertarget{class_world_controller_ad51cc05d9372551932c1407e6ca9075c}\label{class_world_controller_ad51cc05d9372551932c1407e6ca9075c}} 
+Game\+Object {\bfseries barrier\+Prefab}
 \item 
-\mbox{\Hypertarget{class_world_controller_a35bbadf0e6f956d4a3fd0efa8f9704a9}\label{class_world_controller_a35bbadf0e6f956d4a3fd0efa8f9704a9}} 
-Game\+Object {\bfseries tower\+Preview\+Controller}
+\mbox{\Hypertarget{class_world_controller_ad221de842abcf4811ae163a63db1f8b4}\label{class_world_controller_ad221de842abcf4811ae163a63db1f8b4}} 
+Game\+Object {\bfseries wall\+Prefab}
 \item 
-\mbox{\Hypertarget{class_world_controller_a75d88549ace67fab7ae5cb816cbb2bed}\label{class_world_controller_a75d88549ace67fab7ae5cb816cbb2bed}} 
-Game\+Object {\bfseries enemy\+Spawn\+Controller}
+\mbox{\Hypertarget{class_world_controller_ab56ba41ba607cecece2227138ef2c6d4}\label{class_world_controller_ab56ba41ba607cecece2227138ef2c6d4}} 
+Game\+Object {\bfseries entrance\+Prefab}
 \item 
-\mbox{\Hypertarget{class_world_controller_a5dbb1e55aaf13af2f86fa400dc2d06ff}\label{class_world_controller_a5dbb1e55aaf13af2f86fa400dc2d06ff}} 
-Game\+Object {\bfseries minimap\+Camera\+Controller}
+\mbox{\Hypertarget{class_world_controller_a336f1e7936915399bdf80dee0d710c9d}\label{class_world_controller_a336f1e7936915399bdf80dee0d710c9d}} 
+Game\+Object {\bfseries exit\+Prefab}
+\item 
+\mbox{\Hypertarget{class_world_controller_a3de1a8c619c30cf1dd1702424855b535}\label{class_world_controller_a3de1a8c619c30cf1dd1702424855b535}} 
+bool {\bfseries is\+Debug} = false
+\item 
+\mbox{\Hypertarget{class_world_controller_afd169b49758032b3d11c88dad1293232}\label{class_world_controller_afd169b49758032b3d11c88dad1293232}} 
+Game\+Object {\bfseries central\+Column}
+\item 
+\mbox{\Hypertarget{class_world_controller_aa4c818cdace394508eccc1ba0e3b52b8}\label{class_world_controller_aa4c818cdace394508eccc1ba0e3b52b8}} 
+Game\+Object {\bfseries initial\+Mana\+Tower\+Prefab}
+\item 
+\mbox{\Hypertarget{class_world_controller_a1f5802c50977b27e958781123d3fab86}\label{class_world_controller_a1f5802c50977b27e958781123d3fab86}} 
+\mbox{\hyperlink{class_world_info}{World\+Info}} {\bfseries world\+Info}
+\item 
+\mbox{\Hypertarget{class_world_controller_a5d2a09ce41201d74b23092dd92bd480a}\label{class_world_controller_a5d2a09ce41201d74b23092dd92bd480a}} 
+\mbox{\hyperlink{class_stage_data}{Stage\+Data}} {\bfseries default\+Stage\+Data}
+\item 
+\mbox{\Hypertarget{class_world_controller_a074051abf01c24c45ed4b4715ce0ff60}\label{class_world_controller_a074051abf01c24c45ed4b4715ce0ff60}} 
+\mbox{\hyperlink{class_player_resource_manager}{Player\+Resource\+Manager}} {\bfseries player\+Resource\+Manager}
+\item 
+\mbox{\Hypertarget{class_world_controller_ae3ee9be7d44751b521cfd60ac1f9a444}\label{class_world_controller_ae3ee9be7d44751b521cfd60ac1f9a444}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries round\+Begin}
+\item 
+\mbox{\Hypertarget{class_world_controller_ae7a00f691cf9a6eb6f162bd53ddcd2dc}\label{class_world_controller_ae7a00f691cf9a6eb6f162bd53ddcd2dc}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries round\+End}
+\item 
+\mbox{\Hypertarget{class_world_controller_acb7e171494d17367cb986fe1b2b8dfb7}\label{class_world_controller_acb7e171494d17367cb986fe1b2b8dfb7}} 
+\mbox{\hyperlink{class_camera_controller}{Camera\+Controller}} {\bfseries camera\+Controller}
+\item 
+\mbox{\Hypertarget{class_world_controller_aecb1be03f1a795cb3a12afbba13effd7}\label{class_world_controller_aecb1be03f1a795cb3a12afbba13effd7}} 
+\mbox{\hyperlink{class_enemy_spawn_controller}{Enemy\+Spawn\+Controller}} {\bfseries enemy\+Spawn\+Controller}
+\item 
+\mbox{\Hypertarget{class_world_controller_a2241d85e912209a0b3522ed48e31f1b4}\label{class_world_controller_a2241d85e912209a0b3522ed48e31f1b4}} 
+\mbox{\hyperlink{class_target_selection_controller}{Target\+Selection\+Controller}} {\bfseries target\+Selection\+Controller}
+\item 
+\mbox{\Hypertarget{class_world_controller_a132ca62342be1d86105b7140b4d363b2}\label{class_world_controller_a132ca62342be1d86105b7140b4d363b2}} 
+\mbox{\hyperlink{class_card_game_controller}{Card\+Game\+Controller}} {\bfseries card\+Game\+Controller}
+\item 
+\mbox{\Hypertarget{class_world_controller_af1c5db2b10e56a5970091773ba4cf107}\label{class_world_controller_af1c5db2b10e56a5970091773ba4cf107}} 
+\mbox{\hyperlink{class_minimap_controller}{Minimap\+Controller}} {\bfseries minimap\+Camera\+Controller}
+\item 
+\mbox{\Hypertarget{class_world_controller_acfcafcf28045c8de201d7598ac00e984}\label{class_world_controller_acfcafcf28045c8de201d7598ac00e984}} 
+\mbox{\hyperlink{class_cycle_controller}{Cycle\+Controller}} {\bfseries cycle\+Controller}
+\item 
+\mbox{\Hypertarget{class_world_controller_a3482226607bf76721e9ef4b70e8f631b}\label{class_world_controller_a3482226607bf76721e9ef4b70e8f631b}} 
+Game\+Object {\bfseries water}
 \item 
 \mbox{\Hypertarget{class_world_controller_a5230470cbf2172e0c0272de662473dc4}\label{class_world_controller_a5230470cbf2172e0c0272de662473dc4}} 
 Game\+Object {\bfseries tiles\+Container}
+\item 
+\mbox{\Hypertarget{class_world_controller_a8c0443ed48a5308c0374c6c94186c98e}\label{class_world_controller_a8c0443ed48a5308c0374c6c94186c98e}} 
+Game\+Object {\bfseries towers\+Container}
 \item 
 \mbox{\Hypertarget{class_world_controller_ac511a9080a754eb213d208dd216858eb}\label{class_world_controller_ac511a9080a754eb213d208dd216858eb}} 
 \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}}\mbox{[},\mbox{]} {\bfseries Tiles}

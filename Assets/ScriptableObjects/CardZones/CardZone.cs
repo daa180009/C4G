@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/CardZone", order = 1), System.Serializable]
 public class CardZone : ScriptableObject
@@ -35,6 +36,13 @@ public class CardZone : ScriptableObject
     /// Register a function to be called whenever one or more new cards are removed from this zone
     /// </summary>
     public void RegisterCardsRemoved(Action<List<CardController>> cb) { cbCardsRemoved += cb; }
+
+    public void Restart()
+    {
+        cards = new List<CardController>();
+        cbCardsAdded = null;
+        cbCardsRemoved = null;
+    }
 
     /// <summary>
     /// Create new card models for the card data passed in then add it to this zone

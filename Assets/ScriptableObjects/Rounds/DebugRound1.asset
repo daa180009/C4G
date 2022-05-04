@@ -14,12 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyWaves:
   - Enemies:
-    - prefab: {fileID: 2976261093610815630, guid: e6890087b6ffbd5409a767f186086141, type: 3}
+    - prefab: {fileID: 2976261093610815630, guid: 084fb09086e25c243b3b14895c9d7444, type: 3}
       enemiesCount: 4
+      increasePerRound: 1
       enemiesSpawned: 1
     - prefab: {fileID: 2976261093610815630, guid: 084fb09086e25c243b3b14895c9d7444, type: 3}
       enemiesCount: 6
-      enemiesSpawned: 3
+      increasePerRound: 1
+      enemiesSpawned: 1
     - prefab: {fileID: 2976261093610815630, guid: 8c4a19755e8888d4b889389d2df840b6, type: 3}
       enemiesCount: 3
-      enemiesSpawned: 0
+      increasePerRound: 1
+      enemiesSpawned: 3
+    - prefab: {fileID: 8352681372047073589, guid: 0965e2175cba115468008f21254ce0de, type: 3}
+      enemiesCount: 1
+      increasePerRound: 1
+      enemiesSpawned: 1

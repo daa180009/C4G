@@ -9,7 +9,8 @@ using System.Linq;
 public class WaveEnemyData
 {
     public GameObject prefab;
-    public int enemiesCount = 1;
+    public float enemiesCount = 1;
+    public float increasePerRound = 1;
 
     public int enemiesSpawned;
 
@@ -20,6 +21,21 @@ public class WaveEnemyData
     public void Restart()
     {
         enemiesSpawned = 0;
+    }
+
+    public int getCount(int roundNumber)
+    {
+        return Mathf.Clamp((int)Mathf.Floor(enemiesCount + increasePerRound * (float)roundNumber), 0, 1000);
+    }
+
+    public bool canSpawnMore(int roundNumber)
+    {
+        return enemiesSpawned < getCount(roundNumber);
+    }
+
+    public void enemySpawned()
+    {
+        enemiesSpawned += 1;
     }
 
 #if UNITY_EDITOR
@@ -36,8 +52,10 @@ public class WaveEnemyData
 
         // choose enemy count
         EditorGUI.indentLevel += 1;
-        enemiesCount = (int)EditorGUILayout.IntField("#: ", enemiesCount);
-        enemiesCount = Mathf.Clamp(enemiesCount, 1, 1000);
+        enemiesCount = (float)EditorGUILayout.FloatField("Initial #: ", enemiesCount);
+        enemiesCount = Mathf.Clamp(enemiesCount, -1000f, 1000f);
+        increasePerRound = (float)EditorGUILayout.FloatField("Increase per round: ", increasePerRound);
+        increasePerRound = Mathf.Clamp(increasePerRound, -1000f, 1000f);
         EditorGUI.indentLevel -= 1;
 
         EditorGUI.indentLevel -= 1;

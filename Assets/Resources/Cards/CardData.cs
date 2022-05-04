@@ -9,6 +9,9 @@ using System.Linq;
 public class CardData : ScriptableObject
 {
     public string CardTitle = "";
+    public Sprite CardImage;
+    public bool ShowCardImageFrame = true;
+
     //public List<Mana.ManaType> ManaCost = new List<Mana.ManaType>();
     public int[] ManaCosts = { 0, 0, 0, 0, 0 };
     public bool canBuildWith = true;
@@ -24,17 +27,24 @@ public class CardData : ScriptableObject
     public GameObject TowerPrefab;
     public GameObject LeftTowerPrefab;
 
+    public string additionalDescription;
+
     static public Color GetColorOfManaType(Mana.ManaType type)
     {
         switch (type)
         {
             case Mana.ManaType.None: return new Color(0.637416f, 0.681f, 0.6787649f);
             case Mana.ManaType.Clubs: return Color.green;
-            case Mana.ManaType.Spades: return new Color(.8f, 0, .8f);
+            case Mana.ManaType.Spades: return Color.blue;
             case Mana.ManaType.Hearts: return Color.red; 
-            case Mana.ManaType.Diamonds: return Color.yellow;
+            case Mana.ManaType.Diamonds: return new Color(1f, .2f, 1f);
         }
         return Color.white;
+    }
+
+    static public Color GetGoldColor()
+    {
+        return Color.yellow;
     }
 
     static public Sprite GetSpriteOfManaType(Mana.ManaType type)
@@ -46,6 +56,19 @@ public class CardData : ScriptableObject
             case Mana.ManaType.Spades: return Resources.Load<Sprite>("CostIcons/spades");
             case Mana.ManaType.Hearts: return Resources.Load<Sprite>("CostIcons/hearts");
             case Mana.ManaType.Diamonds: return Resources.Load<Sprite>("CostIcons/diamonds");
+        }
+        return null;
+    }
+
+    static public Sprite GetSpriteBackgroundOfManaType(Mana.ManaType type)
+    {
+        switch (type)
+        {
+            case Mana.ManaType.None: return Resources.Load<Sprite>("CostBackgrounds/none");
+            case Mana.ManaType.Clubs: return Resources.Load<Sprite>("CostBackgrounds/clubs");
+            case Mana.ManaType.Spades: return Resources.Load<Sprite>("CostBackgrounds/spades");
+            case Mana.ManaType.Hearts: return Resources.Load<Sprite>("CostBackgrounds/hearts");
+            case Mana.ManaType.Diamonds: return Resources.Load<Sprite>("CostBackgrounds/diamonds");
         }
         return null;
     }
@@ -102,6 +125,20 @@ public class CardData : ScriptableObject
         }
     }
 
+    static public string GetStatusName(Card.Status status)
+    {
+        switch (status)
+        {
+            case Card.Status.Burn: return "Burn";
+            case Card.Status.Frozen: return "Frozen";
+            case Card.Status.Attack_Up: return "Attack Up";
+            case Card.Status.Attack_Down: return "Attack Down";
+            case Card.Status.Defense_Up: return "Defense Up";
+            case Card.Status.Defense_Down: return "Defense Down";
+        }
+        return "unknown status";
+    }
+
     public int ManaValue
     {
         get
@@ -118,23 +155,12 @@ public class CardData : ScriptableObject
             resultString += effect.GetDescription(worldInfo) + "\n";
         }
 
-        if (TowerPrefab != null)
-        {
-            Component[] towerBehaviourComponents = TowerPrefab.GetComponents(typeof(TowerBehaviour));
-            TowerBehaviour[] towerBehaviours = new TowerBehaviour[towerBehaviourComponents.Length];
-            System.Array.Copy(towerBehaviourComponents, towerBehaviours, towerBehaviourComponents.Length);
-
-            foreach (TowerBehaviour behaviour in towerBehaviours)
-            {
-                resultString += behaviour.GetDescription();
-            }
-        }
-
         if (hasLeftBonus) 
         {
-            resultString += "\nHas bonus when leftmost card.";
+            resultString += "Has bonus when leftmost card.";
         }
 
+        resultString += additionalDescription;
 
         return resultString;
     }
@@ -156,9 +182,17 @@ public class CardData : ScriptableObject
     /// </summary>
     public void OnInputGUI()
     {
+        if(CardEffects == null)
+            CardEffects = new List<CardEffect>();
+
         EditorGUILayout.Space(3);
         EditorGUILayout.HelpBox(GetDescription(null), MessageType.None);
         EditorGUILayout.Space(3);
+
+        additionalDescription = EditorGUILayout.TextField("Additional Description:", additionalDescription);
+
+        CardImage = (Sprite)EditorGUILayout.ObjectField("Icon:", CardImage, typeof(Sprite), false); 
+        ShowCardImageFrame = EditorGUILayout.Toggle("Show Frame:", ShowCardImageFrame);
 
         GUI.backgroundColor = Color.clear;
         EditorGUILayout.BeginFoldoutHeaderGroup(true, "Card Information");

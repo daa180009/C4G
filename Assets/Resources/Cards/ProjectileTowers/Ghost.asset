@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ghost
   m_EditorClassIdentifier: 
   CardTitle: Ghost
-  ManaCosts: 0000000000000000000000000200000000000000
+  CardImage: {fileID: 21300000, guid: 3d90bc9b14a51c74db3818b7b2d6a080, type: 3}
+  ManaCosts: 0100000002000000000000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
   Type: 1
@@ -21,7 +22,9 @@ MonoBehaviour:
   SpellSubtypes: 0
   SkillSubtypes: 0
   CardEffects: []
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 3233021664539426064, guid: 6e3b10bdfe33f5442971721c42f00fbd, type: 3}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: Damages all adjacent tiles.
   references:
     version: 1

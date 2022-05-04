@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updatestagedata_0',['UpdateStageData',['../class_minimap_controller.html#a2c6d6c5aacb01044236ba08c785419f6',1,'MinimapController']]]
+  ['foreach_0',['ForEach',['../class_card_zone.html#a85ec5eb162d0c5124e98097751fbb032',1,'CardZone']]]
 ];

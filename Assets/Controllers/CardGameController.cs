@@ -209,19 +209,18 @@ public class CardGameController : MonoBehaviour
     /// </summary>
     public bool AttemptPlay(CardController cardController)
     {
-        if (!cardResolutionController.IsBusy && playerResourceManager.CanAfford(cardController.Data.ManaCostDictionary))
+        if (!cardResolutionController.IsBusy && playerResourceManager.CanAfford(cardController.Data))
         {
-            if (cardController == HandZone.GetCard(0))
+            bool isLeft = cardController == HandZone.GetCard(0);
+            if (HandZone.Remove(cardController))
             {
-                HandZone.Remove(cardController);
-                playerResourceManager.PayCost(cardController.Data.ManaCostDictionary);
-                cardResolutionController.PlayLeft(cardController);
-                return true;
-            }
-            else if (HandZone.Remove(cardController))
-            {
-                playerResourceManager.PayCost(cardController.Data.ManaCostDictionary);
-                cardResolutionController.PlayCard(cardController);
+                playerResourceManager.PayCost(cardController.Data);
+
+                if(isLeft)
+                    cardResolutionController.PlayLeft(cardController);
+                else
+                    cardResolutionController.PlayCard(cardController);
+
                 return true;
             }
         }

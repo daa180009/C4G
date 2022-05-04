@@ -1,0 +1,102 @@
+\hypertarget{class_tower_behaviour}{}\doxysection{Tower\+Behaviour Class Reference}
+\label{class_tower_behaviour}\index{TowerBehaviour@{TowerBehaviour}}
+
+
+Abstract class for behaviours that can be attached to towers to handle individual elements. May not be the best structure for this but seems fine for now.  
+
+
+Inheritance diagram for Tower\+Behaviour\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tower_behaviour}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_behaviour_a17f868d26490567803c9c81f60c1dedf}\label{class_tower_behaviour_a17f868d26490567803c9c81f60c1dedf}} 
+void {\bfseries On\+Initiate} ()
+\begin{DoxyCompactList}\small\item\em Call when creating tower after setting it up \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_behaviour_a8b1b086163696b74c0502bdd68fb0394}\label{class_tower_behaviour_a8b1b086163696b74c0502bdd68fb0394}} 
+void {\bfseries On\+Death} (\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} tower)
+\begin{DoxyCompactList}\small\item\em Called when enemy dies \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_behaviour_adcacdbf8704e046655ac5139eb0fa702}\label{class_tower_behaviour_adcacdbf8704e046655ac5139eb0fa702}} 
+bool {\bfseries perform\+Behaviour} = true
+\begin{DoxyCompactList}\small\item\em Whether this behaviour should be active \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{class_tower_behaviour_a15f55810ac86b48e1ef0258e24fc5bc8}{Behave}} ()
+\begin{DoxyCompactList}\small\item\em Called every Fixed\+Update() if the tower is enabled \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_tower_behaviour_a8e8b24394b34ee421a017cf682f02136}{Initiate}} ()
+\begin{DoxyCompactList}\small\item\em Call on Start() \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_tower_behaviour_afe74a2cecac27a5c2766feb096918556}{Died}} ()
+\begin{DoxyCompactList}\small\item\em Call on Death \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_behaviour_aedab2ae3594758041723b3fca9cf9849}\label{class_tower_behaviour_aedab2ae3594758041723b3fca9cf9849}} 
+\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} {\bfseries main\+Controller}
+\begin{DoxyCompactList}\small\item\em The main \mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} script of the tower this is attached to \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_behaviour_a7b994a46206aed90889b077c8e8f5b98}\label{class_tower_behaviour_a7b994a46206aed90889b077c8e8f5b98}} 
+\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} {\bfseries Main\+Controller}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for behaviours that can be attached to towers to handle individual elements. May not be the best structure for this but seems fine for now. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_behaviour_a15f55810ac86b48e1ef0258e24fc5bc8}\label{class_tower_behaviour_a15f55810ac86b48e1ef0258e24fc5bc8}} 
+\index{TowerBehaviour@{TowerBehaviour}!Behave@{Behave}}
+\index{Behave@{Behave}!TowerBehaviour@{TowerBehaviour}}
+\doxysubsubsection{\texorpdfstring{Behave()}{Behave()}}
+{\footnotesize\ttfamily abstract void Tower\+Behaviour.\+Behave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Called every Fixed\+Update() if the tower is enabled 
+
+
+
+Implemented in \mbox{\hyperlink{class_behaviour___area_of_effect_a72773892b26c891e894ce50f02c4f8a3}{Behaviour\+\_\+\+Area\+Of\+Effect}}, \mbox{\hyperlink{class_produce_mana_a89cb580d609b01efcf6f3660fbf08a9e}{Produce\+Mana}}, and \mbox{\hyperlink{class_shoot_projectile_a79cefd621357252f90997eb0cda273ba}{Shoot\+Projectile}}.
+
+\mbox{\Hypertarget{class_tower_behaviour_afe74a2cecac27a5c2766feb096918556}\label{class_tower_behaviour_afe74a2cecac27a5c2766feb096918556}} 
+\index{TowerBehaviour@{TowerBehaviour}!Died@{Died}}
+\index{Died@{Died}!TowerBehaviour@{TowerBehaviour}}
+\doxysubsubsection{\texorpdfstring{Died()}{Died()}}
+{\footnotesize\ttfamily abstract void Tower\+Behaviour.\+Died (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Call on Death 
+
+
+
+Implemented in \mbox{\hyperlink{class_behaviour___area_of_effect_a9ea72854941bcd07aa485c531d7fc6a3}{Behaviour\+\_\+\+Area\+Of\+Effect}}, \mbox{\hyperlink{class_produce_mana_a5db374eb56a136c73079b6a089f12efd}{Produce\+Mana}}, and \mbox{\hyperlink{class_shoot_projectile_a80a1d24f70a75f0de8c3c12af7218622}{Shoot\+Projectile}}.
+
+\mbox{\Hypertarget{class_tower_behaviour_a8e8b24394b34ee421a017cf682f02136}\label{class_tower_behaviour_a8e8b24394b34ee421a017cf682f02136}} 
+\index{TowerBehaviour@{TowerBehaviour}!Initiate@{Initiate}}
+\index{Initiate@{Initiate}!TowerBehaviour@{TowerBehaviour}}
+\doxysubsubsection{\texorpdfstring{Initiate()}{Initiate()}}
+{\footnotesize\ttfamily abstract void Tower\+Behaviour.\+Initiate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Call on Start() 
+
+
+
+Implemented in \mbox{\hyperlink{class_behaviour___area_of_effect_a506d00b78d32208196b4d071d021d5a3}{Behaviour\+\_\+\+Area\+Of\+Effect}}, \mbox{\hyperlink{class_produce_mana_a8ed88cc205d2eab71ccdebaad85437db}{Produce\+Mana}}, and \mbox{\hyperlink{class_shoot_projectile_abaf9a584f96cd669d7699e6cddd07239}{Shoot\+Projectile}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Prefabs/\+Tower/\+Tower\+Behaviours/Tower\+Behaviour.\+cs\end{DoxyCompactItemize}

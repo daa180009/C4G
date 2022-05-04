@@ -1,0 +1,46 @@
+\hypertarget{class_card_effect_condition}{}\doxysection{Card\+Effect\+Condition Class Reference}
+\label{class_card_effect_condition}\index{CardEffectCondition@{CardEffectCondition}}
+
+
+Class that card effect conditions inherit from. A condition is a script that is run when trying to resolve a card effect to determine if that effect should happen.  
+
+
+Inheritance diagram for Card\+Effect\+Condition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_card_effect_condition}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract bool \mbox{\hyperlink{class_card_effect_condition_a058a5eb1ecbe232a4ebf1ac26110e20d}{Check\+Condition}} (\mbox{\hyperlink{class_world_info}{World\+Info}} world\+Info, \mbox{\hyperlink{struct_resolution_info}{Resolution\+Info}} resolution\+Info)
+\begin{DoxyCompactList}\small\item\em Method called during runtime to actually check if the condition is true (and whether to run the effect preedicate) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_effect_condition_a7a64400d911d8676c0314c17bae5efa5}\label{class_card_effect_condition_a7a64400d911d8676c0314c17bae5efa5}} 
+abstract string {\bfseries Get\+Description} (\mbox{\hyperlink{class_world_info}{World\+Info}} world\+Info)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that card effect conditions inherit from. A condition is a script that is run when trying to resolve a card effect to determine if that effect should happen. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_card_effect_condition_a058a5eb1ecbe232a4ebf1ac26110e20d}\label{class_card_effect_condition_a058a5eb1ecbe232a4ebf1ac26110e20d}} 
+\index{CardEffectCondition@{CardEffectCondition}!CheckCondition@{CheckCondition}}
+\index{CheckCondition@{CheckCondition}!CardEffectCondition@{CardEffectCondition}}
+\doxysubsubsection{\texorpdfstring{CheckCondition()}{CheckCondition()}}
+{\footnotesize\ttfamily abstract bool Card\+Effect\+Condition.\+Check\+Condition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_world_info}{World\+Info}}}]{world\+Info,  }\item[{\mbox{\hyperlink{struct_resolution_info}{Resolution\+Info}}}]{resolution\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Method called during runtime to actually check if the condition is true (and whether to run the effect preedicate) 
+
+
+
+Implemented in \mbox{\hyperlink{class_no_condition_a657361e3569bc3f0d9604fadfcd4431b}{No\+Condition}}, and \mbox{\hyperlink{class_condition___s_a15bc49c3f4a43244d56db7c47f29e2f5}{Condition\+\_\+S}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scriptable\+Objects/\+Card\+Effects/Card\+Effect\+Condition.\+cs\end{DoxyCompactItemize}

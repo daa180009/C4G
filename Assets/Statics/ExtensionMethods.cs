@@ -13,6 +13,19 @@ using System.Text;
 /// </summary>
 public static class ExtensionMethods
 {
+    /// Gets the degrees needed to rotate for a certain direction
+    public static float Degrees(this Tile.TileDirection direction)
+    {
+        switch (direction)
+        {
+            case Tile.TileDirection.Down: return 0f;
+            case Tile.TileDirection.Left: return 90f; 
+            case Tile.TileDirection.Up: return 180f;
+            case Tile.TileDirection.Right: return 270f;
+        }
+        return 0f;
+    }
+
     // Returns the Vector2 rotated by some angle
     public static Vector2 Rotated(this Vector2 v, float degrees)
     {
@@ -24,6 +37,18 @@ public static class ExtensionMethods
         v.x = (cos * tx) - (sin * ty);
         v.y = (sin * tx) + (cos * ty);
         return v;
+    }
+
+    // Returns the Vector2 rotated by some direction
+    public static Vector2 Rotated(this Vector2 v, Tile.TileDirection direction)
+    {
+        return v.Rotated(direction.Degrees());
+    }
+
+    public static Vector3 Rotated(this Vector3 v, Tile.TileDirection direction)
+    {
+        Vector2 temp = new Vector2(v.x, v.z).Rotated(direction);
+        return new Vector3(temp.x, v.y, temp.y);
     }
 
     // Returns the transform position of a MonoBehaviour object projected onto the xz plane

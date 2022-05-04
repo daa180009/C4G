@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: ClubsTower
   m_EditorClassIdentifier: 
   CardTitle: Clubs Tower
-  ManaCosts: 0200000000000000000000000000000000000000
+  CardImage: {fileID: 21300000, guid: 29520da9ba9d95d46856d6a1b5473f4c, type: 3}
+  ShowCardImageFrame: 0
+  ManaCosts: 0000000000000000000000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
   Type: 1
@@ -21,7 +23,9 @@ MonoBehaviour:
   SpellSubtypes: 0
   SkillSubtypes: 0
   CardEffects: []
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 1820236534691553018, guid: 26113d4449776494caf6271179d4f126, type: 3}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: Generates <b>Clubs mana</b>.
   references:
     version: 1

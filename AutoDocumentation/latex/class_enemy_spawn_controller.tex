@@ -16,12 +16,45 @@ Inheritance diagram for Enemy\+Spawn\+Controller\+:\begin{figure}[H]
 \item 
 \mbox{\Hypertarget{class_enemy_spawn_controller_a753f198f8051372609f2029ee5c82f5f}\label{class_enemy_spawn_controller_a753f198f8051372609f2029ee5c82f5f}} 
 void {\bfseries Register\+Enemy\+Spawned\+CB} (Action$<$ \mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} $>$ cb)
-\begin{DoxyCompactList}\small\item\em Register a function to be called whenever the an enemy is spawned \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Register a function to be called whenever the an enemy is spawned \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_aeeccde2b84f5504d1d9a4e9f6b2103a3}\label{class_enemy_spawn_controller_aeeccde2b84f5504d1d9a4e9f6b2103a3}} 
+void {\bfseries start\+Round} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_enemy_spawn_controller_a319824f6e3b996f957562346989c0674}\label{class_enemy_spawn_controller_a319824f6e3b996f957562346989c0674}} 
-Game\+Object {\bfseries enemy\+Prefab}
+\mbox{\Hypertarget{class_enemy_spawn_controller_acf00e091f241bc9df2f7e95705576c44}\label{class_enemy_spawn_controller_acf00e091f241bc9df2f7e95705576c44}} 
+\mbox{\hyperlink{class_target_selection_controller}{Target\+Selection\+Controller}} {\bfseries target\+Selection\+Controller}
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_ab9eed502bae6c7f53cf755cecab9117f}\label{class_enemy_spawn_controller_ab9eed502bae6c7f53cf755cecab9117f}} 
+\mbox{\hyperlink{class_cycle_controller}{Cycle\+Controller}} {\bfseries cycle\+Controller}
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_a7aa1c322dd4c5869aeb65721e3d96480}\label{class_enemy_spawn_controller_a7aa1c322dd4c5869aeb65721e3d96480}} 
+\mbox{\hyperlink{class_player_resource_manager}{Player\+Resource\+Manager}} {\bfseries player\+Resource\+Manager}
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_a7f6e3dcfacfab0bc00734bfc5fdda6a1}\label{class_enemy_spawn_controller_a7f6e3dcfacfab0bc00734bfc5fdda6a1}} 
+Game\+Object {\bfseries start\+Round\+Button}
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_ab6b0e0146cac10c3c36f81e019cc3c5d}\label{class_enemy_spawn_controller_ab6b0e0146cac10c3c36f81e019cc3c5d}} 
+Game\+Object {\bfseries start\+Cycle\+Button}
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_a1df9010f0a772f7c34ec4d780b66a57c}\label{class_enemy_spawn_controller_a1df9010f0a772f7c34ec4d780b66a57c}} 
+float {\bfseries begin\+Range} = 60f
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_a38b6fece34e56222114324ec2e0052dc}\label{class_enemy_spawn_controller_a38b6fece34e56222114324ec2e0052dc}} 
+\mbox{\hyperlink{class_round_data}{Round\+Data}} {\bfseries Current\+Round}
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_a8656f9d0692cfd15c03c682514fb03d2}\label{class_enemy_spawn_controller_a8656f9d0692cfd15c03c682514fb03d2}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries round\+Begin}
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_a14d2061e783561567526affedec8b78f}\label{class_enemy_spawn_controller_a14d2061e783561567526affedec8b78f}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries round\+End}
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_a13138a1787266e99a0fb49c8373fa427}\label{class_enemy_spawn_controller_a13138a1787266e99a0fb49c8373fa427}} 
+int {\bfseries round\+Index} = -\/1
+\item 
+\mbox{\Hypertarget{class_enemy_spawn_controller_abd98a4de9c5add727405eb87388bca26}\label{class_enemy_spawn_controller_abd98a4de9c5add727405eb87388bca26}} 
+bool {\bfseries spawned\+All\+Enemies} = true
 \item 
 \mbox{\Hypertarget{class_enemy_spawn_controller_a02cf22d6b4b5abd2648642c6eede54be}\label{class_enemy_spawn_controller_a02cf22d6b4b5abd2648642c6eede54be}} 
 List$<$ \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$ {\bfseries active\+Entrances}

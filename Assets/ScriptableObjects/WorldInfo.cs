@@ -13,7 +13,17 @@ public class WorldInfo : ScriptableObject
     public CardZone HandZone;
     public CardZone DeckZone;
     public CardZone ResolutionZone;
+    public PlayerResourceManager playerResourceManager;
 
-    public CardGameController cardGameController { set; get; }
-    public WorldController worldController { set; get; }
+    public CardGameController cardGameController;
+    public WorldController worldController;
+
+    public void Restart()
+    {
+        DiscardZone.Restart();
+        HandZone.Restart();
+        DeckZone.Restart();
+        ResolutionZone.Restart();
+        playerResourceManager.Reset();
+    }
 }

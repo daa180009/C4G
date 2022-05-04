@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ReapersKeep.png"/></td>
   <td id="projectalign">
-   <div id="projectname">C4G<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">C4G<span id="projectnumber">&#160;0.2</span>
    </div>
    <div id="projectbrief">Just a short tower defense game</div>
   </td>
@@ -82,18 +83,14 @@ Inheritance diagram for StageData:</div>
   <img src="class_stage_data.png" alt=""/>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage_data_1_1_stage_layout_row.html">StageLayoutRow</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Since we can't serialize multidimensional arrays, we make a helper class to essentially store an array in a wrapper  <a href="class_stage_data_1_1_stage_layout_row.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5244c1db64f9806f55fe751af01083d4"><td class="memItemLeft" align="right" valign="top"><a id="a5244c1db64f9806f55fe751af01083d4" name="a5244c1db64f9806f55fe751af01083d4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetData</b> (Tile.TileType[,] tileTypes, Vector2Int stageDimensions)</td></tr>
-<tr class="memdesc:a5244c1db64f9806f55fe751af01083d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a multidimensional array of tile information into a serialization format and stores it <br /></td></tr>
-<tr class="separator:a5244c1db64f9806f55fe751af01083d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0261c17ab022d5e4115927363ea5cf80"><td class="memItemLeft" align="right" valign="top"><a id="a0261c17ab022d5e4115927363ea5cf80" name="a0261c17ab022d5e4115927363ea5cf80"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnBeforeSerialize</b> ()</td></tr>
+<tr class="separator:a0261c17ab022d5e4115927363ea5cf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af073eb821f5df9afcbb47daed8943381"><td class="memItemLeft" align="right" valign="top"><a id="af073eb821f5df9afcbb47daed8943381" name="af073eb821f5df9afcbb47daed8943381"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAfterDeserialize</b> ()</td></tr>
+<tr class="separator:af073eb821f5df9afcbb47daed8943381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -107,22 +104,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>Width</b></td></tr>
 <tr class="memitem:a119ec3af690cb7a41e3f6cfe265cbcf2"><td class="memItemLeft" align="right" valign="top"><a id="a119ec3af690cb7a41e3f6cfe265cbcf2" name="a119ec3af690cb7a41e3f6cfe265cbcf2"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>Height</b></td></tr>
 <tr class="separator:a119ec3af690cb7a41e3f6cfe265cbcf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa3de4bc6718dcc351f88b162dc5cfc"><td class="memItemLeft" align="right" valign="top"><a id="a5aa3de4bc6718dcc351f88b162dc5cfc" name="a5aa3de4bc6718dcc351f88b162dc5cfc"></a>
-<a class="el" href="class_stage_data_1_1_stage_layout_row.html">StageLayoutRow</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>tileTypeMatrix</b></td></tr>
-<tr class="memdesc:a5aa3de4bc6718dcc351f88b162dc5cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hidden array of tile information using wrapper class for serialization. Yes, I know it's public and thus not hidden, but it won't serialize otherwise. <br /></td></tr>
-<tr class="separator:a5aa3de4bc6718dcc351f88b162dc5cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:ad9f47bda36594e4cc4e14bbc3b98823a"><td class="memItemLeft" align="right" valign="top"><a id="ad9f47bda36594e4cc4e14bbc3b98823a" name="ad9f47bda36594e4cc4e14bbc3b98823a"></a>
-Tile.TileType[,]&#160;</td><td class="memItemRight" valign="bottom"><b>TileTypes</b><code> [get]</code></td></tr>
-<tr class="memdesc:ad9f47bda36594e4cc4e14bbc3b98823a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public accessor to tile information multidimensional array <br /></td></tr>
-<tr class="separator:ad9f47bda36594e4cc4e14bbc3b98823a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5363f6d993209425800688a070f81efe"><td class="memItemLeft" align="right" valign="top"><a id="a5363f6d993209425800688a070f81efe" name="a5363f6d993209425800688a070f81efe"></a>
+Tile.TileType[,]&#160;</td><td class="memItemRight" valign="bottom"><b>Values</b><code> [get]</code></td></tr>
+<tr class="memdesc:a5363f6d993209425800688a070f81efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public accessor <br /></td></tr>
+<tr class="separator:a5363f6d993209425800688a070f81efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Scriptable Object that holds the data for each separate stage, notably the tile types and dimensions of the tiles for the stage Only serializable information can be stored here because its a ScriptableObject so beware </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Stages/StageData.cs</li>
+<li>Assets/Resources/Stages/StageData.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

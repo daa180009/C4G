@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tiletypes_0',['TileTypes',['../class_stage_data.html#ad9f47bda36594e4cc4e14bbc3b98823a',1,'StageData']]],
-  ['type_1',['Type',['../class_tile_controller.html#a80e1f2f36af5bfea206915efe8870acb',1,'TileController']]]
+  ['facingdirection_0',['FacingDirection',['../class_tower_controller.html#a7345270d3887586f0f372477e555ae91',1,'TowerController']]],
+  ['fromtile_1',['FromTile',['../class_enemy_controller.html#a065c1396c1154828046d2c1d358f8043',1,'EnemyController']]]
 ];

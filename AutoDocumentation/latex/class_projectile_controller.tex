@@ -9,15 +9,70 @@ Inheritance diagram for Projectile\+Controller\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_projectile_controller_ab6c8b48251469f59ba483af5ff9f87a5}\label{class_projectile_controller_ab6c8b48251469f59ba483af5ff9f87a5}} 
-void {\bfseries Hit\+Enemy} ()
-\begin{DoxyCompactList}\small\item\em Called when the projectile collides wihth an enemy \end{DoxyCompactList}\end{DoxyCompactItemize}
+float \mbox{\hyperlink{class_projectile_controller_a181cd00b3e53a36c2957b7cf78918ad7}{Get\+Damage}} (\mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} enemy)
+\begin{DoxyCompactList}\small\item\em Calculates the damage to deal to the hit enemy \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_projectile_controller_a02404149fbfec482f22fd3099bd946ba}{Get\+Damage}} (\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} tower)
+\begin{DoxyCompactList}\small\item\em Calculates the damage to deal to the hit tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projectile_controller_a15d216bbfdff02605ce29e1314461c51}\label{class_projectile_controller_a15d216bbfdff02605ce29e1314461c51}} 
+void {\bfseries Hit} ()
+\begin{DoxyCompactList}\small\item\em Called when the projectile collides wiht an enemy \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_projectile_controller_a9ce1578cd01dde63dee4bd71f0aabd06}\label{class_projectile_controller_a9ce1578cd01dde63dee4bd71f0aabd06}} 
+bool {\bfseries is\+Evil} = false
+\item 
+\mbox{\Hypertarget{class_projectile_controller_a7ecf648ebea1b019e36d8d39d8ebf017}\label{class_projectile_controller_a7ecf648ebea1b019e36d8d39d8ebf017}} 
+float {\bfseries acceleration} = 100f
+\item 
+\mbox{\Hypertarget{class_projectile_controller_af1fdedc725cb74392b48cfc14cbc13c1}\label{class_projectile_controller_af1fdedc725cb74392b48cfc14cbc13c1}} 
+float {\bfseries base\+Damage}
+\begin{DoxyCompactList}\small\item\em How much damage to deal upon collision with enemy \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_projectile_controller_a83a45fc7350fc46da4660010a5285ddb}\label{class_projectile_controller_a83a45fc7350fc46da4660010a5285ddb}} 
 Tile.\+Tile\+Direction {\bfseries Facing\+Direction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projectile_controller_a181cd00b3e53a36c2957b7cf78918ad7}\label{class_projectile_controller_a181cd00b3e53a36c2957b7cf78918ad7}} 
+\index{ProjectileController@{ProjectileController}!GetDamage@{GetDamage}}
+\index{GetDamage@{GetDamage}!ProjectileController@{ProjectileController}}
+\doxysubsubsection{\texorpdfstring{GetDamage()}{GetDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float Projectile\+Controller.\+Get\+Damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}}}]{enemy }\end{DoxyParamCaption})}
+
+
+
+Calculates the damage to deal to the hit enemy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_controller_a02404149fbfec482f22fd3099bd946ba}\label{class_projectile_controller_a02404149fbfec482f22fd3099bd946ba}} 
+\index{ProjectileController@{ProjectileController}!GetDamage@{GetDamage}}
+\index{GetDamage@{GetDamage}!ProjectileController@{ProjectileController}}
+\doxysubsubsection{\texorpdfstring{GetDamage()}{GetDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Projectile\+Controller.\+Get\+Damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}}}]{tower }\end{DoxyParamCaption})}
+
+
+
+Calculates the damage to deal to the hit tower 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tower} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

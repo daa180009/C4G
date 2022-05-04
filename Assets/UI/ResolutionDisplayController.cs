@@ -6,7 +6,6 @@ using System;
 
 public class ResolutionDisplayController : MonoBehaviour
 {
-    public GameObject cardPrefab;
     public CardResolutionController cardResolutionController;
 
     public Text TargetCountText;
@@ -27,6 +26,7 @@ public class ResolutionDisplayController : MonoBehaviour
         {
             card.gameObject.SetActive(true);
             card.transform.SetParent(this.transform);
+            card.transform.SetAsFirstSibling();
 
             card.horizontalEdge = RectTransform.Edge.Right;
             card.TargetX = 15;
@@ -48,9 +48,9 @@ public class ResolutionDisplayController : MonoBehaviour
     void onTargetCountChanged(int currentTargets, int targetsMax, bool allowSubmit)
     {
         if(targetsMax == 0)
-            TargetCountText.text = "";
+            TargetCountText.text = "Submit";
         else
-            TargetCountText.text = currentTargets + " / " + targetsMax;
+            TargetCountText.text = "Submit (" + currentTargets + " / " + targetsMax + ")";
 
         SubmitButton.gameObject.SetActive(allowSubmit);
     }

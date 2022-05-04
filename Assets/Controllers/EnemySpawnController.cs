@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 /// <summary>
 /// Class that manages spawning enemies in waves
@@ -9,11 +10,22 @@ using System;
 public class EnemySpawnController : MonoBehaviour
 {
     public TargetSelectionController targetSelectionController;
+    public CycleController cycleController;
+    public PlayerResourceManager playerResourceManager;
+    public GameObject startRoundButton;
+    public GameObject startCycleButton;
 
-    //debug variables
-    int enemySpawnTimer = 90;
+    int enemySpawnTimer = 0;
+    public float beginRange = 60f;
 
     public RoundData CurrentRound;
+
+    public GameEvent roundBegin;
+    public GameEvent roundEnd;
+
+    float timeSinceRoundBegin = 0f;
+    public int roundIndex = -1;
+    public bool spawnedAllEnemies = true;
 
     int waveIndex;
     WaveData CurrentWave
@@ -48,11 +60,36 @@ public class EnemySpawnController : MonoBehaviour
 
     void FixedUpdate()
     {
-        enemySpawnTimer += 1;
-        if (enemySpawnTimer > 10)
+        if (!spawnedAllEnemies)
         {
-            if(attemptSpawn())
-                enemySpawnTimer = 0;
+            timeSinceRoundBegin += Time.deltaTime * .5f;
+            if (UnityEngine.Random.Range(0f, beginRange) < timeSinceRoundBegin)
+                enemySpawnTimer += 1;
+
+            if (enemySpawnTimer > (20 + enemiesCount * 10))
+            {
+                if (CurrentWave.Enemies.Where(x => x.canSpawnMore(roundIndex)).Count() >= 1)
+                {
+                    // one or more enemies have remaining enemies to spawn
+                    if (attemptSpawn())
+                        enemySpawnTimer = 0;
+                }
+                else
+                {
+                    // no enemies are left to spawn in this wave
+                    if (waveIndex + 1 < CurrentRound.EnemyWaves.Count())
+                    {
+                        setWave(waveIndex + 1);
+                    }
+                    else if (enemiesCount == 0)
+                    {
+                        spawnedAllEnemies = true;
+                        startRoundButton.SetActive(true);
+                        startCycleButton.SetActive(false);
+                        roundEnd.Raise();
+                    }
+                }
+            }
         }
     }
 
@@ -64,20 +101,36 @@ public class EnemySpawnController : MonoBehaviour
             data.Restart();
     }
 
+    public void startRound()
+    {
+        if (spawnedAllEnemies)
+        {
+            roundIndex += 1;
+            setWave(0);
+            timeSinceRoundBegin = 0f;
+            spawnedAllEnemies = false;
+            startRoundButton.SetActive(false);
+            startCycleButton.SetActive(true);
+
+            roundBegin.Raise();
+            cycleController.OnRoundBegin();
+        }
+    }
+
     // try to spawn an enemy from the wave parameters; returns true if an enemy was spawned
     bool attemptSpawn()
     {
-        if (enemiesCount > 3 || activeEntrances.Count == 0)
+        if (activeEntrances.Count == 0)
             return false;
 
         WaveEnemyData chosenEnemy = CurrentWave.Enemies[UnityEngine.Random.Range(0, CurrentWave.Enemies.Count)];
         TileController chosenEntrance = activeEntrances[UnityEngine.Random.Range(0, activeEntrances.Count)];
 
-        if (chosenEnemy.enemiesSpawned >= chosenEnemy.enemiesCount)
+        if (!chosenEnemy.canSpawnMore(roundIndex))
             return false;
 
         enemySpawn(chosenEnemy.prefab, chosenEntrance);
-        chosenEnemy.enemiesSpawned += 1;
+        chosenEnemy.enemySpawned();
         return true;
     }
 
@@ -87,14 +140,14 @@ public class EnemySpawnController : MonoBehaviour
     void enemySpawn(GameObject enemyPrefab, TileController entrance)
     {
         Vector3 enemyPosition = new Vector3(0f, 0f, 0f);
-        GameObject enemyObject = SimplePool.Spawn(enemyPrefab, enemyPosition, Quaternion.identity);
+        GameObject enemyObject = Instantiate(enemyPrefab, enemyPosition, Quaternion.identity);
         EnemyController enemyController = enemyObject.GetComponent<EnemyController>();
-
-        enemyController.FromTile = entrance;
 
         enemyObject.transform.SetParent(this.transform);
         enemyController.RegisterDespawnedCB(OnEnemyDespawn);
         enemyController.RegisterHoveredCB(targetSelectionController.EnemyHovered);
+
+        enemyController.FromTile = entrance;
 
         enemiesCount += 1;
 
@@ -102,9 +155,14 @@ public class EnemySpawnController : MonoBehaviour
             cbEnemySpawned(enemyController);
     }
 
-    void OnEnemyDespawn(EnemyController enemy)
+    void OnEnemyDespawn(EnemyController enemy, bool escaped)
     {
-        SimplePool.Despawn(enemy.gameObject);
+        if (escaped)
+        {
+            playerResourceManager.LifeTotal -= enemy.LifeLossAmount;
+        }
+
+        Destroy(enemy.gameObject);
         enemiesCount -= 1;
     }
 }

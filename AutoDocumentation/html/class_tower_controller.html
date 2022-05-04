@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ReapersKeep.png"/></td>
   <td id="projectalign">
-   <div id="projectname">C4G<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">C4G<span id="projectnumber">&#160;0.2</span>
    </div>
    <div id="projectbrief">Just a short tower defense game</div>
   </td>
@@ -80,51 +81,103 @@ Inheritance diagram for TowerController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a504c2c8276cc67a9b0033708b18d7e13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_controller.html#a504c2c8276cc67a9b0033708b18d7e13">SetTransparent</a> (bool isTransparent)</td></tr>
-<tr class="memdesc:a504c2c8276cc67a9b0033708b18d7e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the tower's material slightly transparent. Intended primarily for the placement preview tower  <a href="class_tower_controller.html#a504c2c8276cc67a9b0033708b18d7e13">More...</a><br /></td></tr>
-<tr class="separator:a504c2c8276cc67a9b0033708b18d7e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dae34dc02e6c18a555bb6b52d466b13"><td class="memItemLeft" align="right" valign="top"><a id="a1dae34dc02e6c18a555bb6b52d466b13" name="a1dae34dc02e6c18a555bb6b52d466b13"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterHoveredCB</b> (Action&lt; <a class="el" href="class_tower_controller.html">TowerController</a> &gt; cb)</td></tr>
+<tr class="memdesc:a1dae34dc02e6c18a555bb6b52d466b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a method to be called when the tower is hovered over by the user's mouse cursor <br /></td></tr>
+<tr class="separator:a1dae34dc02e6c18a555bb6b52d466b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb33a7b525fd9be68ae6c453721edcb4"><td class="memItemLeft" align="right" valign="top"><a id="abb33a7b525fd9be68ae6c453721edcb4" name="abb33a7b525fd9be68ae6c453721edcb4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterDespawnedCB</b> (Action&lt; <a class="el" href="class_tower_controller.html">TowerController</a> &gt; cb)</td></tr>
+<tr class="memdesc:abb33a7b525fd9be68ae6c453721edcb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function to be called when this tower is set to despawn from being destroyed <br /></td></tr>
+<tr class="separator:abb33a7b525fd9be68ae6c453721edcb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaabde12102c9700708a37a9aeffc669a"><td class="memItemLeft" align="right" valign="top"><a id="aaabde12102c9700708a37a9aeffc669a" name="aaabde12102c9700708a37a9aeffc669a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UnregisterDespawnedCB</b> (Action&lt; <a class="el" href="class_tower_controller.html">TowerController</a> &gt; cb)</td></tr>
+<tr class="memdesc:aaabde12102c9700708a37a9aeffc669a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a function to be called when this tower is set to despawn from being destroyed <br /></td></tr>
+<tr class="separator:aaabde12102c9700708a37a9aeffc669a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0136a8566ce7f6abf03c74c4c33d22f7"><td class="memItemLeft" align="right" valign="top"><a id="a0136a8566ce7f6abf03c74c4c33d22f7" name="a0136a8566ce7f6abf03c74c4c33d22f7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterDiedCB</b> (Action&lt; <a class="el" href="class_tower_controller.html">TowerController</a> &gt; cb)</td></tr>
+<tr class="memdesc:a0136a8566ce7f6abf03c74c4c33d22f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function to be called when this tower starts to die from being destroyed <br /></td></tr>
+<tr class="separator:a0136a8566ce7f6abf03c74c4c33d22f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24bf3cb338a4e2b05b3f7f077cb0f783"><td class="memItemLeft" align="right" valign="top"><a id="a24bf3cb338a4e2b05b3f7f077cb0f783" name="a24bf3cb338a4e2b05b3f7f077cb0f783"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Initiate</b> ()</td></tr>
+<tr class="separator:a24bf3cb338a4e2b05b3f7f077cb0f783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ff6db3821555ca09902bb6f7eb9309"><td class="memItemLeft" align="right" valign="top"><a id="a73ff6db3821555ca09902bb6f7eb9309" name="a73ff6db3821555ca09902bb6f7eb9309"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Hover</b> ()</td></tr>
+<tr class="memdesc:a73ff6db3821555ca09902bb6f7eb9309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the tower is hovered over by the user's mouse cursor. Sets hovered to true and calls hovered callback <br /></td></tr>
+<tr class="separator:a73ff6db3821555ca09902bb6f7eb9309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f572b2ed800e81be9a00dfc1c3fe90"><td class="memItemLeft" align="right" valign="top"><a id="a83f572b2ed800e81be9a00dfc1c3fe90" name="a83f572b2ed800e81be9a00dfc1c3fe90"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DestroySelf</b> ()</td></tr>
+<tr class="separator:a83f572b2ed800e81be9a00dfc1c3fe90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f8df9eae4e6e830a0b47b5b31bca73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_controller.html#ad7f8df9eae4e6e830a0b47b5b31bca73">DirectDamage</a> (float damage)</td></tr>
+<tr class="memdesc:ad7f8df9eae4e6e830a0b47b5b31bca73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when tower takes damage from usually a projectile  <a href="class_tower_controller.html#ad7f8df9eae4e6e830a0b47b5b31bca73">More...</a><br /></td></tr>
+<tr class="separator:ad7f8df9eae4e6e830a0b47b5b31bca73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da43c3514e20ed5ad8003d5b1bbd9e1"><td class="memItemLeft" align="right" valign="top"><a id="a8da43c3514e20ed5ad8003d5b1bbd9e1" name="a8da43c3514e20ed5ad8003d5b1bbd9e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddStatus</b> (Card.Status status, float duration)</td></tr>
+<tr class="memdesc:a8da43c3514e20ed5ad8003d5b1bbd9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new status to the list or continue its duration if its already present <br /></td></tr>
+<tr class="separator:a8da43c3514e20ed5ad8003d5b1bbd9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71635fb0df490fafb35b53078f293bc5"><td class="memItemLeft" align="right" valign="top"><a id="a71635fb0df490fafb35b53078f293bc5" name="a71635fb0df490fafb35b53078f293bc5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasStatus</b> (Card.Status status)</td></tr>
+<tr class="separator:a71635fb0df490fafb35b53078f293bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4a54b474f1764112edf0be2210c22c"><td class="memItemLeft" align="right" valign="top"><a id="aab4a54b474f1764112edf0be2210c22c" name="aab4a54b474f1764112edf0be2210c22c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnTriggerEnter</b> (Collider trigger)</td></tr>
+<tr class="separator:aab4a54b474f1764112edf0be2210c22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae0fc989c2f31fd913c7328449688807b"><td class="memItemLeft" align="right" valign="top"><a id="ae0fc989c2f31fd913c7328449688807b" name="ae0fc989c2f31fd913c7328449688807b"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>ProjectilePrefab</b></td></tr>
-<tr class="separator:ae0fc989c2f31fd913c7328449688807b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82ea10ecddc6051e2237652eda6e83d6"><td class="memItemLeft" align="right" valign="top"><a id="a82ea10ecddc6051e2237652eda6e83d6" name="a82ea10ecddc6051e2237652eda6e83d6"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>Cube</b></td></tr>
-<tr class="separator:a82ea10ecddc6051e2237652eda6e83d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed214a099cb7fd5a2c6792e598d0c1e1"><td class="memItemLeft" align="right" valign="top"><a id="aed214a099cb7fd5a2c6792e598d0c1e1" name="aed214a099cb7fd5a2c6792e598d0c1e1"></a>
+<a class="el" href="class_h_p_bar_controller.html">HPBarController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hpBar</b></td></tr>
+<tr class="separator:aed214a099cb7fd5a2c6792e598d0c1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57ade58383a0dec8680af71f0cd3e323"><td class="memItemLeft" align="right" valign="top"><a id="a57ade58383a0dec8680af71f0cd3e323" name="a57ade58383a0dec8680af71f0cd3e323"></a>
+Animator&#160;</td><td class="memItemRight" valign="bottom"><b>animator</b></td></tr>
+<tr class="separator:a57ade58383a0dec8680af71f0cd3e323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ca7d4ce04f2fbfe54584dab8f0ffca"><td class="memItemLeft" align="right" valign="top"><a id="aa5ca7d4ce04f2fbfe54584dab8f0ffca" name="aa5ca7d4ce04f2fbfe54584dab8f0ffca"></a>
+<a class="el" href="class_card_data.html">CardData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CardParent</b></td></tr>
+<tr class="memdesc:aa5ca7d4ce04f2fbfe54584dab8f0ffca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The card data of the card that created this tower. <br /></td></tr>
+<tr class="separator:aa5ca7d4ce04f2fbfe54584dab8f0ffca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe802d370b102c0d00c10789000b3a0"><td class="memItemLeft" align="right" valign="top"><a id="a3fe802d370b102c0d00c10789000b3a0" name="a3fe802d370b102c0d00c10789000b3a0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>baseHP</b> = 10</td></tr>
+<tr class="memdesc:a3fe802d370b102c0d00c10789000b3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of HP that the tower begins with by default. <br /></td></tr>
+<tr class="separator:a3fe802d370b102c0d00c10789000b3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af225541ae86d54181e0d004c943ca8e4"><td class="memItemLeft" align="right" valign="top"><a id="af225541ae86d54181e0d004c943ca8e4" name="af225541ae86d54181e0d004c943ca8e4"></a>
 <a class="el" href="class_tile_controller.html">TileController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ParentTile</b> = null</td></tr>
 <tr class="memdesc:af225541ae86d54181e0d004c943ca8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tile that the tower is sitting on <br /></td></tr>
 <tr class="separator:af225541ae86d54181e0d004c943ca8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2ac9f9793322dd5ab1fa38d9d3fd53"><td class="memItemLeft" align="right" valign="top"><a id="ace2ac9f9793322dd5ab1fa38d9d3fd53" name="ace2ac9f9793322dd5ab1fa38d9d3fd53"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>timeToDeath</b> = 21</td></tr>
+<tr class="memdesc:ace2ac9f9793322dd5ab1fa38d9d3fd53"><td class="mdescLeft">&#160;</td><td class="mdescRight">How long to keep around object while dying <br /></td></tr>
+<tr class="separator:ace2ac9f9793322dd5ab1fa38d9d3fd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a7345270d3887586f0f372477e555ae91"><td class="memItemLeft" align="right" valign="top"><a id="a7345270d3887586f0f372477e555ae91" name="a7345270d3887586f0f372477e555ae91"></a>
 Tile.TileDirection&#160;</td><td class="memItemRight" valign="bottom"><b>FacingDirection</b><code> [get, set]</code></td></tr>
-<tr class="memdesc:a7345270d3887586f0f372477e555ae91"><td class="mdescLeft">&#160;</td><td class="mdescRight">The direction the tower is facing, usually used for the tower's attacks and graphics; Sstting it publically automatically changed its graphics <br /></td></tr>
+<tr class="memdesc:a7345270d3887586f0f372477e555ae91"><td class="mdescLeft">&#160;</td><td class="mdescRight">The direction the tower is facing, usually used for the tower's attacks and graphics; Setting it publically automatically changed its graphics <br /></td></tr>
 <tr class="separator:a7345270d3887586f0f372477e555ae91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8157ed85cc77d2695ca8fc5daa71da04"><td class="memItemLeft" align="right" valign="top"><a id="a8157ed85cc77d2695ca8fc5daa71da04" name="a8157ed85cc77d2695ca8fc5daa71da04"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>PerformBehaviours</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8157ed85cc77d2695ca8fc5daa71da04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the tower should have its behaviours active. Setting false publically also causes the tower to become transparent <br /></td></tr>
+<tr class="separator:a8157ed85cc77d2695ca8fc5daa71da04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a504c2c8276cc67a9b0033708b18d7e13" name="a504c2c8276cc67a9b0033708b18d7e13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a504c2c8276cc67a9b0033708b18d7e13">&#9670;&nbsp;</a></span>SetTransparent()</h2>
+<a id="ad7f8df9eae4e6e830a0b47b5b31bca73" name="ad7f8df9eae4e6e830a0b47b5b31bca73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f8df9eae4e6e830a0b47b5b31bca73">&#9670;&nbsp;</a></span>DirectDamage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TowerController.SetTransparent </td>
+          <td class="memname">void TowerController.DirectDamage </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isTransparent</em></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>damage</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Makes the tower's material slightly transparent. Intended primarily for the placement preview tower </p>
+<p>Called when tower takes damage from usually a projectile </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">isTransparent</td><td></td></tr>
+    <tr><td class="paramname">damage</td><td></td></tr>
   </table>
   </dd>
 </dl>

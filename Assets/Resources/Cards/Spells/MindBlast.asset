@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eae0be279bdd5f4caf48bac1284a64f, type: 3}
+  m_Name: MindBlast
+  m_EditorClassIdentifier: 
+  CardTitle: Mind Blast
+  CardImage: {fileID: 21300000, guid: 95700320c2508d84fbf8d0d4463a845a, type: 3}
+  ManaCosts: 0100000000000000020000000000000000000000
+  canBuildWith: 1
+  hasLeftBonus: 0
+  Type: 2
+  TowerSubtypes: 0
+  SpellSubtypes: 0
+  SkillSubtypes: 0
+  CardEffects:
+  - minTargets: 1
+    maxTargets: 1
+    overrideDescription: 
+    conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
+    qualityScript: {fileID: 11500000, guid: fa255c6d27b5a10408aa096163e0cdba, type: 3}
+    predicateScript: {fileID: 11500000, guid: dfa206a760f3afe4c9a58159510a81c0, type: 3}
+    condition:
+      id: 0
+    targetQuality:
+      id: 1
+    predicate:
+      id: 2
+  - minTargets: 0
+    maxTargets: 0
+    overrideDescription: 
+    conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
+    qualityScript: {fileID: 0}
+    predicateScript: {fileID: 11500000, guid: 2273637f20fc6c948a1b5302b9df75e8, type: 3}
+    condition:
+      id: 3
+    targetQuality:
+      id: 4
+    predicate:
+      id: 5
+  CardEffectsLeft: []
+  TowerPrefab: {fileID: 0}
+  LeftTowerPrefab: {fileID: 0}
+  additionalDescription: 
+  references:
+    version: 1
+    00000000:
+      type: {class: NoCondition, ns: , asm: Assembly-CSharp}
+    00000001:
+      type: {class: Tiles_TowerPlacementAllowed, ns: , asm: Assembly-CSharp}
+    00000002:
+      type: {class: EnemyDamageAreaOfEffect, ns: , asm: Assembly-CSharp}
+      data:
+        AffectedArea: {fileID: 11400000, guid: eeee1b1c04049d44eafe28188ebb7135, type: 2}
+        damage: 5
+        applyStatus: 0
+        status: 0
+        duration: 0
+    00000003:
+      type: {class: NoCondition, ns: , asm: Assembly-CSharp}
+    00000004:
+      type: {class: , ns: , asm: }
+    00000005:
+      type: {class: DrawCards, ns: , asm: Assembly-CSharp}
+      data:
+        AffectedArea: {fileID: 0}
+        cardAmount: 1

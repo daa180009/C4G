@@ -34,8 +34,7 @@ public class ProduceMana : TowerBehaviour
             playerResourceManager.AddMana(manaType, 1);
     }
 
-    public override string GetDescription()
+    protected override void Died()
     {
-        return "Mana";
     }
 }

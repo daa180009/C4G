@@ -7,21 +7,30 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Linq;
+using TMPro;
 
 public class DeckBuildingController : MonoBehaviour
 {
 	public GameObject collectionPrefab;
 	public GameObject collectionGrid;
 	public Dropdown deckListDropdown;
+	public Dropdown stageListDropdown;
 	public InputField deckListName;
-	public Text deckListText;
-	
+	public TextMeshProUGUI deckListText;
+	public TextMeshProUGUI deckSizeRequirement;
+	public WorldInfo worldInfo;
+
+	public int MinDeckSize = 20;
+
 	DeckListData data = new DeckListData();
 	CardData[] allCards;
+	StageData[] allStages;
 	List<string> savedDeckNames;
 	bool editingName = false;
+	int deckSize = 0;
 
 	string deckTitle = "Decklist";
+	StageData selectedStage;
 
 	string GetFileDirectory()
 	{
@@ -39,7 +48,19 @@ public class DeckBuildingController : MonoBehaviour
 
 	void Start()
 	{
+		// initialize card list
 		allCards = Resources.LoadAll("Cards", typeof(CardData)).Cast<CardData>().Where(n => n.canBuildWith).ToArray();
+
+		// initialize stage dropdown
+		allStages = Resources.LoadAll("Stages", typeof(StageData)).Cast<StageData>().ToArray();
+		List<string> stageListDropdownOptions = new List<string>();
+		foreach (StageData stage in allStages)
+			stageListDropdownOptions.Add(stage.StageTitle);
+		selectedStage = allStages[0];
+		stageListDropdown.ClearOptions();
+		stageListDropdown.AddOptions(stageListDropdownOptions);
+
+		// create decklist directory
 		Directory.CreateDirectory(GetFileDirectory());
 		updateDeckNameList();
 
@@ -81,6 +102,7 @@ public class DeckBuildingController : MonoBehaviour
 
 		// update current deck
 		deckListText.text = "";
+		deckSize = 0;
 		List<CardData> cardsList = new List<CardData>();
 
 		foreach(Transform child in collectionGrid.transform)
@@ -89,15 +111,27 @@ public class DeckBuildingController : MonoBehaviour
 
 			if(collectionCardController != null && collectionCardController.Count != 0)
             {
-				string cardDescription = collectionCardController.Count + "/4 " + collectionCardController.Data.CardTitle + "\n";
-				deckListText.text += cardDescription;
+				int maxCount = collectionCardController.MaxCount;
 
-				for(int i = 0; i < collectionCardController.Count; i++)
+				string cardDescription = collectionCardController.Count + (maxCount != -1 ? "/" + (maxCount) : "") + " " + collectionCardController.Data.CardTitle + "\n";
+				deckListText.text += cardDescription;
+				deckSize += collectionCardController.Count;
+
+				for (int i = 0; i < collectionCardController.Count; i++)
                 {
 					cardsList.Add(collectionCardController.Data);
                 }
             }
         }
+
+		if(deckSize < MinDeckSize)
+		{
+			deckSizeRequirement.text = deckSize + "/20 Required";
+		}
+        else
+        {
+			deckSizeRequirement.text = "";
+		}
 
 		data.Cards = cardsList;
 	}
@@ -175,6 +209,11 @@ public class DeckBuildingController : MonoBehaviour
 		collectionGrid.GetComponent<GridLayoutGroup>().constraintCount = (int)Mathf.Floor((gridWidth - 20f) / (cardWidth + 20f));
 	}
 
+	public void OnStageSelected(int _)
+	{
+		selectedStage = allStages[stageListDropdown.value];
+    }
+
 	public void OnDeckSelected(int _)
     {
 		if(deckListDropdown.value == savedDeckNames.Count)
@@ -198,6 +237,7 @@ public class DeckBuildingController : MonoBehaviour
 			// activate the text input field and bring it to the front
 			deckListName.Select();
 			deckListName.ActivateInputField();
+			deckListDropdown.transform.SetAsFirstSibling();
 			deckListName.transform.SetAsLastSibling();
 			deckListName.text = deckTitle;
 		}
@@ -205,8 +245,9 @@ public class DeckBuildingController : MonoBehaviour
         {
 			// rename the current deck and move deck selector back to the front
 			submitDeckName(deckListName.text);
+			deckListName.transform.SetAsFirstSibling();
 			deckListDropdown.transform.SetAsLastSibling();
-        }
+		}
     }
 
 	public void OnMainMenu()
@@ -216,7 +257,14 @@ public class DeckBuildingController : MonoBehaviour
 
 	public void OnGameStart()
     {
+		if (deckSize < 20)
+			return;
+
 		PlayerChoices.DeckList = data;
+		PlayerChoices.SelectedStage = selectedStage;
+
+		worldInfo.Restart();
+		File.Delete(Application.persistentDataPath + "/SavedGames" + "/" + "mainSave" + ".json");
 		SceneManager.LoadSceneAsync("Level");
     }
 

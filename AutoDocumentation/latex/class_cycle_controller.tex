@@ -1,0 +1,67 @@
+\hypertarget{class_cycle_controller}{}\doxysection{Cycle\+Controller Class Reference}
+\label{class_cycle_controller}\index{CycleController@{CycleController}}
+Inheritance diagram for Cycle\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cycle_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cycle_controller_a4f8f8a1480dbc98d18d219cdbc01be20}\label{class_cycle_controller_a4f8f8a1480dbc98d18d219cdbc01be20}} 
+void {\bfseries On\+Round\+Begin} ()
+\begin{DoxyCompactList}\small\item\em Called at the start of the round to reset the cycles \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cycle_controller_a88ac26e34cb0aa3239d05e7db6f4a1be}{On\+Round\+End}} ()
+\begin{DoxyCompactList}\small\item\em called when round ends to stop the cycling \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cycle_controller_ac22bf9e3afad297b82a1ef1fd648d697}\label{class_cycle_controller_ac22bf9e3afad297b82a1ef1fd648d697}} 
+void {\bfseries Next\+Cycle} ()
+\begin{DoxyCompactList}\small\item\em Calls for the next cycle to start; only works if cycle timer is low enough \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cycle_controller_a88900aa4dd78e2a088f9862532b72554}\label{class_cycle_controller_a88900aa4dd78e2a088f9862532b72554}} 
+\mbox{\hyperlink{class_enemy_spawn_controller}{Enemy\+Spawn\+Controller}} {\bfseries enemy\+Spawn\+Controller}
+\item 
+\mbox{\Hypertarget{class_cycle_controller_a9080ecad87a9664239f2d1b80cdc37f8}\label{class_cycle_controller_a9080ecad87a9664239f2d1b80cdc37f8}} 
+bool {\bfseries is\+Debug} = false
+\item 
+\mbox{\Hypertarget{class_cycle_controller_a27e70175ca6d4ab16bcfc54953a0200e}\label{class_cycle_controller_a27e70175ca6d4ab16bcfc54953a0200e}} 
+\mbox{\hyperlink{class_player_resource_manager}{Player\+Resource\+Manager}} {\bfseries player\+Resource\+Manager}
+\begin{DoxyCompactList}\small\item\em The scriptable object that manages the players available resources \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cycle_controller_aa6e7f0ccf9fe769bc39b4f757c0ba867}\label{class_cycle_controller_aa6e7f0ccf9fe769bc39b4f757c0ba867}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries cycle\+Begin}
+\begin{DoxyCompactList}\small\item\em Event that is to be invoked at the beginning of a cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cycle_controller_a6be29b63a64a93a4ebf7a06f8df6357f}\label{class_cycle_controller_a6be29b63a64a93a4ebf7a06f8df6357f}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries cycle\+End}
+\begin{DoxyCompactList}\small\item\em Event that is to be invoked at the end of a cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cycle_controller_a1b0ccc9f103aa8b5cecd2be1984e8f7b}\label{class_cycle_controller_a1b0ccc9f103aa8b5cecd2be1984e8f7b}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries round\+Begin}
+\begin{DoxyCompactList}\small\item\em Event that is invoked at the beginning of a round \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cycle_controller_aea609b158dc3cec3fc53754a85e75af4}\label{class_cycle_controller_aea609b158dc3cec3fc53754a85e75af4}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries round\+End}
+\begin{DoxyCompactList}\small\item\em Event that is invoked at the end of a round \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cycle_controller_a1fb210cb457090e2df6d5cfc9f1e5301}\label{class_cycle_controller_a1fb210cb457090e2df6d5cfc9f1e5301}} 
+int {\bfseries Cycle\+Duration} = 300
+\begin{DoxyCompactList}\small\item\em How many game ticks between the beginning and end of each cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cycle_controller_afc174b92a565902e698f452720cc405e}\label{class_cycle_controller_afc174b92a565902e698f452720cc405e}} 
+Game\+Object {\bfseries cycle\+Progress\+Display}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cycle_controller_a88ac26e34cb0aa3239d05e7db6f4a1be}\label{class_cycle_controller_a88ac26e34cb0aa3239d05e7db6f4a1be}} 
+\index{CycleController@{CycleController}!OnRoundEnd@{OnRoundEnd}}
+\index{OnRoundEnd@{OnRoundEnd}!CycleController@{CycleController}}
+\doxysubsubsection{\texorpdfstring{OnRoundEnd()}{OnRoundEnd()}}
+{\footnotesize\ttfamily void Cycle\+Controller.\+On\+Round\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+called when round ends to stop the cycling 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Controllers/Cycle\+Controller.\+cs\end{DoxyCompactItemize}

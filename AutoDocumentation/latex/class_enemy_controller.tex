@@ -9,15 +9,75 @@ Inheritance diagram for Enemy\+Controller\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_enemy_controller_a319077c5903077c6aee5063db8b56139}\label{class_enemy_controller_a319077c5903077c6aee5063db8b56139}} 
-void {\bfseries Register\+Despawned\+CB} (Action$<$ \mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} $>$ cb)
+\mbox{\Hypertarget{class_enemy_controller_a24e63c6248d4056a7548eec342b1d43d}\label{class_enemy_controller_a24e63c6248d4056a7548eec342b1d43d}} 
+void {\bfseries Register\+Despawned\+CB} (Action$<$ \mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}}, bool $>$ cb)
 \begin{DoxyCompactList}\small\item\em Register a function to be called when this enemy is set to despawn from being destroyed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_aa00e0bb1c783b4aeb98d4cb646491c94}\label{class_enemy_controller_aa00e0bb1c783b4aeb98d4cb646491c94}} 
+void {\bfseries Register\+Hovered\+CB} (Action$<$ \mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a method to be called when the enemy is hovered over by the user\textquotesingle{}s mouse cursor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a9d032f98263beec22cc66258c6b1bdd5}\label{class_enemy_controller_a9d032f98263beec22cc66258c6b1bdd5}} 
+void {\bfseries Hover} ()
+\begin{DoxyCompactList}\small\item\em Called when the tower is hovered over by the user\textquotesingle{}s mouse cursor. Sets hovered to true and calls hovered callback \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a13cd62c52c318abec2fb8aef19d3e36f}\label{class_enemy_controller_a13cd62c52c318abec2fb8aef19d3e36f}} 
+void {\bfseries Direct\+Damage} (float damage)
+\begin{DoxyCompactList}\small\item\em Call when something like a card effect deals damage directly to the enemy, rather than through a projectile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a4f9b04fc3865d27155032771c52d5ed9}\label{class_enemy_controller_a4f9b04fc3865d27155032771c52d5ed9}} 
+void {\bfseries Add\+Status} (Card.\+Status status, float duration)
+\begin{DoxyCompactList}\small\item\em Add a new status to the list or continue its duration if its already present \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a9598b36a5c6377121fba92cb984fe91b}\label{class_enemy_controller_a9598b36a5c6377121fba92cb984fe91b}} 
+bool {\bfseries Has\+Status} (Card.\+Status status)
+\item 
 \mbox{\Hypertarget{class_enemy_controller_a8d2c885e8011d73271bd345975691640}\label{class_enemy_controller_a8d2c885e8011d73271bd345975691640}} 
 void {\bfseries On\+Trigger\+Enter} (Collider trigger)
+\item 
+\mbox{\Hypertarget{class_enemy_controller_a23e1dc68c4c6ff27954099798d964d1f}\label{class_enemy_controller_a23e1dc68c4c6ff27954099798d964d1f}} 
+void {\bfseries On\+Trigger\+Exit} (Collider trigger)
 \end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_controller_a8f5f9225ed51c91bffc74c44eaacde18}\label{class_enemy_controller_a8f5f9225ed51c91bffc74c44eaacde18}} 
+Game\+Object {\bfseries enemy\+Model}
+\item 
+\mbox{\Hypertarget{class_enemy_controller_ac057b420018ea19d8e156be90ac17341}\label{class_enemy_controller_ac057b420018ea19d8e156be90ac17341}} 
+\mbox{\hyperlink{class_h_p_bar_controller}{HPBar\+Controller}} {\bfseries hp\+Bar}
+\item 
+\mbox{\Hypertarget{class_enemy_controller_abe1838f584abc6d7ae175c2604500baa}\label{class_enemy_controller_abe1838f584abc6d7ae175c2604500baa}} 
+Particle\+System {\bfseries fire\+Particles}
+\item 
+\mbox{\Hypertarget{class_enemy_controller_a7cd9a58da3abc46b2b96a65915804944}\label{class_enemy_controller_a7cd9a58da3abc46b2b96a65915804944}} 
+Particle\+System {\bfseries ice\+Particles}
+\item 
+\mbox{\Hypertarget{class_enemy_controller_a792d9c34a08e79dfb0484148bb92572d}\label{class_enemy_controller_a792d9c34a08e79dfb0484148bb92572d}} 
+float {\bfseries base\+HP}
+\begin{DoxyCompactList}\small\item\em The HP the enemy starts at \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a98f5586383483a9fd6f9909465e14780}\label{class_enemy_controller_a98f5586383483a9fd6f9909465e14780}} 
+float {\bfseries Base\+Speed} = 1f
+\begin{DoxyCompactList}\small\item\em The speed the enemy will move at across the stage if they have a variance of 0 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a1a7bceaff853ea696e9d4f3a6b42c0ec}\label{class_enemy_controller_a1a7bceaff853ea696e9d4f3a6b42c0ec}} 
+float {\bfseries Speed\+Variance} = 1f
+\begin{DoxyCompactList}\small\item\em The the maximum additional speed an enemy can spawn with randomly \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_ab221fe79c369253c30c4d721af4c559d}\label{class_enemy_controller_ab221fe79c369253c30c4d721af4c559d}} 
+int {\bfseries Life\+Loss\+Amount} = 2
+\begin{DoxyCompactList}\small\item\em How much life for the player to lose when the enemy gets through their defenses \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a39d4e75e679e1b5855a14ff4da740775}\label{class_enemy_controller_a39d4e75e679e1b5855a14ff4da740775}} 
+string {\bfseries enemy\+Type}
+\begin{DoxyCompactList}\small\item\em Specifier of the enemy type. used to call the correct animation for each enemy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a4c78252cfd0721be943e3c238f1eaba3}\label{class_enemy_controller_a4c78252cfd0721be943e3c238f1eaba3}} 
+\mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} {\bfseries from\+Tile} = null
+\begin{DoxyCompactList}\small\item\em The tile the enemy started wallking from \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_a054c66986cfd8bd4f80c1a474ddefa72}\label{class_enemy_controller_a054c66986cfd8bd4f80c1a474ddefa72}} 
+\mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} {\bfseries to\+Tile} = null
+\begin{DoxyCompactList}\small\item\em The tile the enemy is walking to currently \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_controller_aa8c2be851aedfad32bc62cf87234acd1}\label{class_enemy_controller_aa8c2be851aedfad32bc62cf87234acd1}} 
+\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} {\bfseries current\+Tower\+Colliding}
+\begin{DoxyCompactList}\small\item\em The current tower that the enemy is blocked from moving forward by and which it will attack. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_enemy_controller_afe035148cd81cb16813f0fd11583f7e2}\label{class_enemy_controller_afe035148cd81cb16813f0fd11583f7e2}} 
+bool {\bfseries Perform\+Behaviours}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether or not the enemy should have its behaviours active. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_enemy_controller_a065c1396c1154828046d2c1d358f8043}\label{class_enemy_controller_a065c1396c1154828046d2c1d358f8043}} 
 \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} {\bfseries From\+Tile}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em The last tile that the enemy stopped at, and which it is travelling from. Setting this publically automatically changes its destination tile if valid \end{DoxyCompactList}\end{DoxyCompactItemize}

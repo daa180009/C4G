@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stagetitle_0',['StageTitle',['../class_stage_data.html#ad15b5a2be3938e85acdcd35720e9f73b',1,'StageData']]]
+  ['keypanmodifier_0',['keyPanModifier',['../class_camera_controller.html#a9c97b5046f6feb98813fa4b6ef60e804',1,'CameraController']]]
 ];

@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Rummage
   m_EditorClassIdentifier: 
   CardTitle: Rummage
-  ManaCosts: 0000000002000000000000000000000000000000
+  CardImage: {fileID: 21300000, guid: 3a652ae6853fb844c92fab15013a16bb, type: 3}
+  ShowCardImageFrame: 1
+  ManaCosts: 0000000000000000000000000000000001000000
   canBuildWith: 1
-  hasLeftBonus: 0
+  hasLeftBonus: 1
   Type: 3
   TowerSubtypes: 0
   SpellSubtypes: 0
@@ -23,6 +25,7 @@ MonoBehaviour:
   CardEffects:
   - minTargets: 0
     maxTargets: 0
+    overrideDescription: 
     conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
     qualityScript: {fileID: 0}
     predicateScript: {fileID: 11500000, guid: 2273637f20fc6c948a1b5302b9df75e8, type: 3}
@@ -34,6 +37,7 @@ MonoBehaviour:
       id: 2
   - minTargets: 0
     maxTargets: 0
+    overrideDescription: 
     conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
     qualityScript: {fileID: 0}
     predicateScript: {fileID: 11500000, guid: 94655c4796ed03a4ab5274b62528d802, type: 3}
@@ -43,8 +47,34 @@ MonoBehaviour:
       id: 1
     predicate:
       id: 4
+  CardEffectsLeft:
+  - minTargets: 0
+    maxTargets: 0
+    overrideDescription: 
+    conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
+    qualityScript: {fileID: 0}
+    predicateScript: {fileID: 11500000, guid: 2273637f20fc6c948a1b5302b9df75e8, type: 3}
+    condition:
+      id: 5
+    targetQuality:
+      id: 1
+    predicate:
+      id: 6
+  - minTargets: 0
+    maxTargets: 0
+    overrideDescription: 
+    conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
+    qualityScript: {fileID: 0}
+    predicateScript: {fileID: 11500000, guid: 94655c4796ed03a4ab5274b62528d802, type: 3}
+    condition:
+      id: 7
+    targetQuality:
+      id: 1
+    predicate:
+      id: 8
   TowerPrefab: {fileID: 0}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: 
   references:
     version: 1
     00000000:
@@ -59,6 +89,20 @@ MonoBehaviour:
     00000003:
       type: {class: NoCondition, ns: , asm: Assembly-CSharp}
     00000004:
+      type: {class: DiscardCards, ns: , asm: Assembly-CSharp}
+      data:
+        AffectedArea: {fileID: 0}
+        cardAmount: 1
+    00000005:
+      type: {class: NoCondition, ns: , asm: Assembly-CSharp}
+    00000006:
+      type: {class: DrawCards, ns: , asm: Assembly-CSharp}
+      data:
+        AffectedArea: {fileID: 0}
+        cardAmount: 3
+    00000007:
+      type: {class: NoCondition, ns: , asm: Assembly-CSharp}
+    00000008:
       type: {class: DiscardCards, ns: , asm: Assembly-CSharp}
       data:
         AffectedArea: {fileID: 0}

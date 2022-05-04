@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ReapersKeep.png"/></td>
   <td id="projectalign">
-   <div id="projectname">C4G<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">C4G<span id="projectnumber">&#160;0.2</span>
    </div>
    <div id="projectbrief">Just a short tower defense game</div>
   </td>
@@ -64,6 +65,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_camera_controller-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CameraController Class Reference</div></div>
@@ -79,12 +81,31 @@ Inheritance diagram for CameraController:</div>
   <img src="class_camera_controller.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e718a51995909148ea1df1ec7399e44"><td class="memItemLeft" align="right" valign="top"><a id="a8e718a51995909148ea1df1ec7399e44" name="a8e718a51995909148ea1df1ec7399e44"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PauseGame</b> ()</td></tr>
+<tr class="separator:a8e718a51995909148ea1df1ec7399e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d1c22e32293d5576ee636990a21bb8"><td class="memItemLeft" align="right" valign="top"><a id="af7d1c22e32293d5576ee636990a21bb8" name="af7d1c22e32293d5576ee636990a21bb8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UnpauseGame</b> ()</td></tr>
+<tr class="separator:af7d1c22e32293d5576ee636990a21bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae7ff93781abf213b1bd90b1a90e4a5"><td class="memItemLeft" align="right" valign="top"><a id="a7ae7ff93781abf213b1bd90b1a90e4a5" name="a7ae7ff93781abf213b1bd90b1a90e4a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ExitGame</b> ()</td></tr>
+<tr class="separator:a7ae7ff93781abf213b1bd90b1a90e4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a562766be5d2e9d088d414f2ccfe20"><td class="memItemLeft" align="right" valign="top"><a id="af9a562766be5d2e9d088d414f2ccfe20" name="af9a562766be5d2e9d088d414f2ccfe20"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ExitToMainMenu</b> ()</td></tr>
+<tr class="separator:af9a562766be5d2e9d088d414f2ccfe20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a00a02ea2b89183e110d75c873ec1ca3c"><td class="memItemLeft" align="right" valign="top"><a id="a00a02ea2b89183e110d75c873ec1ca3c" name="a00a02ea2b89183e110d75c873ec1ca3c"></a>
 Camera&#160;</td><td class="memItemRight" valign="bottom"><b>cameraObject</b></td></tr>
 <tr class="memdesc:a00a02ea2b89183e110d75c873ec1ca3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual camera being controlled; used for raycasting <br /></td></tr>
 <tr class="separator:a00a02ea2b89183e110d75c873ec1ca3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba8948c2e302a3e9c25828e9ac02becc"><td class="memItemLeft" align="right" valign="top"><a id="aba8948c2e302a3e9c25828e9ac02becc" name="aba8948c2e302a3e9c25828e9ac02becc"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>pauseMenu</b></td></tr>
+<tr class="memdesc:aba8948c2e302a3e9c25828e9ac02becc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pause menu to be toggled when pausing <br /></td></tr>
+<tr class="separator:aba8948c2e302a3e9c25828e9ac02becc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6c25e032717a9d27902cdb014ebebc7"><td class="memItemLeft" align="right" valign="top"><a id="ae6c25e032717a9d27902cdb014ebebc7" name="ae6c25e032717a9d27902cdb014ebebc7"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>dragPanModifier</b> = .02f</td></tr>
 <tr class="memdesc:ae6c25e032717a9d27902cdb014ebebc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The speed the camera moves at when dragging with the mouse to pan <br /></td></tr>
@@ -101,6 +122,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>rotateModifier</b> =
 float&#160;</td><td class="memItemRight" valign="bottom"><b>zoomModifier</b> = .01f</td></tr>
 <tr class="memdesc:ac16725cf6c4ea470fde208237b62e2b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The speed the camera zoom in and out at <br /></td></tr>
 <tr class="separator:ac16725cf6c4ea470fde208237b62e2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5d21befcf788b93d8d91ba8cca6624"><td class="memItemLeft" align="right" valign="top"><a id="a5e5d21befcf788b93d8d91ba8cca6624" name="a5e5d21befcf788b93d8d91ba8cca6624"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>cameraOffset</b> = 0f</td></tr>
+<tr class="memdesc:a5e5d21befcf788b93d8d91ba8cca6624"><td class="mdescLeft">&#160;</td><td class="mdescRight">How far off of 90 degrees each camera rotation should settle at <br /></td></tr>
+<tr class="separator:a5e5d21befcf788b93d8d91ba8cca6624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Class that manages camera movement input and gets raycasts from the camera to determine what objects are hovered over </p>

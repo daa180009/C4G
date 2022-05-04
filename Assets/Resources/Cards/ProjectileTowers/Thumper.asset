@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Thumper
   m_EditorClassIdentifier: 
   CardTitle: Thumper
-  ManaCosts: 0100000000000000010000000000000000000000
+  CardImage: {fileID: 21300000, guid: cd2c2cedbd5d7234fa7bf91f2838478b, type: 3}
+  ManaCosts: 0100000000000000000000000100000000000000
   canBuildWith: 1
   hasLeftBonus: 0
   Type: 1
@@ -21,7 +22,9 @@ MonoBehaviour:
   SpellSubtypes: 0
   SkillSubtypes: 0
   CardEffects: []
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 1820236534691553018, guid: 53a87584640c5a342b285263709cedae, type: 3}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: Damages the tiles in front of it.
   references:
     version: 1

@@ -11,17 +11,15 @@ Inheritance diagram for Stage\+Data\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_stage_data}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{class_stage_data_1_1_stage_layout_row}{Stage\+Layout\+Row}}
-\begin{DoxyCompactList}\small\item\em Since we can\textquotesingle{}t serialize multidimensional arrays, we make a helper class to essentially store an array in a wrapper \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_stage_data_a5244c1db64f9806f55fe751af01083d4}\label{class_stage_data_a5244c1db64f9806f55fe751af01083d4}} 
-void {\bfseries Set\+Data} (Tile.\+Tile\+Type\mbox{[},\mbox{]} tile\+Types, Vector2\+Int stage\+Dimensions)
-\begin{DoxyCompactList}\small\item\em Transforms a multidimensional array of tile information into a serialization format and stores it \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_stage_data_a0261c17ab022d5e4115927363ea5cf80}\label{class_stage_data_a0261c17ab022d5e4115927363ea5cf80}} 
+void {\bfseries On\+Before\+Serialize} ()
+\item 
+\mbox{\Hypertarget{class_stage_data_af073eb821f5df9afcbb47daed8943381}\label{class_stage_data_af073eb821f5df9afcbb47daed8943381}} 
+void {\bfseries On\+After\+Deserialize} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,16 +31,13 @@ int {\bfseries Width}
 \item 
 \mbox{\Hypertarget{class_stage_data_a119ec3af690cb7a41e3f6cfe265cbcf2}\label{class_stage_data_a119ec3af690cb7a41e3f6cfe265cbcf2}} 
 int {\bfseries Height}
-\item 
-\mbox{\Hypertarget{class_stage_data_a5aa3de4bc6718dcc351f88b162dc5cfc}\label{class_stage_data_a5aa3de4bc6718dcc351f88b162dc5cfc}} 
-\mbox{\hyperlink{class_stage_data_1_1_stage_layout_row}{Stage\+Layout\+Row}}\mbox{[}$\,$\mbox{]} {\bfseries tile\+Type\+Matrix}
-\begin{DoxyCompactList}\small\item\em Hidden array of tile information using wrapper class for serialization. Yes, I know it\textquotesingle{}s public and thus not hidden, but it won\textquotesingle{}t serialize otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_stage_data_ad9f47bda36594e4cc4e14bbc3b98823a}\label{class_stage_data_ad9f47bda36594e4cc4e14bbc3b98823a}} 
-Tile.\+Tile\+Type\mbox{[},\mbox{]} {\bfseries Tile\+Types}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Public accessor to tile information multidimensional array \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_stage_data_a5363f6d993209425800688a070f81efe}\label{class_stage_data_a5363f6d993209425800688a070f81efe}} 
+Tile.\+Tile\+Type\mbox{[},\mbox{]} {\bfseries Values}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Public accessor \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -50,4 +45,4 @@ Scriptable Object that holds the data for each separate stage, notably the tile 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Stages/Stage\+Data.\+cs\end{DoxyCompactItemize}
+Assets/\+Resources/\+Stages/Stage\+Data.\+cs\end{DoxyCompactItemize}

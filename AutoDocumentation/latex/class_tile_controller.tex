@@ -12,24 +12,48 @@ Inheritance diagram for Tile\+Controller\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_tile_controller_a84e7d79c5cda935124f4757ed3ec5861}\label{class_tile_controller_a84e7d79c5cda935124f4757ed3ec5861}} 
 void {\bfseries Register\+Hovered\+CB} (Action$<$ \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$ cb)
 \begin{DoxyCompactList}\small\item\em Register a method to be called when the tile is hovered over by the user\textquotesingle{}s mouse cursor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a576835c6fa6f016ade573de2b8b8f033}\label{class_tile_controller_a576835c6fa6f016ade573de2b8b8f033}} 
+List$<$ \mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} $>$ {\bfseries Get\+Present\+Enemies} ()
+\item 
+\mbox{\Hypertarget{class_tile_controller_a92b2ccc7e6552e988ab239aae8850635}\label{class_tile_controller_a92b2ccc7e6552e988ab239aae8850635}} 
+List$<$ \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$\mbox{[}$\,$\mbox{]} {\bfseries Get\+Area\+Around\+Tile} (\mbox{\hyperlink{class_area_of_effect}{Area\+Of\+Effect}} area, Tile.\+Tile\+Direction direction=Tile.\+Tile\+Direction.\+None)
+\begin{DoxyCompactList}\small\item\em Get area around tower based on an area of effect \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a3d143fcfe9f79d29572d6399fd4631b7}\label{class_tile_controller_a3d143fcfe9f79d29572d6399fd4631b7}} 
+void {\bfseries Ping} (int amt=15)
+\begin{DoxyCompactList}\small\item\em Used for debug mostly to temporarily colour in a tile \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_tile_controller_a84f798ca52e91b1dd8719fc45e191ffc}\label{class_tile_controller_a84f798ca52e91b1dd8719fc45e191ffc}} 
 void {\bfseries Hover} ()
 \begin{DoxyCompactList}\small\item\em Called when the tile is hovered over by the user\textquotesingle{}s mouse cursor. Sets hovered to true and calls hovered callback \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_tile_controller_a8c7e18adb0f1fd0e0001869f6d142844}\label{class_tile_controller_a8c7e18adb0f1fd0e0001869f6d142844}} 
+\mbox{\hyperlink{class_world_controller}{World\+Controller}} {\bfseries world\+Controller}
+\item 
+\mbox{\Hypertarget{class_tile_controller_a5c9841fe6408e96ff6c65ca847d2386d}\label{class_tile_controller_a5c9841fe6408e96ff6c65ca847d2386d}} 
+bool {\bfseries Use\+Parity} = true
+\item 
 \mbox{\Hypertarget{class_tile_controller_a549a192ec44274b45bb2f334e24f099b}\label{class_tile_controller_a549a192ec44274b45bb2f334e24f099b}} 
 Game\+Object {\bfseries Cube}
 \begin{DoxyCompactList}\small\item\em The main cube of the tile graphic \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_tile_controller_a47f78f9a3a110ffb7ea27b06694e768f}\label{class_tile_controller_a47f78f9a3a110ffb7ea27b06694e768f}} 
-Game\+Object {\bfseries Directions\+Display}
-\begin{DoxyCompactList}\small\item\em The flat quad used to display the enemy path direction of the tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a4d2ef159bedd3c67d6cf8956d2dfb4cc}\label{class_tile_controller_a4d2ef159bedd3c67d6cf8956d2dfb4cc}} 
+Game\+Object {\bfseries Straight\+Path}
+\begin{DoxyCompactList}\small\item\em The meshes used to display the enemy path direction of the tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a9c3f05ad1fec828f5dfaff81e153a9d8}\label{class_tile_controller_a9c3f05ad1fec828f5dfaff81e153a9d8}} 
+Game\+Object {\bfseries Corner\+Path}
+\item 
+\mbox{\Hypertarget{class_tile_controller_a80e1f2f36af5bfea206915efe8870acb}\label{class_tile_controller_a80e1f2f36af5bfea206915efe8870acb}} 
+Tile.\+Tile\+Type {\bfseries Type} = Tile.\+Tile\+Type.\+Floor
+\item 
 \mbox{\Hypertarget{class_tile_controller_a366afa5cea71264a49540233c520b964}\label{class_tile_controller_a366afa5cea71264a49540233c520b964}} 
 Material {\bfseries Corner\+Material}
 \begin{DoxyCompactList}\small\item\em The material for the enemy path display going from one side of the tile to one not straight across \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_tile_controller_a95f81eb8a627b512c7ea105455a62b85}\label{class_tile_controller_a95f81eb8a627b512c7ea105455a62b85}} 
 Material {\bfseries Across\+Material}
 \begin{DoxyCompactList}\small\item\em The material for the enemy path display for going straight across the tile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_controller_a0af8bfd132bca3d4ceb06c5338557d95}\label{class_tile_controller_a0af8bfd132bca3d4ceb06c5338557d95}} 
+float {\bfseries Height}
+\begin{DoxyCompactList}\small\item\em Public accessor for the height of the tile (based on its tile type) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_tile_controller_a15f0ee5628130ad39d741241ff96d635}\label{class_tile_controller_a15f0ee5628130ad39d741241ff96d635}} 
 Dictionary$<$ Tile.\+Tile\+Direction, \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$ {\bfseries Neighbors} = new Dictionary$<$Tile.\+Tile\+Direction, \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}}$>$()
 \begin{DoxyCompactList}\small\item\em The tiles in each direction from the tile. \end{DoxyCompactList}\item 
@@ -39,12 +63,15 @@ Dictionary$<$ Tile.\+Tile\+Direction, \mbox{\hyperlink{class_tile_controller}{Ti
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_tile_controller_a248308750848b759205e1742d5de3d40}\label{class_tile_controller_a248308750848b759205e1742d5de3d40}} 
+int {\bfseries X}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tile_controller_a877f1557e3e6ac35a39b497a1825ae3c}\label{class_tile_controller_a877f1557e3e6ac35a39b497a1825ae3c}} 
+int {\bfseries Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
 \mbox{\Hypertarget{class_tile_controller_a3d04a5fea8824e246bc74f87ce523ca7}\label{class_tile_controller_a3d04a5fea8824e246bc74f87ce523ca7}} 
-bool {\bfseries Parity}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+bool {\bfseries Parity}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Whether the X + Y of the tile is even or odd. Used to create the checker pattern of tiles \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_tile_controller_a80e1f2f36af5bfea206915efe8870acb}\label{class_tile_controller_a80e1f2f36af5bfea206915efe8870acb}} 
-Tile.\+Tile\+Type {\bfseries Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em The Tile\+Type of the tile. Setting this publically automatically updates the tile\textquotesingle{}s graphics accordingly \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_tile_controller_af56718bfc375f392ed8298afa90790ef}\label{class_tile_controller_af56718bfc375f392ed8298afa90790ef}} 
 Tile.\+Tile\+Direction Tile.\+Tile\+Direction to {\bfseries Directions}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
@@ -52,4 +79,4 @@ Tile.\+Tile\+Direction Tile.\+Tile\+Direction to {\bfseries Directions}\hspace{0
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Prefabs/\+Tile/Tile\+Controller.\+cs\end{DoxyCompactItemize}
+Assets/\+Controllers/Tile\+Controller.\+cs\end{DoxyCompactItemize}

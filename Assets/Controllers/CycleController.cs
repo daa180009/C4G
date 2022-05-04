@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CycleController : MonoBehaviour
 {
+    public EnemySpawnController enemySpawnController;
+
+    public bool isDebug = false;
+
     /// <summary>
     /// The scriptable object that manages the players available resources
     /// </summary>
@@ -38,7 +42,6 @@ public class CycleController : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log(roundBegin);
         roundBegin.RegisterListener(OnRoundBegin);
         roundEnd.RegisterListener(OnRoundEnd);
     }
@@ -77,7 +80,7 @@ public class CycleController : MonoBehaviour
     /// </summary>
     public void NextCycle() 
     { 
-        if (true)//CycleTimer <= 0 && cycleActive)
+        if ((!enemySpawnController.spawnedAllEnemies && CycleTimer <= 0 && cycleActive) || isDebug)
         {
             CycleTimer = CycleDuration;
             

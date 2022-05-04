@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: HeartsTower
   m_EditorClassIdentifier: 
   CardTitle: Hearts Tower
-  ManaCosts: 0200000000000000000000000000000000000000
+  CardImage: {fileID: 21300000, guid: 163c54423495bf741bc00a5614a6579a, type: 3}
+  ShowCardImageFrame: 0
+  ManaCosts: 0000000000000000000000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
   Type: 1
@@ -21,7 +23,9 @@ MonoBehaviour:
   SpellSubtypes: 0
   SkillSubtypes: 0
   CardEffects: []
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 1820236534691553018, guid: 93787d66688b9fe41be6330bd0880b1a, type: 3}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: Generates <b>Hearts mana</b>.
   references:
     version: 1

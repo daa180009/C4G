@@ -25,6 +25,6 @@ public class SacTower : CardEffectPredicate
 
     public override string GetDescription(WorldInfo worldInfo)
     {
-        return "sacrifice a tower";
+        return "sacrifice that tower";
     }
 }

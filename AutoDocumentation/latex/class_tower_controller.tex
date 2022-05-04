@@ -9,42 +9,84 @@ Inheritance diagram for Tower\+Controller\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_tower_controller_a504c2c8276cc67a9b0033708b18d7e13}{Set\+Transparent}} (bool is\+Transparent)
-\begin{DoxyCompactList}\small\item\em Makes the tower\textquotesingle{}s material slightly transparent. Intended primarily for the placement preview tower \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_tower_controller_a1dae34dc02e6c18a555bb6b52d466b13}\label{class_tower_controller_a1dae34dc02e6c18a555bb6b52d466b13}} 
+void {\bfseries Register\+Hovered\+CB} (Action$<$ \mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a method to be called when the tower is hovered over by the user\textquotesingle{}s mouse cursor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_abb33a7b525fd9be68ae6c453721edcb4}\label{class_tower_controller_abb33a7b525fd9be68ae6c453721edcb4}} 
+void {\bfseries Register\+Despawned\+CB} (Action$<$ \mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when this tower is set to despawn from being destroyed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_aaabde12102c9700708a37a9aeffc669a}\label{class_tower_controller_aaabde12102c9700708a37a9aeffc669a}} 
+void {\bfseries Unregister\+Despawned\+CB} (Action$<$ \mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Unregister a function to be called when this tower is set to despawn from being destroyed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_a0136a8566ce7f6abf03c74c4c33d22f7}\label{class_tower_controller_a0136a8566ce7f6abf03c74c4c33d22f7}} 
+void {\bfseries Register\+Died\+CB} (Action$<$ \mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when this tower starts to die from being destroyed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_a24bf3cb338a4e2b05b3f7f077cb0f783}\label{class_tower_controller_a24bf3cb338a4e2b05b3f7f077cb0f783}} 
+void {\bfseries Initiate} ()
+\item 
+\mbox{\Hypertarget{class_tower_controller_a73ff6db3821555ca09902bb6f7eb9309}\label{class_tower_controller_a73ff6db3821555ca09902bb6f7eb9309}} 
+void {\bfseries Hover} ()
+\begin{DoxyCompactList}\small\item\em Called when the tower is hovered over by the user\textquotesingle{}s mouse cursor. Sets hovered to true and calls hovered callback \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_a83f572b2ed800e81be9a00dfc1c3fe90}\label{class_tower_controller_a83f572b2ed800e81be9a00dfc1c3fe90}} 
+void {\bfseries Destroy\+Self} ()
+\item 
+void \mbox{\hyperlink{class_tower_controller_ad7f8df9eae4e6e830a0b47b5b31bca73}{Direct\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em Called when tower takes damage from usually a projectile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_a8da43c3514e20ed5ad8003d5b1bbd9e1}\label{class_tower_controller_a8da43c3514e20ed5ad8003d5b1bbd9e1}} 
+void {\bfseries Add\+Status} (Card.\+Status status, float duration)
+\begin{DoxyCompactList}\small\item\em Add a new status to the list or continue its duration if its already present \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_a71635fb0df490fafb35b53078f293bc5}\label{class_tower_controller_a71635fb0df490fafb35b53078f293bc5}} 
+bool {\bfseries Has\+Status} (Card.\+Status status)
+\item 
+\mbox{\Hypertarget{class_tower_controller_aab4a54b474f1764112edf0be2210c22c}\label{class_tower_controller_aab4a54b474f1764112edf0be2210c22c}} 
+void {\bfseries On\+Trigger\+Enter} (Collider trigger)
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_tower_controller_ae0fc989c2f31fd913c7328449688807b}\label{class_tower_controller_ae0fc989c2f31fd913c7328449688807b}} 
-Game\+Object {\bfseries Projectile\+Prefab}
+\mbox{\Hypertarget{class_tower_controller_aed214a099cb7fd5a2c6792e598d0c1e1}\label{class_tower_controller_aed214a099cb7fd5a2c6792e598d0c1e1}} 
+\mbox{\hyperlink{class_h_p_bar_controller}{HPBar\+Controller}} {\bfseries hp\+Bar}
 \item 
-\mbox{\Hypertarget{class_tower_controller_a82ea10ecddc6051e2237652eda6e83d6}\label{class_tower_controller_a82ea10ecddc6051e2237652eda6e83d6}} 
-Game\+Object {\bfseries Cube}
+\mbox{\Hypertarget{class_tower_controller_a57ade58383a0dec8680af71f0cd3e323}\label{class_tower_controller_a57ade58383a0dec8680af71f0cd3e323}} 
+Animator {\bfseries animator}
 \item 
+\mbox{\Hypertarget{class_tower_controller_aa5ca7d4ce04f2fbfe54584dab8f0ffca}\label{class_tower_controller_aa5ca7d4ce04f2fbfe54584dab8f0ffca}} 
+\mbox{\hyperlink{class_card_data}{Card\+Data}} {\bfseries Card\+Parent}
+\begin{DoxyCompactList}\small\item\em The card data of the card that created this tower. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_a3fe802d370b102c0d00c10789000b3a0}\label{class_tower_controller_a3fe802d370b102c0d00c10789000b3a0}} 
+float {\bfseries base\+HP} = 10
+\begin{DoxyCompactList}\small\item\em The amount of HP that the tower begins with by default. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_tower_controller_af225541ae86d54181e0d004c943ca8e4}\label{class_tower_controller_af225541ae86d54181e0d004c943ca8e4}} 
 \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} {\bfseries Parent\+Tile} = null
-\begin{DoxyCompactList}\small\item\em The tile that the tower is sitting on \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The tile that the tower is sitting on \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_ace2ac9f9793322dd5ab1fa38d9d3fd53}\label{class_tower_controller_ace2ac9f9793322dd5ab1fa38d9d3fd53}} 
+int {\bfseries time\+To\+Death} = 21
+\begin{DoxyCompactList}\small\item\em How long to keep around object while dying \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_tower_controller_a7345270d3887586f0f372477e555ae91}\label{class_tower_controller_a7345270d3887586f0f372477e555ae91}} 
 Tile.\+Tile\+Direction {\bfseries Facing\+Direction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em The direction the tower is facing, usually used for the tower\textquotesingle{}s attacks and graphics; Sstting it publically automatically changed its graphics \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The direction the tower is facing, usually used for the tower\textquotesingle{}s attacks and graphics; Setting it publically automatically changed its graphics \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_controller_a8157ed85cc77d2695ca8fc5daa71da04}\label{class_tower_controller_a8157ed85cc77d2695ca8fc5daa71da04}} 
+bool {\bfseries Perform\+Behaviours}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether or not the tower should have its behaviours active. Setting false publically also causes the tower to become transparent \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_tower_controller_a504c2c8276cc67a9b0033708b18d7e13}\label{class_tower_controller_a504c2c8276cc67a9b0033708b18d7e13}} 
-\index{TowerController@{TowerController}!SetTransparent@{SetTransparent}}
-\index{SetTransparent@{SetTransparent}!TowerController@{TowerController}}
-\doxysubsubsection{\texorpdfstring{SetTransparent()}{SetTransparent()}}
-{\footnotesize\ttfamily void Tower\+Controller.\+Set\+Transparent (\begin{DoxyParamCaption}\item[{bool}]{is\+Transparent }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_tower_controller_ad7f8df9eae4e6e830a0b47b5b31bca73}\label{class_tower_controller_ad7f8df9eae4e6e830a0b47b5b31bca73}} 
+\index{TowerController@{TowerController}!DirectDamage@{DirectDamage}}
+\index{DirectDamage@{DirectDamage}!TowerController@{TowerController}}
+\doxysubsubsection{\texorpdfstring{DirectDamage()}{DirectDamage()}}
+{\footnotesize\ttfamily void Tower\+Controller.\+Direct\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage }\end{DoxyParamCaption})}
 
 
 
-Makes the tower\textquotesingle{}s material slightly transparent. Intended primarily for the placement preview tower 
+Called when tower takes damage from usually a projectile 
 
 
 \begin{DoxyParams}{Parameters}
-{\em is\+Transparent} & \\
+{\em damage} & \\
 \hline
 \end{DoxyParams}
 

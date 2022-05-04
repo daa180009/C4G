@@ -5,17 +5,14 @@ using UnityEngine.UI;
 
 public class ManaCountController : MonoBehaviour
 {
-    public Image iconImage;
-    public Image iconImageBack;
+    public CostIcon costIcon;
     public Text countText;
 
     public Mana.ManaType manaType;
 
     public void Start()
     {
-        iconImage.sprite = CardData.GetSpriteOfManaType(manaType);
-        iconImage.color = CardData.GetColorOfManaType(manaType);
-        iconImageBack.color = CardData.GetColorOfManaType(manaType).AdjustedBrightness(.7f);
+        costIcon.Type = manaType;  
     }
 
     public void SetCount(int count)

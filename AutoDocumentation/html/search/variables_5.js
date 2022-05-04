@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['neighbors_0',['Neighbors',['../class_tile_controller.html#a15f0ee5628130ad39d741241ff96d635',1,'TileController']]]
+  ['fromtile_0',['fromTile',['../class_enemy_controller.html#a4c78252cfd0721be943e3c238f1eaba3',1,'EnemyController']]]
 ];

@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ReapersKeep.png"/></td>
   <td id="projectalign">
-   <div id="projectname">C4G<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">C4G<span id="projectnumber">&#160;0.2</span>
    </div>
    <div id="projectbrief">Just a short tower defense game</div>
   </td>
@@ -65,6 +66,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_enemy_controller-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">EnemyController Class Reference</div></div>
@@ -79,16 +81,89 @@ Inheritance diagram for EnemyController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a319077c5903077c6aee5063db8b56139"><td class="memItemLeft" align="right" valign="top"><a id="a319077c5903077c6aee5063db8b56139" name="a319077c5903077c6aee5063db8b56139"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterDespawnedCB</b> (Action&lt; <a class="el" href="class_enemy_controller.html">EnemyController</a> &gt; cb)</td></tr>
-<tr class="memdesc:a319077c5903077c6aee5063db8b56139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function to be called when this enemy is set to despawn from being destroyed <br /></td></tr>
-<tr class="separator:a319077c5903077c6aee5063db8b56139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24e63c6248d4056a7548eec342b1d43d"><td class="memItemLeft" align="right" valign="top"><a id="a24e63c6248d4056a7548eec342b1d43d" name="a24e63c6248d4056a7548eec342b1d43d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterDespawnedCB</b> (Action&lt; <a class="el" href="class_enemy_controller.html">EnemyController</a>, bool &gt; cb)</td></tr>
+<tr class="memdesc:a24e63c6248d4056a7548eec342b1d43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function to be called when this enemy is set to despawn from being destroyed <br /></td></tr>
+<tr class="separator:a24e63c6248d4056a7548eec342b1d43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00e0bb1c783b4aeb98d4cb646491c94"><td class="memItemLeft" align="right" valign="top"><a id="aa00e0bb1c783b4aeb98d4cb646491c94" name="aa00e0bb1c783b4aeb98d4cb646491c94"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterHoveredCB</b> (Action&lt; <a class="el" href="class_enemy_controller.html">EnemyController</a> &gt; cb)</td></tr>
+<tr class="memdesc:aa00e0bb1c783b4aeb98d4cb646491c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a method to be called when the enemy is hovered over by the user's mouse cursor <br /></td></tr>
+<tr class="separator:aa00e0bb1c783b4aeb98d4cb646491c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d032f98263beec22cc66258c6b1bdd5"><td class="memItemLeft" align="right" valign="top"><a id="a9d032f98263beec22cc66258c6b1bdd5" name="a9d032f98263beec22cc66258c6b1bdd5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Hover</b> ()</td></tr>
+<tr class="memdesc:a9d032f98263beec22cc66258c6b1bdd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the tower is hovered over by the user's mouse cursor. Sets hovered to true and calls hovered callback <br /></td></tr>
+<tr class="separator:a9d032f98263beec22cc66258c6b1bdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13cd62c52c318abec2fb8aef19d3e36f"><td class="memItemLeft" align="right" valign="top"><a id="a13cd62c52c318abec2fb8aef19d3e36f" name="a13cd62c52c318abec2fb8aef19d3e36f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DirectDamage</b> (float damage)</td></tr>
+<tr class="memdesc:a13cd62c52c318abec2fb8aef19d3e36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call when something like a card effect deals damage directly to the enemy, rather than through a projectile <br /></td></tr>
+<tr class="separator:a13cd62c52c318abec2fb8aef19d3e36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f9b04fc3865d27155032771c52d5ed9"><td class="memItemLeft" align="right" valign="top"><a id="a4f9b04fc3865d27155032771c52d5ed9" name="a4f9b04fc3865d27155032771c52d5ed9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddStatus</b> (Card.Status status, float duration)</td></tr>
+<tr class="memdesc:a4f9b04fc3865d27155032771c52d5ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new status to the list or continue its duration if its already present <br /></td></tr>
+<tr class="separator:a4f9b04fc3865d27155032771c52d5ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9598b36a5c6377121fba92cb984fe91b"><td class="memItemLeft" align="right" valign="top"><a id="a9598b36a5c6377121fba92cb984fe91b" name="a9598b36a5c6377121fba92cb984fe91b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasStatus</b> (Card.Status status)</td></tr>
+<tr class="separator:a9598b36a5c6377121fba92cb984fe91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d2c885e8011d73271bd345975691640"><td class="memItemLeft" align="right" valign="top"><a id="a8d2c885e8011d73271bd345975691640" name="a8d2c885e8011d73271bd345975691640"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnTriggerEnter</b> (Collider trigger)</td></tr>
 <tr class="separator:a8d2c885e8011d73271bd345975691640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e1dc68c4c6ff27954099798d964d1f"><td class="memItemLeft" align="right" valign="top"><a id="a23e1dc68c4c6ff27954099798d964d1f" name="a23e1dc68c4c6ff27954099798d964d1f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnTriggerExit</b> (Collider trigger)</td></tr>
+<tr class="separator:a23e1dc68c4c6ff27954099798d964d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a8f5f9225ed51c91bffc74c44eaacde18"><td class="memItemLeft" align="right" valign="top"><a id="a8f5f9225ed51c91bffc74c44eaacde18" name="a8f5f9225ed51c91bffc74c44eaacde18"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>enemyModel</b></td></tr>
+<tr class="separator:a8f5f9225ed51c91bffc74c44eaacde18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac057b420018ea19d8e156be90ac17341"><td class="memItemLeft" align="right" valign="top"><a id="ac057b420018ea19d8e156be90ac17341" name="ac057b420018ea19d8e156be90ac17341"></a>
+<a class="el" href="class_h_p_bar_controller.html">HPBarController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hpBar</b></td></tr>
+<tr class="separator:ac057b420018ea19d8e156be90ac17341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1838f584abc6d7ae175c2604500baa"><td class="memItemLeft" align="right" valign="top"><a id="abe1838f584abc6d7ae175c2604500baa" name="abe1838f584abc6d7ae175c2604500baa"></a>
+ParticleSystem&#160;</td><td class="memItemRight" valign="bottom"><b>fireParticles</b></td></tr>
+<tr class="separator:abe1838f584abc6d7ae175c2604500baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd9a58da3abc46b2b96a65915804944"><td class="memItemLeft" align="right" valign="top"><a id="a7cd9a58da3abc46b2b96a65915804944" name="a7cd9a58da3abc46b2b96a65915804944"></a>
+ParticleSystem&#160;</td><td class="memItemRight" valign="bottom"><b>iceParticles</b></td></tr>
+<tr class="separator:a7cd9a58da3abc46b2b96a65915804944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792d9c34a08e79dfb0484148bb92572d"><td class="memItemLeft" align="right" valign="top"><a id="a792d9c34a08e79dfb0484148bb92572d" name="a792d9c34a08e79dfb0484148bb92572d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>baseHP</b></td></tr>
+<tr class="memdesc:a792d9c34a08e79dfb0484148bb92572d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The HP the enemy starts at <br /></td></tr>
+<tr class="separator:a792d9c34a08e79dfb0484148bb92572d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f5586383483a9fd6f9909465e14780"><td class="memItemLeft" align="right" valign="top"><a id="a98f5586383483a9fd6f9909465e14780" name="a98f5586383483a9fd6f9909465e14780"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>BaseSpeed</b> = 1f</td></tr>
+<tr class="memdesc:a98f5586383483a9fd6f9909465e14780"><td class="mdescLeft">&#160;</td><td class="mdescRight">The speed the enemy will move at across the stage if they have a variance of 0 <br /></td></tr>
+<tr class="separator:a98f5586383483a9fd6f9909465e14780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7bceaff853ea696e9d4f3a6b42c0ec"><td class="memItemLeft" align="right" valign="top"><a id="a1a7bceaff853ea696e9d4f3a6b42c0ec" name="a1a7bceaff853ea696e9d4f3a6b42c0ec"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>SpeedVariance</b> = 1f</td></tr>
+<tr class="memdesc:a1a7bceaff853ea696e9d4f3a6b42c0ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The the maximum additional speed an enemy can spawn with randomly <br /></td></tr>
+<tr class="separator:a1a7bceaff853ea696e9d4f3a6b42c0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab221fe79c369253c30c4d721af4c559d"><td class="memItemLeft" align="right" valign="top"><a id="ab221fe79c369253c30c4d721af4c559d" name="ab221fe79c369253c30c4d721af4c559d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>LifeLossAmount</b> = 2</td></tr>
+<tr class="memdesc:ab221fe79c369253c30c4d721af4c559d"><td class="mdescLeft">&#160;</td><td class="mdescRight">How much life for the player to lose when the enemy gets through their defenses <br /></td></tr>
+<tr class="separator:ab221fe79c369253c30c4d721af4c559d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d4e75e679e1b5855a14ff4da740775"><td class="memItemLeft" align="right" valign="top"><a id="a39d4e75e679e1b5855a14ff4da740775" name="a39d4e75e679e1b5855a14ff4da740775"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>enemyType</b></td></tr>
+<tr class="memdesc:a39d4e75e679e1b5855a14ff4da740775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifier of the enemy type. used to call the correct animation for each enemy. <br /></td></tr>
+<tr class="separator:a39d4e75e679e1b5855a14ff4da740775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c78252cfd0721be943e3c238f1eaba3"><td class="memItemLeft" align="right" valign="top"><a id="a4c78252cfd0721be943e3c238f1eaba3" name="a4c78252cfd0721be943e3c238f1eaba3"></a>
+<a class="el" href="class_tile_controller.html">TileController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fromTile</b> = null</td></tr>
+<tr class="memdesc:a4c78252cfd0721be943e3c238f1eaba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tile the enemy started wallking from <br /></td></tr>
+<tr class="separator:a4c78252cfd0721be943e3c238f1eaba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054c66986cfd8bd4f80c1a474ddefa72"><td class="memItemLeft" align="right" valign="top"><a id="a054c66986cfd8bd4f80c1a474ddefa72" name="a054c66986cfd8bd4f80c1a474ddefa72"></a>
+<a class="el" href="class_tile_controller.html">TileController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toTile</b> = null</td></tr>
+<tr class="memdesc:a054c66986cfd8bd4f80c1a474ddefa72"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tile the enemy is walking to currently <br /></td></tr>
+<tr class="separator:a054c66986cfd8bd4f80c1a474ddefa72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c2be851aedfad32bc62cf87234acd1"><td class="memItemLeft" align="right" valign="top"><a id="aa8c2be851aedfad32bc62cf87234acd1" name="aa8c2be851aedfad32bc62cf87234acd1"></a>
+<a class="el" href="class_tower_controller.html">TowerController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currentTowerColliding</b></td></tr>
+<tr class="memdesc:aa8c2be851aedfad32bc62cf87234acd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current tower that the enemy is blocked from moving forward by and which it will attack. <br /></td></tr>
+<tr class="separator:aa8c2be851aedfad32bc62cf87234acd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:afe035148cd81cb16813f0fd11583f7e2"><td class="memItemLeft" align="right" valign="top"><a id="afe035148cd81cb16813f0fd11583f7e2" name="afe035148cd81cb16813f0fd11583f7e2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>PerformBehaviours</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:afe035148cd81cb16813f0fd11583f7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the enemy should have its behaviours active. <br /></td></tr>
+<tr class="separator:afe035148cd81cb16813f0fd11583f7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a065c1396c1154828046d2c1d358f8043"><td class="memItemLeft" align="right" valign="top"><a id="a065c1396c1154828046d2c1d358f8043" name="a065c1396c1154828046d2c1d358f8043"></a>
 <a class="el" href="class_tile_controller.html">TileController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>FromTile</b><code> [set]</code></td></tr>
 <tr class="memdesc:a065c1396c1154828046d2c1d358f8043"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last tile that the enemy stopped at, and which it is travelling from. Setting this publically automatically changes its destination tile if valid <br /></td></tr>

@@ -1,0 +1,81 @@
+\hypertarget{class_card_resolution_controller}{}\doxysection{Card\+Resolution\+Controller Class Reference}
+\label{class_card_resolution_controller}\index{CardResolutionController@{CardResolutionController}}
+
+
+Manages the process of resolving the action of a player playing a card  
+
+
+Inheritance diagram for Card\+Resolution\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_card_resolution_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a8747d84fc2bfb10f292fde6764e1f7f6}\label{class_card_resolution_controller_a8747d84fc2bfb10f292fde6764e1f7f6}} 
+void {\bfseries Register\+Resolution\+Finished} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when this card\textquotesingle{}s resolution is complete \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_resolution_controller_ab577d0d5edc6a838564ff83fbbee913e}\label{class_card_resolution_controller_ab577d0d5edc6a838564ff83fbbee913e}} 
+void {\bfseries Register\+Card\+Added} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when a new active card is set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_resolution_controller_ae0f3da7ccaa06d8dac447e1539513e44}\label{class_card_resolution_controller_ae0f3da7ccaa06d8dac447e1539513e44}} 
+void {\bfseries Register\+Card\+Removed} (Action cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when the active card is removed, such as upon resolution \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a2e7bc73fac9e1b7f1e533e3f8ab2a447}\label{class_card_resolution_controller_a2e7bc73fac9e1b7f1e533e3f8ab2a447}} 
+void {\bfseries Register\+Target\+Count\+Changed} (Action$<$ int, int, bool $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when the number of targets changes, returning the number of targets now, max number of targets, and if the user can submit yet \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a35d2e60880374a5d71ae7860e792d0b0}\label{class_card_resolution_controller_a35d2e60880374a5d71ae7860e792d0b0}} 
+bool {\bfseries Play\+Card} (\mbox{\hyperlink{class_card_controller}{Card\+Controller}} card\+Controller)
+\begin{DoxyCompactList}\small\item\em Request for a card to be played. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a4774dbed7774c986552822fe18560b7f}\label{class_card_resolution_controller_a4774dbed7774c986552822fe18560b7f}} 
+bool {\bfseries Play\+Left} (\mbox{\hyperlink{class_card_controller}{Card\+Controller}} card\+Controller)
+\begin{DoxyCompactList}\small\item\em Request for the leftmost card to be played. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a5b653017f701fb15c9faa2c6b2bebb2b}\label{class_card_resolution_controller_a5b653017f701fb15c9faa2c6b2bebb2b}} 
+void {\bfseries cheat\+Card} (\mbox{\hyperlink{class_card_controller}{Card\+Controller}} \mbox{\hyperlink{class_card_controller}{Card\+Controller}})
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a5f463ff34013ee274e7583e83ea83d75}\label{class_card_resolution_controller_a5f463ff34013ee274e7583e83ea83d75}} 
+void {\bfseries On\+Select\+Tile} (\mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} tile, Tile.\+Tile\+Direction direction)
+\begin{DoxyCompactList}\small\item\em Called when the player selects a tile to be targetted \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a8a362916b390ad49a939f9a5f3d6bb12}\label{class_card_resolution_controller_a8a362916b390ad49a939f9a5f3d6bb12}} 
+void {\bfseries On\+Select\+Tower} (\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} tower)
+\begin{DoxyCompactList}\small\item\em Called when the player selects a tower to be targetted \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_resolution_controller_ab914f59d760094b7f605be30cc347c8d}\label{class_card_resolution_controller_ab914f59d760094b7f605be30cc347c8d}} 
+void {\bfseries On\+Select\+Enemy} (\mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} enemy)
+\begin{DoxyCompactList}\small\item\em Called when the player selects an enemy to be targetted \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_afc5cd009c8a470f1f0ffedfe852f27b7}\label{class_card_resolution_controller_afc5cd009c8a470f1f0ffedfe852f27b7}} 
+\mbox{\hyperlink{class_world_controller}{World\+Controller}} {\bfseries world\+Controller}
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_ae08ff460b197b5c9341d90bb79d1483e}\label{class_card_resolution_controller_ae08ff460b197b5c9341d90bb79d1483e}} 
+\mbox{\hyperlink{class_world_info}{World\+Info}} {\bfseries world\+Info}
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_afea878ec8459cf4953ac0344112c961e}\label{class_card_resolution_controller_afea878ec8459cf4953ac0344112c961e}} 
+\mbox{\hyperlink{class_target_selection_controller}{Target\+Selection\+Controller}} {\bfseries target\+Selection\+Controller}
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_ac28381ac5153e248919ba9e71e276db6}\label{class_card_resolution_controller_ac28381ac5153e248919ba9e71e276db6}} 
+\mbox{\hyperlink{class_card_zone}{Card\+Zone}} {\bfseries Discard\+Zone}
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a3c62ff57e4cae8a06f8fe36823cba9f9}\label{class_card_resolution_controller_a3c62ff57e4cae8a06f8fe36823cba9f9}} 
+\mbox{\hyperlink{class_card_zone}{Card\+Zone}} {\bfseries Resolution\+Zone}
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a93dcabd11130db3cc014d6c8916ba056}\label{class_card_resolution_controller_a93dcabd11130db3cc014d6c8916ba056}} 
+bool {\bfseries is\+Left}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_resolution_controller_a150bf378bf688025df81cf9cdd720a8d}\label{class_card_resolution_controller_a150bf378bf688025df81cf9cdd720a8d}} 
+bool {\bfseries Is\+Busy}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Public access to tell whether a card is currently resolving \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the process of resolving the action of a player playing a card 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Controllers/Card\+Resolution\+Controller.\+cs\end{DoxyCompactItemize}

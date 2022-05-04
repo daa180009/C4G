@@ -11,12 +11,30 @@ Inheritance diagram for Camera\+Controller\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_camera_controller}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_controller_a8e718a51995909148ea1df1ec7399e44}\label{class_camera_controller_a8e718a51995909148ea1df1ec7399e44}} 
+void {\bfseries Pause\+Game} ()
+\item 
+\mbox{\Hypertarget{class_camera_controller_af7d1c22e32293d5576ee636990a21bb8}\label{class_camera_controller_af7d1c22e32293d5576ee636990a21bb8}} 
+void {\bfseries Unpause\+Game} ()
+\item 
+\mbox{\Hypertarget{class_camera_controller_a7ae7ff93781abf213b1bd90b1a90e4a5}\label{class_camera_controller_a7ae7ff93781abf213b1bd90b1a90e4a5}} 
+void {\bfseries Exit\+Game} ()
+\item 
+\mbox{\Hypertarget{class_camera_controller_af9a562766be5d2e9d088d414f2ccfe20}\label{class_camera_controller_af9a562766be5d2e9d088d414f2ccfe20}} 
+void {\bfseries Exit\+To\+Main\+Menu} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_camera_controller_a00a02ea2b89183e110d75c873ec1ca3c}\label{class_camera_controller_a00a02ea2b89183e110d75c873ec1ca3c}} 
 Camera {\bfseries camera\+Object}
 \begin{DoxyCompactList}\small\item\em The actual camera being controlled; used for raycasting \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_controller_aba8948c2e302a3e9c25828e9ac02becc}\label{class_camera_controller_aba8948c2e302a3e9c25828e9ac02becc}} 
+Game\+Object {\bfseries pause\+Menu}
+\begin{DoxyCompactList}\small\item\em The pause menu to be toggled when pausing \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_camera_controller_ae6c25e032717a9d27902cdb014ebebc7}\label{class_camera_controller_ae6c25e032717a9d27902cdb014ebebc7}} 
 float {\bfseries drag\+Pan\+Modifier} = .\+02f
 \begin{DoxyCompactList}\small\item\em The speed the camera moves at when dragging with the mouse to pan \end{DoxyCompactList}\item 
@@ -28,7 +46,10 @@ float {\bfseries rotate\+Modifier} = .\+75f
 \begin{DoxyCompactList}\small\item\em The speed the camera rotates at \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_camera_controller_ac16725cf6c4ea470fde208237b62e2b2}\label{class_camera_controller_ac16725cf6c4ea470fde208237b62e2b2}} 
 float {\bfseries zoom\+Modifier} = .\+01f
-\begin{DoxyCompactList}\small\item\em The speed the camera zoom in and out at \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The speed the camera zoom in and out at \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_controller_a5e5d21befcf788b93d8d91ba8cca6624}\label{class_camera_controller_a5e5d21befcf788b93d8d91ba8cca6624}} 
+float {\bfseries camera\+Offset} = 0f
+\begin{DoxyCompactList}\small\item\em How far off of 90 degrees each camera rotation should settle at \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

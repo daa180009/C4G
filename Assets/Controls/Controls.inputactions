@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "MenuOpen",
+                    "type": "Button",
+                    "id": "279d99aa-4ef0-4856-b98b-0a27e049a26d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -210,6 +219,17 @@
                     "action": "TowerRotateCCW",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "95d1eedf-fd4c-4615-996b-6241e46bfc75",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "MenuOpen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -303,6 +323,15 @@
                     "type": "PassThrough",
                     "id": "8f947f02-108a-4990-8fa3-2d70ad11bff6",
                     "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "5a50a694-5dd7-450a-855c-b91d77817c5a",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -724,6 +753,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30026334-9b5e-44e5-aa4e-365b7b81b84a",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

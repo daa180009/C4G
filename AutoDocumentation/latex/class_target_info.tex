@@ -1,0 +1,72 @@
+\hypertarget{class_target_info}{}\doxysection{Target\+Info Class Reference}
+\label{class_target_info}\index{TargetInfo@{TargetInfo}}
+
+
+Structure holding lists of different data type to enable predicates to requst different target types  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_target_info_abe8ca10fb7ad9fdaa4aad54b661d1840}\label{class_target_info_abe8ca10fb7ad9fdaa4aad54b661d1840}} 
+void {\bfseries Add} (\mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} tile)
+\item 
+\mbox{\Hypertarget{class_target_info_abef401d7e6abc0aa2f4809fbe5513650}\label{class_target_info_abef401d7e6abc0aa2f4809fbe5513650}} 
+void {\bfseries Add} (\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} tower)
+\item 
+\mbox{\Hypertarget{class_target_info_a8b12ecdd24d435f7e32451eaaa5af1dc}\label{class_target_info_a8b12ecdd24d435f7e32451eaaa5af1dc}} 
+void {\bfseries Add} (\mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} enemy)
+\item 
+\mbox{\Hypertarget{class_target_info_ae0efca511e060ecaf65d8706f6587e6e}\label{class_target_info_ae0efca511e060ecaf65d8706f6587e6e}} 
+void {\bfseries Add} (\mbox{\hyperlink{class_card_controller}{Card\+Controller}} card)
+\item 
+\mbox{\Hypertarget{class_target_info_a5dd6016b87aaf5d15604d5d5d407de86}\label{class_target_info_a5dd6016b87aaf5d15604d5d5d407de86}} 
+int {\bfseries Get\+Target\+Count} (Card.\+Target\+Type type)
+\item 
+\mbox{\Hypertarget{class_target_info_aa34b3a663f5128895433930b3728b8dd}\label{class_target_info_aa34b3a663f5128895433930b3728b8dd}} 
+void {\bfseries Target\+All} (Card.\+Target\+Type type, \mbox{\hyperlink{class_world_info}{World\+Info}} world\+Info)
+\item 
+\mbox{\Hypertarget{class_target_info_a124a3fee48de3a95cd8ffde47764be34}\label{class_target_info_a124a3fee48de3a95cd8ffde47764be34}} 
+void {\bfseries AOETargetting} (\mbox{\hyperlink{class_area_of_effect}{Area\+Of\+Effect}} area, \mbox{\hyperlink{class_world_info}{World\+Info}} world\+Info, Tile.\+Tile\+Direction direction=Tile.\+Tile\+Direction.\+None)
+\begin{DoxyCompactList}\small\item\em Applies the given area of effect to each of the targetted tiles \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_target_info_ac39ca2bb89af23e0bcf03e4c44f70634}\label{class_target_info_ac39ca2bb89af23e0bcf03e4c44f70634}} 
+bool {\bfseries Stopped\+Before\+Max} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_target_info_afef35237d3a01fa724483a955b0a6248}\label{class_target_info_afef35237d3a01fa724483a955b0a6248}} 
+List$<$ \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$ {\bfseries Tiles} = new List$<$\mbox{\hyperlink{class_tile_controller}{Tile\+Controller}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_target_info_afabf9b203723d20dfd5a64bfb9b52688}\label{class_target_info_afabf9b203723d20dfd5a64bfb9b52688}} 
+List$<$ \mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} $>$ {\bfseries Towers} = new List$<$\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_target_info_a8bbd33a355ee2df3e2f9cfdbab97eea1}\label{class_target_info_a8bbd33a355ee2df3e2f9cfdbab97eea1}} 
+List$<$ \mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} $>$ {\bfseries Enemies} = new List$<$\mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_target_info_a27c9340b2286fdcbf2299db80a00337c}\label{class_target_info_a27c9340b2286fdcbf2299db80a00337c}} 
+List$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ {\bfseries Cards} = new List$<$\mbox{\hyperlink{class_card_controller}{Card\+Controller}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_target_info_a7741b2ec58fd12ee6ddc603b54f8fe33}\label{class_target_info_a7741b2ec58fd12ee6ddc603b54f8fe33}} 
+Tile.\+Tile\+Direction {\bfseries Direction} = Tile.\+Tile\+Direction.\+None\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_target_info_a083fbb156a5b5c8ad21bcb8879d07062}\label{class_target_info_a083fbb156a5b5c8ad21bcb8879d07062}} 
+List$<$ Hash\+Set$<$ \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} $>$ $>$ {\bfseries AOETiles} = new List$<$Hash\+Set$<$\mbox{\hyperlink{class_tile_controller}{Tile\+Controller}}$>$$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_target_info_ad73a9d273403ecc252751f21ea7df015}\label{class_target_info_ad73a9d273403ecc252751f21ea7df015}} 
+List$<$ Hash\+Set$<$ \mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} $>$ $>$ {\bfseries AOETowers} = new List$<$Hash\+Set$<$\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}}$>$$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_target_info_ac656204ead5455c07724b283f20106b7}\label{class_target_info_ac656204ead5455c07724b283f20106b7}} 
+List$<$ Hash\+Set$<$ \mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} $>$ $>$ {\bfseries AOEEnemies} = new List$<$Hash\+Set$<$\mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}}$>$$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure holding lists of different data type to enable predicates to requst different target types 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scriptable\+Objects/\+Card\+Effects/Target\+Info.\+cs\end{DoxyCompactItemize}

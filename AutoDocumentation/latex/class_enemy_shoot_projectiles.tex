@@ -1,0 +1,102 @@
+\hypertarget{class_enemy_shoot_projectiles}{}\doxysection{Enemy\+Shoot\+Projectiles Class Reference}
+\label{class_enemy_shoot_projectiles}\index{EnemyShootProjectiles@{EnemyShootProjectiles}}
+
+
+Behaviour that shoots a projectile  
+
+
+Inheritance diagram for Enemy\+Shoot\+Projectiles\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_enemy_shoot_projectiles}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_a74c6890358812ac416a861dfe07fae13}\label{class_enemy_shoot_projectiles_a74c6890358812ac416a861dfe07fae13}} 
+void {\bfseries Spawn\+Projectile} ()
+\begin{DoxyCompactList}\small\item\em Creates a projectile object and shoots it \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_a363855de146472adb880bc5f9679ff06}\label{class_enemy_shoot_projectiles_a363855de146472adb880bc5f9679ff06}} 
+Game\+Object {\bfseries Projectile\+Prefab}
+\begin{DoxyCompactList}\small\item\em The projectile to be shot by the tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_a01bf599ad1919768dd628a4b8481e684}\label{class_enemy_shoot_projectiles_a01bf599ad1919768dd628a4b8481e684}} 
+Animator {\bfseries Enemy\+Animator}
+\begin{DoxyCompactList}\small\item\em The animator of the model that represents the tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_add15af50a89150ff16d9ffb83424f020}\label{class_enemy_shoot_projectiles_add15af50a89150ff16d9ffb83424f020}} 
+int {\bfseries Projectile\+Interval}
+\begin{DoxyCompactList}\small\item\em How long to wait before firing the next bullet after the last \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_a283a5ff2eac3b022afb480af482378b3}\label{class_enemy_shoot_projectiles_a283a5ff2eac3b022afb480af482378b3}} 
+int {\bfseries Initial\+Wait} = 0
+\begin{DoxyCompactList}\small\item\em How long to wait when first created in addition to projectile interval \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_af8899a5414daa127871841db6dbebcb1}\label{class_enemy_shoot_projectiles_af8899a5414daa127871841db6dbebcb1}} 
+int {\bfseries Animation\+Wait} = 5
+\begin{DoxyCompactList}\small\item\em How long before the projectile is fired to trigger the animation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_aca42b6788cd7d00c721a548ccb0f515f}\label{class_enemy_shoot_projectiles_aca42b6788cd7d00c721a548ccb0f515f}} 
+float {\bfseries base\+Damage} = 5f
+\begin{DoxyCompactList}\small\item\em Base amount of damage for projectiles to do on hit \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_a2a975012cec1e59017acf5fa12533702}\label{class_enemy_shoot_projectiles_a2a975012cec1e59017acf5fa12533702}} 
+float {\bfseries ProjectileY} = .\+5f
+\begin{DoxyCompactList}\small\item\em Y position to spawn the projectile at \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_adda926a1128957d6ef8f81b2e877844d}\label{class_enemy_shoot_projectiles_adda926a1128957d6ef8f81b2e877844d}} 
+int {\bfseries projectile\+Timer}
+\begin{DoxyCompactList}\small\item\em Amount of time units left until the tower fires a new projectile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_acaf3ed3484d0d92cca3429c0393f35b0}\label{class_enemy_shoot_projectiles_acaf3ed3484d0d92cca3429c0393f35b0}} 
+float {\bfseries rotation} = 0f
+\begin{DoxyCompactList}\small\item\em The rotation clockwise away from the tower\textquotesingle{}s facing angle to shoot the projectile from. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_ae51c4b6cd600296ab0888f998564ed4a}\label{class_enemy_shoot_projectiles_ae51c4b6cd600296ab0888f998564ed4a}} 
+float {\bfseries range}
+\begin{DoxyCompactList}\small\item\em Enemy range if they use projectile attacks \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_a4997dd090d9bfc933768baf1a1e41d86}\label{class_enemy_shoot_projectiles_a4997dd090d9bfc933768baf1a1e41d86}} 
+Vector2 {\bfseries displacement} = new Vector2(0, 0)
+\begin{DoxyCompactList}\small\item\em The displacement for the ejection point of the projectile away from the center of the tower. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_enemy_shoot_projectiles_a948f273be38cba5b74e4e613bbeb531a}{Initiate}} ()
+\begin{DoxyCompactList}\small\item\em Call on Start() \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_enemy_shoot_projectiles_a02c1aafa07aff23a1ce99dffb2d0a235}{Behave}} ()
+\begin{DoxyCompactList}\small\item\em Called every Fixed\+Update() if the enemy is enabled \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Behaviour that shoots a projectile 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_a02c1aafa07aff23a1ce99dffb2d0a235}\label{class_enemy_shoot_projectiles_a02c1aafa07aff23a1ce99dffb2d0a235}} 
+\index{EnemyShootProjectiles@{EnemyShootProjectiles}!Behave@{Behave}}
+\index{Behave@{Behave}!EnemyShootProjectiles@{EnemyShootProjectiles}}
+\doxysubsubsection{\texorpdfstring{Behave()}{Behave()}}
+{\footnotesize\ttfamily override void Enemy\+Shoot\+Projectiles.\+Behave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called every Fixed\+Update() if the enemy is enabled 
+
+
+
+Implements \mbox{\hyperlink{class_enemy_behaviour_af5585eeaa02f290b92a3ce7a37272fd5}{Enemy\+Behaviour}}.
+
+\mbox{\Hypertarget{class_enemy_shoot_projectiles_a948f273be38cba5b74e4e613bbeb531a}\label{class_enemy_shoot_projectiles_a948f273be38cba5b74e4e613bbeb531a}} 
+\index{EnemyShootProjectiles@{EnemyShootProjectiles}!Initiate@{Initiate}}
+\index{Initiate@{Initiate}!EnemyShootProjectiles@{EnemyShootProjectiles}}
+\doxysubsubsection{\texorpdfstring{Initiate()}{Initiate()}}
+{\footnotesize\ttfamily override void Enemy\+Shoot\+Projectiles.\+Initiate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Call on Start() 
+
+
+
+Implements \mbox{\hyperlink{class_enemy_behaviour_ab4c53bb178cabf2a521d363388b7cf95}{Enemy\+Behaviour}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Prefabs/\+Enemy/\+Enemy\+Behaviours/Enemy\+Shoot\+Projectiles.\+cs\end{DoxyCompactItemize}

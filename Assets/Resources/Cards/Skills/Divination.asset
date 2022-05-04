@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Divination
   m_EditorClassIdentifier: 
   CardTitle: Divination
+  CardImage: {fileID: 21300000, guid: 0a74c370dcd55c44aa55e52dc47756e0, type: 3}
+  ShowCardImageFrame: 1
   ManaCosts: 0000000000000000020000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
@@ -23,6 +25,7 @@ MonoBehaviour:
   CardEffects:
   - minTargets: 0
     maxTargets: 0
+    overrideDescription: 
     conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
     qualityScript: {fileID: 0}
     predicateScript: {fileID: 11500000, guid: 2273637f20fc6c948a1b5302b9df75e8, type: 3}
@@ -32,8 +35,10 @@ MonoBehaviour:
       id: 1
     predicate:
       id: 2
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 0}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: 
   references:
     version: 1
     00000000:

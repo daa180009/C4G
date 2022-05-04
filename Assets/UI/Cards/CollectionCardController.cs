@@ -36,7 +36,12 @@ public class CollectionCardController : MonoBehaviour
 
     public int MaxCount
     {
-        get { return 4; }
+        get
+        {
+            if (VisualCard.Data != null && VisualCard.Data.TowerSubtypes.HasFlag(Card.TowerSubtype.Mana))
+                return -1;
+            return 4; 
+        }
     }
 
     Action<CollectionCardController> cbCountChanged;
@@ -55,6 +60,7 @@ public class CollectionCardController : MonoBehaviour
     {
         VisualCard.RegisterClicked(IncrementCount);
         VisualCard.RegisterRightClicked(DecrementCount);
+        VisualCard.TargetBorderColor = Color.clear;
     }
 
     void updateCountPips()
@@ -76,7 +82,7 @@ public class CollectionCardController : MonoBehaviour
 
     void IncrementCount(VisualCardController card)
     {
-        if (count < 4)
+        if (count < MaxCount || MaxCount == -1)
             count = count + 1;
         updateCountPips();
 

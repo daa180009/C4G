@@ -52,4 +52,14 @@ namespace Card
         Hand,
         Discard
     }
+
+    public enum Status
+    {
+        Burn,
+        Frozen,
+        Attack_Up,
+        Attack_Down,
+        Defense_Up,
+        Defense_Down
+    }
 }

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eae0be279bdd5f4caf48bac1284a64f, type: 3}
+  m_Name: Chill
+  m_EditorClassIdentifier: 
+  CardTitle: Chill
+  CardImage: {fileID: 21300000, guid: 5b722277bc9735849b85f2cda21a3981, type: 3}
+  ManaCosts: 0100000000000000010000000000000000000000
+  canBuildWith: 1
+  hasLeftBonus: 0
+  Type: 2
+  TowerSubtypes: 0
+  SpellSubtypes: 0
+  SkillSubtypes: 0
+  CardEffects:
+  - minTargets: 1
+    maxTargets: 1
+    overrideDescription: 
+    conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
+    qualityScript: {fileID: 11500000, guid: fa255c6d27b5a10408aa096163e0cdba, type: 3}
+    predicateScript: {fileID: 11500000, guid: dfa206a760f3afe4c9a58159510a81c0, type: 3}
+    condition:
+      id: 0
+    targetQuality:
+      id: 1
+    predicate:
+      id: 2
+  CardEffectsLeft: []
+  TowerPrefab: {fileID: 0}
+  LeftTowerPrefab: {fileID: 0}
+  additionalDescription: 
+  references:
+    version: 1
+    00000000:
+      type: {class: NoCondition, ns: , asm: Assembly-CSharp}
+    00000001:
+      type: {class: Tiles_TowerPlacementAllowed, ns: , asm: Assembly-CSharp}
+    00000002:
+      type: {class: EnemyDamageAreaOfEffect, ns: , asm: Assembly-CSharp}
+      data:
+        AffectedArea: {fileID: 11400000, guid: eeee1b1c04049d44eafe28188ebb7135, type: 2}
+        damage: 3
+        applyStatus: 1
+        status: 1
+        duration: 7

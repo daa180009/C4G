@@ -24,9 +24,9 @@ abstract public class TowerBehaviour : MonoBehaviour
     protected abstract void Initiate();
 
     /// <summary>
-    /// Used for card description
+    /// Call on Death
     /// </summary>
-    public abstract string GetDescription();
+    protected abstract void Died();
 
     /// <summary>
     /// The main TowerController script of the tower this is attached to
@@ -48,6 +48,14 @@ abstract public class TowerBehaviour : MonoBehaviour
     public void OnInitiate()
     {
         Initiate();
+    }
+
+    /// <summary>
+    /// Called when enemy dies
+    /// </summary>
+    public void OnDeath(TowerController tower)
+    {
+        Died();
     }
 
     void FixedUpdate()

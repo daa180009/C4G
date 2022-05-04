@@ -56,6 +56,7 @@ public class CardResolutionController : MonoBehaviour
     ResolutionInfo resolutionInfo;
 
     public bool isLeft;
+    public bool isCheat;
 
     /// <summary>
     /// Public access to tell whether a card is currently resolving
@@ -80,7 +81,7 @@ public class CardResolutionController : MonoBehaviour
     /// </summary>
     public bool PlayCard(CardController cardController)
     {
-        if (!IsBusy)
+        if (!IsBusy || isCheat)
         {
             isLeft = false;
             if (cbCardAdded != null)
@@ -99,7 +100,7 @@ public class CardResolutionController : MonoBehaviour
     /// </summary>
     public bool PlayLeft(CardController cardController)
     {
-        if (!IsBusy)
+        if (!IsBusy || isCheat)
         {
             isLeft = true;
             if (cbCardAdded != null)
@@ -165,7 +166,11 @@ public class CardResolutionController : MonoBehaviour
         }
 
         int targetCount = currentTargetInfo.GetTargetCount(activeEffect.predicate.TargetType);
-        if (targetCount < activeEffect.maxTargets && !currentTargetInfo.StoppedBeforeMax)
+        if(activeEffect.minTargets == 4)
+        {
+            currentTargetInfo.TargetAll(activeEffect.predicate.TargetType, worldInfo);
+        } 
+        else if ((targetCount < activeEffect.maxTargets || activeEffect.maxTargets == 4) && !currentTargetInfo.StoppedBeforeMax)
         {
             // not enough targets selected
 
@@ -254,7 +259,7 @@ public class CardResolutionController : MonoBehaviour
                 return;
             }
 
-            worldController.SpawnTower(activeCard.Data.LeftTowerPrefab, currentTargetInfo.Tiles[0], currentTargetInfo.Direction);
+            worldController.SpawnTower(activeCard.Data.LeftTowerPrefab, currentTargetInfo.Tiles[0], currentTargetInfo.Direction, activeCard.Data);
             removeActiveCard();
         }
         else
@@ -266,7 +271,7 @@ public class CardResolutionController : MonoBehaviour
                 return;
             }
 
-            worldController.SpawnTower(activeCard.Data.TowerPrefab, currentTargetInfo.Tiles[0], currentTargetInfo.Direction);
+            worldController.SpawnTower(activeCard.Data.TowerPrefab, currentTargetInfo.Tiles[0], currentTargetInfo.Direction, activeCard.Data);
             removeActiveCard();
         }
     }
@@ -299,7 +304,7 @@ public class CardResolutionController : MonoBehaviour
     /// </summary>
     private void removeActiveCard()
     {
-        if(ResolutionZone.Remove(activeCard))
+        if (ResolutionZone.Remove(activeCard))
             DiscardZone.Add(activeCard);
 
         activeCard = null;

@@ -1,0 +1,70 @@
+\hypertarget{class_card_zone}{}\doxysection{Card\+Zone Class Reference}
+\label{class_card_zone}\index{CardZone@{CardZone}}
+Inheritance diagram for Card\+Zone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_card_zone}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_zone_a752fabfa5b24ecca9c92aeab87e8784a}\label{class_card_zone_a752fabfa5b24ecca9c92aeab87e8784a}} 
+void {\bfseries Register\+Cards\+Added} (Action$<$ List$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called whenever one or more new cards enters this zone \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_zone_acc77cdd6d7c20d4998555fea0780ec7c}\label{class_card_zone_acc77cdd6d7c20d4998555fea0780ec7c}} 
+void {\bfseries Register\+Cards\+Removed} (Action$<$ List$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called whenever one or more new cards are removed from this zone \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_zone_ac38ee6a1ee74e37e29b18e96527cd00d}\label{class_card_zone_ac38ee6a1ee74e37e29b18e96527cd00d}} 
+void {\bfseries Restart} ()
+\item 
+\mbox{\Hypertarget{class_card_zone_a66800fb8f8fc54ae9cc689659cd5115a}\label{class_card_zone_a66800fb8f8fc54ae9cc689659cd5115a}} 
+List$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ {\bfseries Conjure\+List} (List$<$ \mbox{\hyperlink{class_card_data}{Card\+Data}} $>$ card\+Data\+List)
+\begin{DoxyCompactList}\small\item\em Create new card models for the card data passed in then add it to this zone \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_zone_a99ae46f82b96f01a8cab022570326a0b}\label{class_card_zone_a99ae46f82b96f01a8cab022570326a0b}} 
+void {\bfseries Shuffle} ()
+\begin{DoxyCompactList}\small\item\em Randomize the order of the cards in the zone \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_zone_a85ec5eb162d0c5124e98097751fbb032}\label{class_card_zone_a85ec5eb162d0c5124e98097751fbb032}} 
+void {\bfseries For\+Each} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}}, int, int $>$ action)
+\begin{DoxyCompactList}\small\item\em For each card in the zone, call a function. Function inputs are \mbox{[}\mbox{\hyperlink{namespace_card}{Card}}, card index, number of cards\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_zone_ad7f816b3be9fd3bdf9e8819b6eb9a0fa}\label{class_card_zone_ad7f816b3be9fd3bdf9e8819b6eb9a0fa}} 
+void {\bfseries Add\+All} (\mbox{\hyperlink{class_card_zone}{Card\+Zone}} other\+Zone)
+\begin{DoxyCompactList}\small\item\em Move all the cards from one zone into this one \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_zone_a726eaa3cc071c704f1cbbf46ba46c5d8}\label{class_card_zone_a726eaa3cc071c704f1cbbf46ba46c5d8}} 
+void {\bfseries Add} (\mbox{\hyperlink{class_card_controller}{Card\+Controller}} card)
+\item 
+\mbox{\Hypertarget{class_card_zone_aa45dc8e162602472db2f2ec4fbfbe6cb}\label{class_card_zone_aa45dc8e162602472db2f2ec4fbfbe6cb}} 
+bool {\bfseries Remove} (\mbox{\hyperlink{class_card_controller}{Card\+Controller}} card)
+\item 
+\mbox{\Hypertarget{class_card_zone_a0331670189de378eded594d3f2075429}\label{class_card_zone_a0331670189de378eded594d3f2075429}} 
+\mbox{\hyperlink{class_card_controller}{Card\+Controller}} {\bfseries Pop} ()
+\item 
+\mbox{\Hypertarget{class_card_zone_ae53993d7c440c9fe8654fa84435bc407}\label{class_card_zone_ae53993d7c440c9fe8654fa84435bc407}} 
+\mbox{\hyperlink{class_card_controller}{Card\+Controller}} {\bfseries Pop\+Right} ()
+\item 
+\mbox{\Hypertarget{class_card_zone_a8a2721163d372dedae94172d60fe58db}\label{class_card_zone_a8a2721163d372dedae94172d60fe58db}} 
+\mbox{\hyperlink{class_card_controller}{Card\+Controller}} {\bfseries Get\+Card} (int value)
+\item 
+\mbox{\Hypertarget{class_card_zone_aa055b4fa8e91d63aab03398837e0bd51}\label{class_card_zone_aa055b4fa8e91d63aab03398837e0bd51}} 
+\mbox{\hyperlink{class_card_controller}{Card\+Controller}} {\bfseries Pop\+Specific} (int value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_zone_a3532a5038ef2fb68c8134e5c5dfc61ed}\label{class_card_zone_a3532a5038ef2fb68c8134e5c5dfc61ed}} 
+Game\+Object {\bfseries card\+Prefab}
+\item 
+\mbox{\Hypertarget{class_card_zone_af737c4f9d44fc1b15ee74257ebd6728c}\label{class_card_zone_af737c4f9d44fc1b15ee74257ebd6728c}} 
+bool {\bfseries is\+Ordered}
+\begin{DoxyCompactList}\small\item\em Whether or not order matters in this zone. Typically only true for the deck \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_zone_a3e6bbca243512fdc3e33dc9542e39333}\label{class_card_zone_a3e6bbca243512fdc3e33dc9542e39333}} 
+int {\bfseries Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of cards in the zone \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scriptable\+Objects/\+Card\+Zones/Card\+Zone.\+cs\end{DoxyCompactItemize}

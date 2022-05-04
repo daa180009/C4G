@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 45492460}
   - component: {fileID: 45492459}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 45492460}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1183187346}
+        m_TargetAssemblyTypeName: SettingsControlller, Assembly-CSharp
+        m_MethodName: OnExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &45492460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +447,7 @@ GameObject:
   - component: {fileID: 1183187345}
   - component: {fileID: 1183187344}
   - component: {fileID: 1183187343}
+  - component: {fileID: 1183187346}
   m_Layer: 5
   m_Name: SettingsController
   m_TagString: Untagged
@@ -527,6 +540,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183187341}
   m_CullTransparentMesh: 1
+--- !u!114 &1183187346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183187341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4fbad1524e56a4dbe298e8c07f5bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1551739805
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,17 +664,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_PointAction: {fileID: 5402401303113244769, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_MoveAction: {fileID: 1357525026917612973, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_SubmitAction: {fileID: 6388695378345944691, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_CancelAction: {fileID: 8411022556140753118, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_LeftClickAction: {fileID: -7703967144275233040, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_MiddleClickAction: {fileID: 1161612881157522297, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_RightClickAction: {fileID: 3863895535611955916, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_ScrollWheelAction: {fileID: -7574083509549191017, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_TrackedDevicePositionAction: {fileID: -3321530396226993450, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: -2200477056414126962, guid: beb934512ebccaa4ea372ab4ac9c939b, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
 --- !u!114 &1595207347

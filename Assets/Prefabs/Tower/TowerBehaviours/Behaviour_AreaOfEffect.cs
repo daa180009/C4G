@@ -11,6 +11,11 @@ public class Behaviour_AreaOfEffect : TowerBehaviour
     public Animator TowerAnimator;
 
     /// <summary>
+    /// The audio to play when shooting projectile
+    /// </summary>
+    public AudioSource attackNoise;
+
+    /// <summary>
     /// How long to wait before each attack after the last
     /// </summary>
     public int AttackInterval;
@@ -26,6 +31,33 @@ public class Behaviour_AreaOfEffect : TowerBehaviour
     public int AnimationWait = 5;
 
     /// <summary>
+    /// Base amount of damage to do to enemies on hit
+    /// </summary>
+    public float baseDamage = 1f;
+
+    /// <summary>
+    /// Whether or not to apply a status to hit enemies
+    /// </summary>
+    public bool applyStatus = false;
+    /// <summary>
+    /// Which status to apply if so
+    /// </summary>
+    public Card.Status status;
+    /// <summary>
+    /// How long said status should last upon application
+    /// </summary>
+    public float duration;
+
+    /// <summary>
+    /// Whether or not to perform the AOE; if it should only be done on special occasions, turn this off
+    /// </summary>
+    public bool PerformAOE = true;
+    /// <summary>
+    /// Whether or not to perform the AOE when dying
+    /// </summary>
+    public bool AOEOnDeath = false;
+
+    /// <summary>
     /// Amount of time units left until the tower attacks again
     /// </summary>
     int attackTimer;
@@ -35,6 +67,7 @@ public class Behaviour_AreaOfEffect : TowerBehaviour
     /// </summary>
     public AreaOfEffect areaOfEffect;
 
+
     protected override void Initiate()
     {
         attackTimer = InitialWait + AnimationWait + 1;
@@ -42,7 +75,14 @@ public class Behaviour_AreaOfEffect : TowerBehaviour
 
     protected override void Behave()
     {
-        attackTimer -= 1;
+        if (!PerformAOE)
+            return;
+
+        if (!MainController.HasStatus(Card.Status.Frozen))
+            attackTimer -= 1;
+
+        if ((Random.Range(0, 1f) < .1f) || attackTimer < AnimationWait)
+            attackTimer -= 1;
 
         if (attackTimer == AnimationWait)
         {
@@ -64,6 +104,9 @@ public class Behaviour_AreaOfEffect : TowerBehaviour
         if (areaOfEffect == null)
             return;
 
+        if (attackNoise != null)
+            attackNoise.Play();
+
         List<TileController> affectedTiles = MainController.ParentTile.GetAreaAroundTile(areaOfEffect, MainController.FacingDirection)[1];
 
         HashSet<EnemyController> affectedEnemies = new HashSet<EnemyController>();
@@ -71,19 +114,40 @@ public class Behaviour_AreaOfEffect : TowerBehaviour
         {
             List<EnemyController> tileEnemies = tile.GetPresentEnemies();
             foreach (EnemyController enemy in tileEnemies)
+            {
                 affectedEnemies.Add(enemy);
+            }
 
             tile.Ping(4);
         }
 
         foreach(EnemyController enemy in affectedEnemies)
         {
-            enemy.DirectDamage(5f);
+            enemy.DirectDamage(GetDamage());
+
+            if (applyStatus)
+                enemy.AddStatus(status, duration);
         }
     }
 
-    public override string GetDescription()
+    /// <summary>
+    /// Returns how much damage the projectile should deal
+    /// </summary>
+    public float GetDamage()
     {
-        return "AOE";
+        float damageAmount = baseDamage;
+
+        if (MainController.HasStatus(Card.Status.Attack_Up))
+            damageAmount *= 1.5f;
+        if (MainController.HasStatus(Card.Status.Attack_Down))
+            damageAmount *= 0.5f;
+
+        return damageAmount;
+    }
+
+    protected override void Died()
+    {
+        if (AOEOnDeath)
+            Attack();
     }
 }

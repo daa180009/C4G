@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: NoneTower
   m_EditorClassIdentifier: 
   CardTitle: Neutral Tower
-  ManaCosts: 0100000000000000000000000000000000000000
+  CardImage: {fileID: 21300000, guid: 23065c5c48da51849a9405e07f068ce3, type: 3}
+  ShowCardImageFrame: 0
+  ManaCosts: 0000000000000000000000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
   Type: 1
@@ -21,7 +23,9 @@ MonoBehaviour:
   SpellSubtypes: 0
   SkillSubtypes: 0
   CardEffects: []
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 1820236534691553018, guid: d0040d1cbb8ac55448eccba5d8260d17, type: 3}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: Generates <b>Neutral mana</b>.
   references:
     version: 1

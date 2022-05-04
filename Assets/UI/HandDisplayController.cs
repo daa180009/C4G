@@ -10,6 +10,7 @@ public class HandDisplayController : MonoBehaviour, IPointerEnterHandler, IPoint
     public CardGameController cardGameController;
     public CardResolutionController cardResolutionController;
     public PlayerResourceManager playerResourceManager;
+    public EnemySpawnController enemySpawnController;
 
     public float HorizontalCardDisplacement;
     public float VerticalCardDisplacement;
@@ -132,7 +133,7 @@ public class HandDisplayController : MonoBehaviour, IPointerEnterHandler, IPoint
             card.transform.SetSiblingIndex(index);
         }
 
-        if (playerResourceManager.CanAfford(card.Data.ManaCostDictionary))
+        if (CanPlayCard(card))
         {
             card.TargetGlowAlpha = 1f;
             card.TargetBorderColor = PlayableCardColor;
@@ -142,6 +143,11 @@ public class HandDisplayController : MonoBehaviour, IPointerEnterHandler, IPoint
             card.TargetGlowAlpha = 0f;
             card.TargetBorderColor = UnplayableCardColor;
         }
+    }
+
+    bool CanPlayCard(CardController card)
+    {
+        return playerResourceManager.CanAfford(card.Data) && !enemySpawnController.spawnedAllEnemies;
     }
 
     void onCardHover(CardController cardController)

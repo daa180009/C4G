@@ -1,0 +1,69 @@
+\hypertarget{class_target_selection_controller}{}\doxysection{Target\+Selection\+Controller Class Reference}
+\label{class_target_selection_controller}\index{TargetSelectionController@{TargetSelectionController}}
+
+
+Class that moves the preview tower and manages placing the tower when the user clicks  
+
+
+Inheritance diagram for Target\+Selection\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_target_selection_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a61f8757a671bf26caff545847e3f8a41}\label{class_target_selection_controller_a61f8757a671bf26caff545847e3f8a41}} 
+void {\bfseries Register\+Select\+Tile\+CB} (Action$<$ \mbox{\hyperlink{class_tile_controller}{Tile\+Controller}}, Tile.\+Tile\+Direction $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a method to be called when the user selects a tile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_target_selection_controller_a0d27328b0a3e310462132364c72e5747}\label{class_target_selection_controller_a0d27328b0a3e310462132364c72e5747}} 
+void {\bfseries Register\+Select\+Tower\+CB} (Action$<$ \mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a method to be called when the user selects a tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_target_selection_controller_a6bed4291865c01fcf37f06425299a9ed}\label{class_target_selection_controller_a6bed4291865c01fcf37f06425299a9ed}} 
+void {\bfseries Register\+Select\+Enemy\+CB} (Action$<$ \mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a method to be called when the user selects a tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_target_selection_controller_a22d0e9346c5e305dc463bfcda0d41bc1}\label{class_target_selection_controller_a22d0e9346c5e305dc463bfcda0d41bc1}} 
+void {\bfseries Start\+Tower\+Preview} (Game\+Object tower\+Prefab, \mbox{\hyperlink{struct_resolution_info}{Resolution\+Info}} resolution\+Info)
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_afef231b959ac9ceae798434b6a5b0eee}\label{class_target_selection_controller_afef231b959ac9ceae798434b6a5b0eee}} 
+void {\bfseries Start\+Target\+Selection} (Card.\+Target\+Type type, \mbox{\hyperlink{class_card_effect_quality}{Card\+Effect\+Quality}} quality, \mbox{\hyperlink{struct_resolution_info}{Resolution\+Info}} resolution\+Info, bool should\+Allow\+Stop=false, \mbox{\hyperlink{class_area_of_effect}{Area\+Of\+Effect}} affected\+Area=null)
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a921affda37802718870e4dfe7066fbef}\label{class_target_selection_controller_a921affda37802718870e4dfe7066fbef}} 
+void {\bfseries Tile\+Hovered} (\mbox{\hyperlink{class_tile_controller}{Tile\+Controller}} tile)
+\begin{DoxyCompactList}\small\item\em Called when the user hovers over a tile, sets it as the most recently hovered tile and moves the preview tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_target_selection_controller_abedd888d40cd1cd5c0bd6d0af163e302}\label{class_target_selection_controller_abedd888d40cd1cd5c0bd6d0af163e302}} 
+void {\bfseries Tower\+Hovered} (\mbox{\hyperlink{class_tower_controller}{Tower\+Controller}} tower)
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a2895d0043bbc2fc5650aa33f4ece005e}\label{class_target_selection_controller_a2895d0043bbc2fc5650aa33f4ece005e}} 
+void {\bfseries Enemy\+Hovered} (\mbox{\hyperlink{class_enemy_controller}{Enemy\+Controller}} enemy)
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a03bace4a63eacd2276664261ce15ec7e}\label{class_target_selection_controller_a03bace4a63eacd2276664261ce15ec7e}} 
+void {\bfseries On\+Tower\+Rotate\+CW} ()
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a5a0f454c4168459ae735c8daf6c199d4}\label{class_target_selection_controller_a5a0f454c4168459ae735c8daf6c199d4}} 
+void {\bfseries On\+Tower\+Rotate\+CCW} ()
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a8d87e757b92c10ec42936caf05c6b7ef}\label{class_target_selection_controller_a8d87e757b92c10ec42936caf05c6b7ef}} 
+void {\bfseries On\+Submit\+Targets} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a9ca9c74dbbac5ca353869b069603490d}\label{class_target_selection_controller_a9ca9c74dbbac5ca353869b069603490d}} 
+\mbox{\hyperlink{class_world_controller}{World\+Controller}} {\bfseries world\+Controller}
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a754fc42aa88f4eb126959bab1e4d1b01}\label{class_target_selection_controller_a754fc42aa88f4eb126959bab1e4d1b01}} 
+Game\+Object {\bfseries hand\+Display\+Controller}
+\item 
+\mbox{\Hypertarget{class_target_selection_controller_a139375f9d4e89515a551df9bbf9c9cbb}\label{class_target_selection_controller_a139375f9d4e89515a551df9bbf9c9cbb}} 
+\mbox{\hyperlink{class_world_info}{World\+Info}} {\bfseries world\+Info}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that moves the preview tower and manages placing the tower when the user clicks 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Controllers/Target\+Selection\+Controller.\+cs\end{DoxyCompactItemize}

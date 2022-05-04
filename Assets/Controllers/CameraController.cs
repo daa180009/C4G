@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 /// <summary>
 /// Class that manages camera movement input and gets raycasts from the camera to determine what objects are hovered over
@@ -12,6 +14,11 @@ public class CameraController : MonoBehaviour
     /// The actual camera being controlled; used for raycasting
     /// </summary>
     public Camera cameraObject;
+
+    /// <summary>
+    /// The pause menu to be toggled when pausing
+    /// </summary>
+    public GameObject pauseMenu;
 
     /// <summary>
     /// The speed the camera moves at when dragging with the mouse to pan
@@ -68,6 +75,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         goalScrollDistance = transform.position.y;
+        pauseMenu.SetActive(false);
     }
 
     void FixedUpdate()
@@ -149,7 +157,7 @@ public class CameraController : MonoBehaviour
         mask = LayerMask.GetMask("Tower");
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
         {
-            TowerController towerHovered = hit.transform.parent.GetComponent<TowerController>(); 
+            TowerController towerHovered = hit.transform.GetComponent<TowerController>(); 
             towerHovered?.Hover();
         }
 
@@ -203,5 +211,40 @@ public class CameraController : MonoBehaviour
     void OnRotateLeft()
     {
         transform.Rotate(new Vector3(0, 1f, 0f), -50, Space.World);
+    }
+
+    void OnMenuOpen()
+    {
+        if (Time.timeScale == 0)
+        {
+            UnpauseGame();
+        }
+        else
+        {
+            PauseGame();
+        }
+    }
+
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void UnpauseGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void ExitToMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 }

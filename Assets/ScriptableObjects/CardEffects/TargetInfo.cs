@@ -37,6 +37,26 @@ public class TargetInfo
     public List<HashSet<TowerController>> AOETowers { get; } = new List<HashSet<TowerController>>();
     public List<HashSet<EnemyController>> AOEEnemies { get; } = new List<HashSet<EnemyController>>();
 
+    public void TargetAll(Card.TargetType type, WorldInfo worldInfo)
+    {
+        switch (type)
+        {
+            case Card.TargetType.Tiles:
+                foreach (TileController tile in worldInfo.worldController.GetComponentsInChildren(typeof(TileController), true))
+                    Tiles.Add(tile);
+                break;
+            case Card.TargetType.Towers:
+                foreach (TowerController tower in worldInfo.worldController.GetComponentsInChildren(typeof(TowerController), true))
+                    Towers.Add(tower);
+                break;
+            case Card.TargetType.Enemies:
+                foreach (EnemyController enemy in worldInfo.worldController.GetComponentsInChildren(typeof(EnemyController), true))
+                    Enemies.Add(enemy);
+                break;
+            case Card.TargetType.Cards: break;
+        }
+    }
+
     /// <summary>
     /// Applies the given area of effect to each of the targetted tiles
     /// </summary>

@@ -13,6 +13,11 @@ public class ShootProjectile : TowerBehaviour
     public GameObject ProjectilePrefab;
 
     /// <summary>
+    /// The audio to play when shooting projectile
+    /// </summary>
+    public AudioSource shootNoise;
+
+    /// <summary>
     /// The animator of the model that represents the tower
     /// </summary>
     public Animator TowerAnimator;
@@ -33,6 +38,11 @@ public class ShootProjectile : TowerBehaviour
     public int AnimationWait = 5;
 
     /// <summary>
+    /// Base amount of damage for projectiles to do on hit
+    /// </summary>
+    public float baseDamage = 5f;
+
+    /// <summary>
     /// Y position to spawn the projectile at
     /// </summary>
     public float ProjectileY = .5f;
@@ -40,7 +50,7 @@ public class ShootProjectile : TowerBehaviour
     /// <summary>
     /// Amount of time units left until the tower fires a new projectile
     /// </summary>
-    int projectileTimer;
+    public int projectileTimer;
 
     /// <summary>
     /// The rotation clockwise away from the tower's facing angle to shoot the projectile from.
@@ -56,14 +66,15 @@ public class ShootProjectile : TowerBehaviour
     {
         projectileTimer = InitialWait + AnimationWait;
         displacement = displacement.Rotated(-transform.localEulerAngles.y);
-
-        // Preload a few objects for the projectiles shot by the tower
-        SimplePool.Preload(ProjectilePrefab, 3);
     }
 
     protected override void Behave()
     {
-        projectileTimer -= 1;
+        if (!MainController.HasStatus(Card.Status.Frozen))
+            projectileTimer -= 1;
+
+        if ((Random.Range(0, 1f) < .1f) || projectileTimer < AnimationWait)
+            projectileTimer -= 1;
 
         if(projectileTimer == AnimationWait)
         {
@@ -73,6 +84,9 @@ public class ShootProjectile : TowerBehaviour
         if (projectileTimer < 0)
         {
             projectileTimer += ProjectileInterval;
+
+            if (shootNoise != null)
+                shootNoise.Play();
             SpawnProjectile();
         }
     }
@@ -80,16 +94,31 @@ public class ShootProjectile : TowerBehaviour
     /// <summary>
     /// Creates a projectile object and shoots it
     /// </summary>
-    void SpawnProjectile()
+    public void SpawnProjectile()
     {
         Vector3 projectilePosition = new Vector3(transform.position.x + displacement.x, ProjectileY, transform.position.z + displacement.y);
-        GameObject projectileObject = SimplePool.Spawn(ProjectilePrefab, projectilePosition, Quaternion.identity);
+        GameObject projectileObject = Instantiate(ProjectilePrefab, projectilePosition, Quaternion.identity);
         ProjectileController projectileController = projectileObject.GetComponent<ProjectileController>();
         projectileController.SetRotation(transform.localEulerAngles.y + rotation);
+        projectileController.baseDamage = GetDamage();
     }
 
-    public override string GetDescription()
+    /// <summary>
+    /// Returns how much damage the projectile should deal
+    /// </summary>
+    public float GetDamage()
     {
-        return "Projectile";
+        float damageAmount = baseDamage;
+
+        if (MainController.HasStatus(Card.Status.Attack_Up))
+            damageAmount *= 1.5f;
+        if (MainController.HasStatus(Card.Status.Attack_Down))
+            damageAmount *= 0.5f;
+
+        return damageAmount;
+    }
+
+    protected override void Died()
+    {
     }
 }

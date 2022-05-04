@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eae0be279bdd5f4caf48bac1284a64f, type: 3}
+  m_Name: Dark Ritual
+  m_EditorClassIdentifier: 
+  CardTitle: Luminous Ritual
+  CardImage: {fileID: 21300000, guid: a0d756e94fb238043b270991c981a5ec, type: 3}
+  ShowCardImageFrame: 1
+  ManaCosts: 0000000000000000010000000000000000000000
+  canBuildWith: 1
+  hasLeftBonus: 0
+  Type: 2
+  TowerSubtypes: 0
+  SpellSubtypes: 0
+  SkillSubtypes: 0
+  CardEffects:
+  - minTargets: 0
+    maxTargets: 0
+    overrideDescription: 
+    conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
+    qualityScript: {fileID: 0}
+    predicateScript: {fileID: 11500000, guid: 78d48e80a1514b142a6dbfd55aaf0e9a, type: 3}
+    condition:
+      id: 0
+    targetQuality:
+      id: 1
+    predicate:
+      id: 2
+  CardEffectsLeft: []
+  TowerPrefab: {fileID: 0}
+  LeftTowerPrefab: {fileID: 0}
+  additionalDescription: 
+  references:
+    version: 1
+    00000000:
+      type: {class: NoCondition, ns: , asm: Assembly-CSharp}
+    00000001:
+      type: {class: , ns: , asm: }
+    00000002:
+      type: {class: ChangeResources, ns: , asm: Assembly-CSharp}
+      data:
+        AffectedArea: {fileID: 0}
+        hpChange: 0
+        landPlaysChange: 0
+        noneManaChange: 3

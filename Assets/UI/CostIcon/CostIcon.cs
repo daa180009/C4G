@@ -12,8 +12,8 @@ public class CostIcon : MonoBehaviour
         set
         {
             iconImage.sprite = CardData.GetSpriteOfManaType(value);
-            iconImage.color = CardData.GetColorOfManaType(value);
-            GetComponent<Image>().color = CardData.GetColorOfManaType(value).AdjustedBrightness(.8f); 
+            //iconImage.color = CardData.GetColorOfManaType(value);
+            GetComponent<Image>().sprite = CardData.GetSpriteBackgroundOfManaType(value); 
         }
     }
 }

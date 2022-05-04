@@ -14,6 +14,8 @@ public class CardEffect
     public int minTargets = 0;
     public int maxTargets = 0;
 
+    public string overrideDescription = "";
+
 #if UNITY_EDITOR
     public MonoScript conditionScript;
     public MonoScript qualityScript;
@@ -70,6 +72,8 @@ public class CardEffect
             qualityScript = null;
             targetQuality = null;
         }
+
+        overrideDescription = EditorGUILayout.TextField("Override Description:", overrideDescription);
 
         EditorGUI.indentLevel--;
     }
@@ -139,6 +143,9 @@ public class CardEffect
         {
             return "";
         }
+
+        if (overrideDescription != "")
+            return overrideDescription;
 
         string returnString = condition.GetDescription(worldInfo);
 

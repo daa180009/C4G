@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: DiamondsTower
   m_EditorClassIdentifier: 
   CardTitle: Diamonds Tower
-  ManaCosts: 0200000000000000000000000000000000000000
+  CardImage: {fileID: 21300000, guid: 5ad3bbc750174974abedb273b45b5a81, type: 3}
+  ShowCardImageFrame: 0
+  ManaCosts: 0000000000000000000000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
   Type: 1
@@ -21,7 +23,9 @@ MonoBehaviour:
   SpellSubtypes: 0
   SkillSubtypes: 0
   CardEffects: []
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 1820236534691553018, guid: 8ced6092f872ffb49bdc892c996f33e0, type: 3}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: Generates <b>Diamonds mana</b>.
   references:
     version: 1

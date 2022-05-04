@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: SpadesTower
   m_EditorClassIdentifier: 
   CardTitle: Spades Tower
-  ManaCosts: 0200000000000000000000000000000000000000
+  CardImage: {fileID: 21300000, guid: 3d75b65bfd882734cbab9df408af305d, type: 3}
+  ShowCardImageFrame: 0
+  ManaCosts: 0000000000000000000000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
   Type: 1
@@ -21,7 +23,9 @@ MonoBehaviour:
   SpellSubtypes: 0
   SkillSubtypes: 0
   CardEffects: []
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 1820236534691553018, guid: 10140e9576b403b428ebfd4f7711aed8, type: 3}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: Generates <b>Spades mana</b>.
   references:
     version: 1

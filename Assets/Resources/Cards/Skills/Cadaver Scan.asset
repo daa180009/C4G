@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Cadaver Scan
   m_EditorClassIdentifier: 
   CardTitle: Cadaver Scan
-  ManaCosts: 0000000000000000000000000000000003000000
+  CardImage: {fileID: 21300000, guid: 27f80d9562e5b5646af3dde73e967f06, type: 3}
+  ShowCardImageFrame: 1
+  ManaCosts: 0100000000000000000000000000000002000000
   canBuildWith: 1
   hasLeftBonus: 0
   Type: 3
@@ -23,6 +25,7 @@ MonoBehaviour:
   CardEffects:
   - minTargets: 0
     maxTargets: 0
+    overrideDescription: 
     conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
     qualityScript: {fileID: 0}
     predicateScript: {fileID: 11500000, guid: dd9beea8a1397614f9c11ac0d006b09e, type: 3}
@@ -32,8 +35,10 @@ MonoBehaviour:
       id: 1
     predicate:
       id: 2
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 0}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: 
   references:
     version: 1
     00000000:

@@ -1,0 +1,64 @@
+\hypertarget{class_enemy_damage_area_of_effect}{}\doxysection{Enemy\+Damage\+Area\+Of\+Effect Class Reference}
+\label{class_enemy_damage_area_of_effect}\index{EnemyDamageAreaOfEffect@{EnemyDamageAreaOfEffect}}
+Inheritance diagram for Enemy\+Damage\+Area\+Of\+Effect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_enemy_damage_area_of_effect}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_enemy_damage_area_of_effect_ae81b9359366ca2b024eea50d4a476803}{Perform\+Predicate}} (\mbox{\hyperlink{class_target_info}{Target\+Info}} target\+Info, \mbox{\hyperlink{class_world_info}{World\+Info}} world\+Info, \mbox{\hyperlink{struct_resolution_info}{Resolution\+Info}} resolution\+Info)
+\item 
+override string \mbox{\hyperlink{class_enemy_damage_area_of_effect_a1589ed9377c48d893cdd11d6a05dd68e}{Get\+Description}} (\mbox{\hyperlink{class_world_info}{World\+Info}} world\+Info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_damage_area_of_effect_ae2c5c61296a3c5aa993bd39e2360e6e2}\label{class_enemy_damage_area_of_effect_ae2c5c61296a3c5aa993bd39e2360e6e2}} 
+float {\bfseries damage} = 3f
+\item 
+\mbox{\Hypertarget{class_enemy_damage_area_of_effect_a32a725332aab4668ac43b6aa7afe42c3}\label{class_enemy_damage_area_of_effect_a32a725332aab4668ac43b6aa7afe42c3}} 
+bool {\bfseries apply\+Status} = false
+\begin{DoxyCompactList}\small\item\em Whether or not to apply a status to hit enemies \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_damage_area_of_effect_a6b107e75bd74ea41a157979937b2dace}\label{class_enemy_damage_area_of_effect_a6b107e75bd74ea41a157979937b2dace}} 
+Card.\+Status {\bfseries status}
+\begin{DoxyCompactList}\small\item\em Which status to apply if so \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_damage_area_of_effect_adc6100d6cee8c2c99ee66c6e74c44e11}\label{class_enemy_damage_area_of_effect_adc6100d6cee8c2c99ee66c6e74c44e11}} 
+float {\bfseries duration}
+\begin{DoxyCompactList}\small\item\em How long said status should last upon application \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_damage_area_of_effect_a39d487bf7fe8f0facb7b9ec788cb3382}\label{class_enemy_damage_area_of_effect_a39d487bf7fe8f0facb7b9ec788cb3382}} 
+override Card.\+Target\+Type {\bfseries Target\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_damage_area_of_effect_a1589ed9377c48d893cdd11d6a05dd68e}\label{class_enemy_damage_area_of_effect_a1589ed9377c48d893cdd11d6a05dd68e}} 
+\index{EnemyDamageAreaOfEffect@{EnemyDamageAreaOfEffect}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!EnemyDamageAreaOfEffect@{EnemyDamageAreaOfEffect}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily override string Enemy\+Damage\+Area\+Of\+Effect.\+Get\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_world_info}{World\+Info}}}]{world\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_card_effect_predicate}{Card\+Effect\+Predicate}}.
+
+\mbox{\Hypertarget{class_enemy_damage_area_of_effect_ae81b9359366ca2b024eea50d4a476803}\label{class_enemy_damage_area_of_effect_ae81b9359366ca2b024eea50d4a476803}} 
+\index{EnemyDamageAreaOfEffect@{EnemyDamageAreaOfEffect}!PerformPredicate@{PerformPredicate}}
+\index{PerformPredicate@{PerformPredicate}!EnemyDamageAreaOfEffect@{EnemyDamageAreaOfEffect}}
+\doxysubsubsection{\texorpdfstring{PerformPredicate()}{PerformPredicate()}}
+{\footnotesize\ttfamily override void Enemy\+Damage\+Area\+Of\+Effect.\+Perform\+Predicate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_target_info}{Target\+Info}}}]{target\+Info,  }\item[{\mbox{\hyperlink{class_world_info}{World\+Info}}}]{world\+Info,  }\item[{\mbox{\hyperlink{struct_resolution_info}{Resolution\+Info}}}]{resolution\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_card_effect_predicate}{Card\+Effect\+Predicate}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scriptable\+Objects/\+Card\+Effects/\+Card\+Predicates/Enemy\+Damage\+Area\+Of\+Effect.\+cs\end{DoxyCompactItemize}

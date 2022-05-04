@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['registerdespawnedcb_0',['RegisterDespawnedCB',['../class_enemy_controller.html#a319077c5903077c6aee5063db8b56139',1,'EnemyController']]],
-  ['registerenemyspawnedcb_1',['RegisterEnemySpawnedCB',['../class_enemy_spawn_controller.html#a753f198f8051372609f2029ee5c82f5f',1,'EnemySpawnController']]],
-  ['registerhoveredcb_2',['RegisterHoveredCB',['../class_tile_controller.html#a84e7d79c5cda935124f4757ed3ec5861',1,'TileController']]],
-  ['rotatemodifier_3',['rotateModifier',['../class_camera_controller.html#a8aa35f8586cf6bd2b83d7a01bd7b4d34',1,'CameraController']]]
+  ['levelsavedata_0',['LevelSaveData',['../class_level_save_data.html',1,'']]],
+  ['lifelossamount_1',['LifeLossAmount',['../class_enemy_controller.html#ab221fe79c369253c30c4d721af4c559d',1,'EnemyController']]]
 ];

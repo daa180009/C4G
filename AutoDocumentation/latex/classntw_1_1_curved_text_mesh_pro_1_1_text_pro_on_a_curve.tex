@@ -1,0 +1,79 @@
+\hypertarget{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve}{}\doxysection{ntw.\+Curved\+Text\+Mesh\+Pro.\+Text\+Pro\+On\+ACurve Class Reference}
+\label{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve}\index{ntw.CurvedTextMeshPro.TextProOnACurve@{ntw.CurvedTextMeshPro.TextProOnACurve}}
+
+
+Base class for drawing a Text Pro text following a particular curve  
+
+
+Inheritance diagram for ntw.\+Curved\+Text\+Mesh\+Pro.\+Text\+Pro\+On\+ACurve\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve_a5910b2f84ecdd35f4bcfb5a417fb492f}\label{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve_a5910b2f84ecdd35f4bcfb5a417fb492f}} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Update \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve_ab79daca6e337837b778e83f973bf7763}{Parameters\+Have\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Method executed at every frame that checks if some parameters have been changed \end{DoxyCompactList}\item 
+abstract Matrix4x4 \mbox{\hyperlink{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve_a0c2d3b916bfefe1a75e47faacf1de014}{Compute\+Transformation\+Matrix}} (Vector3 char\+Mid\+Baseline\+Pos, float zero\+To\+One\+Pos, TMP\+\_\+\+Text\+Info text\+Info, int char\+Idx)
+\begin{DoxyCompactList}\small\item\em Computes the transformation matrix that maps the offsets of the vertices of each single character from the character\textquotesingle{}s center to the final destinations of the vertices so that the text follows a curve \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for drawing a Text Pro text following a particular curve 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve_a0c2d3b916bfefe1a75e47faacf1de014}\label{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve_a0c2d3b916bfefe1a75e47faacf1de014}} 
+\index{ntw.CurvedTextMeshPro.TextProOnACurve@{ntw.CurvedTextMeshPro.TextProOnACurve}!ComputeTransformationMatrix@{ComputeTransformationMatrix}}
+\index{ComputeTransformationMatrix@{ComputeTransformationMatrix}!ntw.CurvedTextMeshPro.TextProOnACurve@{ntw.CurvedTextMeshPro.TextProOnACurve}}
+\doxysubsubsection{\texorpdfstring{ComputeTransformationMatrix()}{ComputeTransformationMatrix()}}
+{\footnotesize\ttfamily abstract Matrix4x4 ntw.\+Curved\+Text\+Mesh\+Pro.\+Text\+Pro\+On\+ACurve.\+Compute\+Transformation\+Matrix (\begin{DoxyParamCaption}\item[{Vector3}]{char\+Mid\+Baseline\+Pos,  }\item[{float}]{zero\+To\+One\+Pos,  }\item[{TMP\+\_\+\+Text\+Info}]{text\+Info,  }\item[{int}]{char\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Computes the transformation matrix that maps the offsets of the vertices of each single character from the character\textquotesingle{}s center to the final destinations of the vertices so that the text follows a curve 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char\+Mid\+Baseline\+Posfloat} & Position of the central point of the character\\
+\hline
+{\em zero\+To\+One\+Pos} & Horizontal position of the character relative to the bounds of the box, in a range \mbox{[}0, 1\mbox{]}\\
+\hline
+{\em text\+Info} & Information on the text that we are showing\\
+\hline
+{\em char\+Idx} & Index of the character we have to compute the transformation for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Transformation matrix to be applied to all vertices of the text
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_circle_a194e18eb94ff9c035aa33e73ce27cdff}{ntw.\+Curved\+Text\+Mesh\+Pro.\+Text\+Pro\+On\+ACircle}}, and \mbox{\hyperlink{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_exp_ab615372cf777e344949a5eb5b7b85fc4}{ntw.\+Curved\+Text\+Mesh\+Pro.\+Text\+Pro\+On\+AExp}}.
+
+\mbox{\Hypertarget{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve_ab79daca6e337837b778e83f973bf7763}\label{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_curve_ab79daca6e337837b778e83f973bf7763}} 
+\index{ntw.CurvedTextMeshPro.TextProOnACurve@{ntw.CurvedTextMeshPro.TextProOnACurve}!ParametersHaveChanged@{ParametersHaveChanged}}
+\index{ParametersHaveChanged@{ParametersHaveChanged}!ntw.CurvedTextMeshPro.TextProOnACurve@{ntw.CurvedTextMeshPro.TextProOnACurve}}
+\doxysubsubsection{\texorpdfstring{ParametersHaveChanged()}{ParametersHaveChanged()}}
+{\footnotesize\ttfamily abstract bool ntw.\+Curved\+Text\+Mesh\+Pro.\+Text\+Pro\+On\+ACurve.\+Parameters\+Have\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method executed at every frame that checks if some parameters have been changed 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_circle_a5fdb9d89e4dd535bc0c6ffad0b7ad640}{ntw.\+Curved\+Text\+Mesh\+Pro.\+Text\+Pro\+On\+ACircle}}, and \mbox{\hyperlink{classntw_1_1_curved_text_mesh_pro_1_1_text_pro_on_a_exp_ad13c5a1b40ec50e2e02179696fc3786a}{ntw.\+Curved\+Text\+Mesh\+Pro.\+Text\+Pro\+On\+AExp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Curved\+Text\+Mesh\+Pro/\+Scripts/Text\+Pro\+On\+ACurve.\+cs\end{DoxyCompactItemize}

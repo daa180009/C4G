@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Spellseek
   m_EditorClassIdentifier: 
   CardTitle: Spellseek
+  CardImage: {fileID: 21300000, guid: 4fb7ad975e9be8946b3aeb7ee7395bad, type: 3}
   ManaCosts: 0000000000000000010000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
@@ -23,6 +24,7 @@ MonoBehaviour:
   CardEffects:
   - minTargets: 0
     maxTargets: 0
+    overrideDescription: 
     conditionScript: {fileID: 11500000, guid: cce934b28a7d1d44896c4bed0a3228cc, type: 3}
     qualityScript: {fileID: 0}
     predicateScript: {fileID: 11500000, guid: 028da6d127cc54347af50054389c3e2b, type: 3}
@@ -35,6 +37,7 @@ MonoBehaviour:
   CardEffectsLeft: []
   TowerPrefab: {fileID: 0}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: 
   references:
     version: 1
     00000000:

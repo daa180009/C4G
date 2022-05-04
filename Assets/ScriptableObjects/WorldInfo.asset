@@ -16,3 +16,6 @@ MonoBehaviour:
   HandZone: {fileID: 11400000, guid: 9c1329845d257c94ca47cee3c04615bd, type: 2}
   DeckZone: {fileID: 11400000, guid: 6e9813d50e647c14c82a3b4473cc5f2c, type: 2}
   ResolutionZone: {fileID: 11400000, guid: f4ecbbca8e1a37b41a7ba4a8fe990da4, type: 2}
+  playerResourceManager: {fileID: 11400000, guid: 8f692e2ce7bfc8b48b38c3c44f84f4d5, type: 2}
+  cardGameController: {fileID: 0}
+  worldController: {fileID: 0}

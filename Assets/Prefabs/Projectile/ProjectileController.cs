@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
+    // if evil, hurts towers, otherwise hurts enemies
+    public bool isEvil = false;
+
+    public float acceleration = 100f;
+
     Tile.TileDirection facingDirection;
     public Tile.TileDirection FacingDirection
     {
@@ -19,6 +24,11 @@ public class ProjectileController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// How much damage to deal upon collision with enemy
+    /// </summary>
+    public float baseDamage;
+
     void OnEnable()
     {
         GetComponent<Rigidbody>().velocity = Vector3.zero;
@@ -28,7 +38,7 @@ public class ProjectileController : MonoBehaviour
     {
         if(GetComponent<Rigidbody>().velocity.magnitude < .01)
         {
-            GetComponent<Rigidbody>().AddForce(100 * transform.forward);
+            GetComponent<Rigidbody>().AddForce(acceleration * transform.forward);
         }
 
         TileController underTile;
@@ -58,17 +68,37 @@ public class ProjectileController : MonoBehaviour
     }
 
     /// <summary>
+    /// Calculates the damage to deal to the hit enemy
+    /// </summary>
+    /// <param name="enemy"></param>
+    /// <returns></returns>
+    public float GetDamage(EnemyController enemy)
+    {
+        return baseDamage;
+    }
+
+    /// <summary>
+    /// Calculates the damage to deal to the hit tower
+    /// </summary>
+    /// <param name="tower"></param>
+    /// <returns></returns>
+    public float GetDamage(TowerController tower)
+    {
+        return baseDamage;
+    }
+
+    /// <summary>
     /// Destroys the projectile
     /// </summary>
     void Despawn()
     {
-        SimplePool.Despawn(gameObject);
+        Destroy(gameObject);
     }
 
     /// <summary>
-    /// Called when the projectile collides wihth an enemy
+    /// Called when the projectile collides wiht an enemy
     /// </summary>
-    public void HitEnemy()
+    public void Hit()
     {
         Despawn();
     }

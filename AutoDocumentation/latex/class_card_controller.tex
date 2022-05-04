@@ -1,0 +1,99 @@
+\hypertarget{class_card_controller}{}\doxysection{Card\+Controller Class Reference}
+\label{class_card_controller}\index{CardController@{CardController}}
+
+
+The UI element representing a card in the user\textquotesingle{}s hand or otherwise viewable by the user  
+
+
+Inheritance diagram for Card\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_card_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_controller_ac155a8c84e80dda396e5ee6201105c34}\label{class_card_controller_ac155a8c84e80dda396e5ee6201105c34}} 
+void {\bfseries Register\+Hovered} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when the user hovers over this card \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_af0840e07c556e28a4ff407ca5780935b}\label{class_card_controller_af0840e07c556e28a4ff407ca5780935b}} 
+void {\bfseries Unregister\+Hovered} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ cb)
+\item 
+\mbox{\Hypertarget{class_card_controller_ac02310d62785cf63dff4202be15ace3d}\label{class_card_controller_ac02310d62785cf63dff4202be15ace3d}} 
+void {\bfseries Register\+Unhovered} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when the user stops hovering over this card \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_a8212b07a921ab663a2545a851d62cf40}\label{class_card_controller_a8212b07a921ab663a2545a851d62cf40}} 
+void {\bfseries Unregister\+Unhovered} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ cb)
+\item 
+\mbox{\Hypertarget{class_card_controller_a5a5577b55901f0263c2b619c5d259bab}\label{class_card_controller_a5a5577b55901f0263c2b619c5d259bab}} 
+void {\bfseries Register\+Played} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ cb)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when the user attempts to play this card \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_a6bcb15d324b56e86761493968aa3e5a8}\label{class_card_controller_a6bcb15d324b56e86761493968aa3e5a8}} 
+void {\bfseries Unregister\+Played} (Action$<$ \mbox{\hyperlink{class_card_controller}{Card\+Controller}} $>$ cb)
+\item 
+\mbox{\Hypertarget{class_card_controller_ab3658c6ff87f76aeea43e5e050a3e554}\label{class_card_controller_ab3658c6ff87f76aeea43e5e050a3e554}} 
+void {\bfseries On\+Hover} (\mbox{\hyperlink{class_visual_card_controller}{Visual\+Card\+Controller}} own\+Visual\+Card)
+\item 
+\mbox{\Hypertarget{class_card_controller_a9822c464b609fc14546b62d817ae2664}\label{class_card_controller_a9822c464b609fc14546b62d817ae2664}} 
+void {\bfseries On\+Unhover} (\mbox{\hyperlink{class_visual_card_controller}{Visual\+Card\+Controller}} own\+Visual\+Card)
+\item 
+\mbox{\Hypertarget{class_card_controller_ab246dced602055f1fcb7ed6e1940e3de}\label{class_card_controller_ab246dced602055f1fcb7ed6e1940e3de}} 
+void {\bfseries On\+Click} (\mbox{\hyperlink{class_visual_card_controller}{Visual\+Card\+Controller}} own\+Visual\+Card)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_controller_a558ba693d126dffcd6d7a7cb63375563}\label{class_card_controller_a558ba693d126dffcd6d7a7cb63375563}} 
+\mbox{\hyperlink{class_visual_card_controller}{Visual\+Card\+Controller}} {\bfseries visual\+Card}
+\item 
+\mbox{\Hypertarget{class_card_controller_aed38c395bc1397049ffc8026c5e9ac38}\label{class_card_controller_aed38c395bc1397049ffc8026c5e9ac38}} 
+Rect\+Transform.\+Edge {\bfseries horizontal\+Edge} = Rect\+Transform.\+Edge.\+Left
+\begin{DoxyCompactList}\small\item\em Which edge to align the card with horizontally \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_ad38cdfd4a2ef4ac0592f4235a4c87c58}\label{class_card_controller_ad38cdfd4a2ef4ac0592f4235a4c87c58}} 
+Rect\+Transform.\+Edge {\bfseries vertical\+Edge} = Rect\+Transform.\+Edge.\+Bottom
+\begin{DoxyCompactList}\small\item\em Which edge to align the card with vertically \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_a4c3620a645f9b2df02748faf29698c46}\label{class_card_controller_a4c3620a645f9b2df02748faf29698c46}} 
+float {\bfseries TargetX} = 0f
+\begin{DoxyCompactList}\small\item\em The x position to move the visual card to over time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_a53016c81dc01cd15670fa1882dbcb731}\label{class_card_controller_a53016c81dc01cd15670fa1882dbcb731}} 
+float {\bfseries TargetY} = 0f
+\begin{DoxyCompactList}\small\item\em The y position (from the bottom of the parent) to move the visual card to over time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_a05bd5491f732d5a480e8d78e6e8040b7}\label{class_card_controller_a05bd5491f732d5a480e8d78e6e8040b7}} 
+float {\bfseries Target\+Rotation} = 0f
+\begin{DoxyCompactList}\small\item\em The z-\/rotation to move the visual card to over time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_a308961d1fb54dab8345753f124423173}\label{class_card_controller_a308961d1fb54dab8345753f124423173}} 
+float {\bfseries Target\+ScaleX} = 1f
+\begin{DoxyCompactList}\small\item\em The horizontal scale to change the visual card to over time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_ade6dc1e9625e50e08153e184a3edc3c9}\label{class_card_controller_ade6dc1e9625e50e08153e184a3edc3c9}} 
+float {\bfseries Target\+ScaleY} = 1f
+\begin{DoxyCompactList}\small\item\em The vertical scale to change the visual card to over time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_a1d2f29b24a019971980679f4dfcb9247}\label{class_card_controller_a1d2f29b24a019971980679f4dfcb9247}} 
+int {\bfseries double\+Clicked\+Timer} = 0
+\begin{DoxyCompactList}\small\item\em The ticks since the last time the card was clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_controller_a83c03f54433a5c1488e503bd60028b1a}\label{class_card_controller_a83c03f54433a5c1488e503bd60028b1a}} 
+\mbox{\hyperlink{class_card_data}{Card\+Data}} {\bfseries Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_card_controller_a7f6dddc56f6c081f53fce2bce2ab906e}\label{class_card_controller_a7f6dddc56f6c081f53fce2bce2ab906e}} 
+float {\bfseries Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_card_controller_a015db4ed715f34d01a74f83a47b23112}\label{class_card_controller_a015db4ed715f34d01a74f83a47b23112}} 
+float {\bfseries Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_card_controller_aeeb55221be2195b976a9e78b8eb4c975}\label{class_card_controller_aeeb55221be2195b976a9e78b8eb4c975}} 
+float {\bfseries Target\+Glow\+Alpha}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The alpha for the glowing border around the card \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_controller_a4773c547b46823cb4b83e4326b1a5779}\label{class_card_controller_a4773c547b46823cb4b83e4326b1a5779}} 
+Color {\bfseries Target\+Border\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The colour of the card\textquotesingle{}s border \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The UI element representing a card in the user\textquotesingle{}s hand or otherwise viewable by the user 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Controllers/Card\+Controller.\+cs\end{DoxyCompactItemize}

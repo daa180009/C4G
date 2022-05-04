@@ -1,0 +1,78 @@
+\hypertarget{class_card_game_controller}{}\doxysection{Card\+Game\+Controller Class Reference}
+\label{class_card_game_controller}\index{CardGameController@{CardGameController}}
+
+
+Master class for controlling high level aspects of the card game, such as moving cards between zones.  
+
+
+Inheritance diagram for Card\+Game\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_card_game_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_game_controller_ad38efd52fc834ffa398619d413dfe355}\label{class_card_game_controller_ad38efd52fc834ffa398619d413dfe355}} 
+bool {\bfseries At\+Maximum\+Hand\+Size} (int with\+Additional=0)
+\begin{DoxyCompactList}\small\item\em Returns whether or not the player is at their maximum hand size. Pass in an int to see if the player would also be at max hand size with that many cards added/removed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_game_controller_ad84b78c424314cba3bff1db156407358}\label{class_card_game_controller_ad84b78c424314cba3bff1db156407358}} 
+void {\bfseries Draw\+Card} (int number\+Of\+Cards=1)
+\begin{DoxyCompactList}\small\item\em Draw one or more cards from the deck into hand. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_game_controller_a9bfd4529d584293cc89980c68a0074d2}\label{class_card_game_controller_a9bfd4529d584293cc89980c68a0074d2}} 
+void {\bfseries Draw\+Yard\+Towers} (int number\+Of\+Cards=1)
+\item 
+\mbox{\Hypertarget{class_card_game_controller_a6cc6b05b2228860382a4439e8fe69ea9}\label{class_card_game_controller_a6cc6b05b2228860382a4439e8fe69ea9}} 
+void {\bfseries Draw\+Yard\+Spells} (int number\+Of\+Cards=1)
+\item 
+\mbox{\Hypertarget{class_card_game_controller_a39597ef5352f4665d3ce417fce9a33b6}\label{class_card_game_controller_a39597ef5352f4665d3ce417fce9a33b6}} 
+void {\bfseries Play\+Yard\+Tower} ()
+\item 
+\mbox{\Hypertarget{class_card_game_controller_a10366ac2fa794cd26006e3b84cabb591}\label{class_card_game_controller_a10366ac2fa794cd26006e3b84cabb591}} 
+void {\bfseries Discard\+Card} (int number\+Of\+Cards=1)
+\begin{DoxyCompactList}\small\item\em Discard one or more cards from their hand to discard \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_game_controller_a13a7a238e45f0ee4b4ac2a7f3f60c33d}\label{class_card_game_controller_a13a7a238e45f0ee4b4ac2a7f3f60c33d}} 
+void {\bfseries Discard\+Right} (int number\+Of\+Cards=1)
+\item 
+\mbox{\Hypertarget{class_card_game_controller_a180c9f6c6f9b1a13a7f464861b9af98a}\label{class_card_game_controller_a180c9f6c6f9b1a13a7f464861b9af98a}} 
+bool {\bfseries Attempt\+Play} (\mbox{\hyperlink{class_card_controller}{Card\+Controller}} card\+Controller)
+\begin{DoxyCompactList}\small\item\em When player tries to play a card from their hand \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_game_controller_a7796e75e2236edd0faee021445390ae4}\label{class_card_game_controller_a7796e75e2236edd0faee021445390ae4}} 
+void {\bfseries On\+Cycle\+End} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_card_game_controller_a1da3778a6a59ef10b46751216b2827c7}\label{class_card_game_controller_a1da3778a6a59ef10b46751216b2827c7}} 
+\mbox{\hyperlink{class_player_resource_manager}{Player\+Resource\+Manager}} {\bfseries player\+Resource\+Manager}
+\item 
+\mbox{\Hypertarget{class_card_game_controller_af3578bfde32834e4f2ae320778992afe}\label{class_card_game_controller_af3578bfde32834e4f2ae320778992afe}} 
+\mbox{\hyperlink{class_card_resolution_controller}{Card\+Resolution\+Controller}} {\bfseries card\+Resolution\+Controller}
+\item 
+\mbox{\Hypertarget{class_card_game_controller_a3a76e034666bff13122d9cebf62053f6}\label{class_card_game_controller_a3a76e034666bff13122d9cebf62053f6}} 
+\mbox{\hyperlink{class_world_info}{World\+Info}} {\bfseries world\+Info}
+\item 
+\mbox{\Hypertarget{class_card_game_controller_a28361b46d8b424577164478bdb20ef62}\label{class_card_game_controller_a28361b46d8b424577164478bdb20ef62}} 
+\mbox{\hyperlink{class_game_event}{Game\+Event}} {\bfseries cycle\+End}
+\begin{DoxyCompactList}\small\item\em Event that is invoked at the end of a cycle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_game_controller_acc52a8dbfdd2284d1115bd0b49a476dc}\label{class_card_game_controller_acc52a8dbfdd2284d1115bd0b49a476dc}} 
+List$<$ \mbox{\hyperlink{class_card_data}{Card\+Data}} $>$ {\bfseries Initial\+Deck}
+\begin{DoxyCompactList}\small\item\em The cards the player starts the match with in their deck \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_game_controller_aa6297892e5b234d63c3bcda9c7a13aa6}\label{class_card_game_controller_aa6297892e5b234d63c3bcda9c7a13aa6}} 
+\mbox{\hyperlink{class_card_zone}{Card\+Zone}} {\bfseries Deck\+Zone}
+\begin{DoxyCompactList}\small\item\em The zone representing the user\textquotesingle{}s deck of cards that they can draw from \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_game_controller_aa037eb205074d3d872c2d4c6ee42a1e3}\label{class_card_game_controller_aa037eb205074d3d872c2d4c6ee42a1e3}} 
+\mbox{\hyperlink{class_card_zone}{Card\+Zone}} {\bfseries Hand\+Zone}
+\begin{DoxyCompactList}\small\item\em The zone representing the user\textquotesingle{}s hand and thus the cards they can play \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_card_game_controller_a32673e91f7791509d0367f2c4884df8c}\label{class_card_game_controller_a32673e91f7791509d0367f2c4884df8c}} 
+\mbox{\hyperlink{class_card_zone}{Card\+Zone}} {\bfseries Discard\+Zone}
+\begin{DoxyCompactList}\small\item\em The zone where cards go after resolving \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Master class for controlling high level aspects of the card game, such as moving cards between zones. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Controllers/Card\+Game\+Controller.\+cs\end{DoxyCompactItemize}

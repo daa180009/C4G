@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['enemycontroller_0',['EnemyController',['../class_enemy_controller.html',1,'']]],
-  ['enemyspawncontroller_1',['EnemySpawnController',['../class_enemy_spawn_controller.html',1,'']]]
+  ['behaviour_5fareaofeffect_0',['Behaviour_AreaOfEffect',['../class_behaviour___area_of_effect.html',1,'']]]
 ];

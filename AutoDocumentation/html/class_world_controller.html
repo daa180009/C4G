@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ReapersKeep.png"/></td>
   <td id="projectalign">
-   <div id="projectname">C4G<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">C4G<span id="projectnumber">&#160;0.2</span>
    </div>
    <div id="projectbrief">Just a short tower defense game</div>
   </td>
@@ -64,6 +65,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_world_controller-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WorldController Class Reference</div></div>
@@ -76,29 +78,93 @@ Inheritance diagram for WorldController:</div>
   <img src="class_world_controller.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab07820a237cf6a954ae0b085d3e6a7b0"><td class="memItemLeft" align="right" valign="top"><a id="ab07820a237cf6a954ae0b085d3e6a7b0" name="ab07820a237cf6a954ae0b085d3e6a7b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SpawnTower</b> (GameObject towerPrefab, <a class="el" href="class_tile_controller.html">TileController</a> parentTile, Tile.TileDirection facingDirection, <a class="el" href="class_card_data.html">CardData</a> cardData=null)</td></tr>
+<tr class="memdesc:ab07820a237cf6a954ae0b085d3e6a7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new tower object with the parameters as settings and places it in the world <br /></td></tr>
+<tr class="separator:ab07820a237cf6a954ae0b085d3e6a7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f49d9be85184e6b5a9f9de49c28ce7"><td class="memItemLeft" align="right" valign="top"><a id="a74f49d9be85184e6b5a9f9de49c28ce7" name="a74f49d9be85184e6b5a9f9de49c28ce7"></a>
+List&lt; <a class="el" href="class_tile_controller.html">TileController</a> &gt;[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetAreaAroundTile</b> (<a class="el" href="class_tile_controller.html">TileController</a> tile, <a class="el" href="class_area_of_effect.html">AreaOfEffect</a> area, Tile.TileDirection direction=Tile.TileDirection.None)</td></tr>
+<tr class="separator:a74f49d9be85184e6b5a9f9de49c28ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6141bf44f0f11d7b194617d726d390c1"><td class="memItemLeft" align="right" valign="top"><a id="a6141bf44f0f11d7b194617d726d390c1" name="a6141bf44f0f11d7b194617d726d390c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveLevelData</b> ()</td></tr>
+<tr class="separator:a6141bf44f0f11d7b194617d726d390c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b672b233c0dd63c4449f26a924261b3"><td class="memItemLeft" align="right" valign="top"><a id="a0b672b233c0dd63c4449f26a924261b3" name="a0b672b233c0dd63c4449f26a924261b3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadLevelData</b> ()</td></tr>
+<tr class="separator:a0b672b233c0dd63c4449f26a924261b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a33bb396ebb0b7b9f6e3f49679daf8975"><td class="memItemLeft" align="right" valign="top"><a id="a33bb396ebb0b7b9f6e3f49679daf8975" name="a33bb396ebb0b7b9f6e3f49679daf8975"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>tilePrefab</b></td></tr>
-<tr class="separator:a33bb396ebb0b7b9f6e3f49679daf8975"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88d88b7959d23cf023c28beb9b3fa62f"><td class="memItemLeft" align="right" valign="top"><a id="a88d88b7959d23cf023c28beb9b3fa62f" name="a88d88b7959d23cf023c28beb9b3fa62f"></a>
-<a class="el" href="class_stage_data.html">StageData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stageData</b></td></tr>
-<tr class="separator:a88d88b7959d23cf023c28beb9b3fa62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a801e1e640e2e99efb690e1438184fdcc"><td class="memItemLeft" align="right" valign="top"><a id="a801e1e640e2e99efb690e1438184fdcc" name="a801e1e640e2e99efb690e1438184fdcc"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>cameraController</b></td></tr>
-<tr class="separator:a801e1e640e2e99efb690e1438184fdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35bbadf0e6f956d4a3fd0efa8f9704a9"><td class="memItemLeft" align="right" valign="top"><a id="a35bbadf0e6f956d4a3fd0efa8f9704a9" name="a35bbadf0e6f956d4a3fd0efa8f9704a9"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>towerPreviewController</b></td></tr>
-<tr class="separator:a35bbadf0e6f956d4a3fd0efa8f9704a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75d88549ace67fab7ae5cb816cbb2bed"><td class="memItemLeft" align="right" valign="top"><a id="a75d88549ace67fab7ae5cb816cbb2bed" name="a75d88549ace67fab7ae5cb816cbb2bed"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>enemySpawnController</b></td></tr>
-<tr class="separator:a75d88549ace67fab7ae5cb816cbb2bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dbb1e55aaf13af2f86fa400dc2d06ff"><td class="memItemLeft" align="right" valign="top"><a id="a5dbb1e55aaf13af2f86fa400dc2d06ff" name="a5dbb1e55aaf13af2f86fa400dc2d06ff"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>minimapCameraController</b></td></tr>
-<tr class="separator:a5dbb1e55aaf13af2f86fa400dc2d06ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3ab05db28cf638ba47bf24a7121c32"><td class="memItemLeft" align="right" valign="top"><a id="acd3ab05db28cf638ba47bf24a7121c32" name="acd3ab05db28cf638ba47bf24a7121c32"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>floorPrefab</b></td></tr>
+<tr class="separator:acd3ab05db28cf638ba47bf24a7121c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a83e390e305518ec83dad219b1ea739"><td class="memItemLeft" align="right" valign="top"><a id="a3a83e390e305518ec83dad219b1ea739" name="a3a83e390e305518ec83dad219b1ea739"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>raisedPrefab</b></td></tr>
+<tr class="separator:a3a83e390e305518ec83dad219b1ea739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51cc05d9372551932c1407e6ca9075c"><td class="memItemLeft" align="right" valign="top"><a id="ad51cc05d9372551932c1407e6ca9075c" name="ad51cc05d9372551932c1407e6ca9075c"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>barrierPrefab</b></td></tr>
+<tr class="separator:ad51cc05d9372551932c1407e6ca9075c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad221de842abcf4811ae163a63db1f8b4"><td class="memItemLeft" align="right" valign="top"><a id="ad221de842abcf4811ae163a63db1f8b4" name="ad221de842abcf4811ae163a63db1f8b4"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>wallPrefab</b></td></tr>
+<tr class="separator:ad221de842abcf4811ae163a63db1f8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56ba41ba607cecece2227138ef2c6d4"><td class="memItemLeft" align="right" valign="top"><a id="ab56ba41ba607cecece2227138ef2c6d4" name="ab56ba41ba607cecece2227138ef2c6d4"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>entrancePrefab</b></td></tr>
+<tr class="separator:ab56ba41ba607cecece2227138ef2c6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a336f1e7936915399bdf80dee0d710c9d"><td class="memItemLeft" align="right" valign="top"><a id="a336f1e7936915399bdf80dee0d710c9d" name="a336f1e7936915399bdf80dee0d710c9d"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>exitPrefab</b></td></tr>
+<tr class="separator:a336f1e7936915399bdf80dee0d710c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de1a8c619c30cf1dd1702424855b535"><td class="memItemLeft" align="right" valign="top"><a id="a3de1a8c619c30cf1dd1702424855b535" name="a3de1a8c619c30cf1dd1702424855b535"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDebug</b> = false</td></tr>
+<tr class="separator:a3de1a8c619c30cf1dd1702424855b535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd169b49758032b3d11c88dad1293232"><td class="memItemLeft" align="right" valign="top"><a id="afd169b49758032b3d11c88dad1293232" name="afd169b49758032b3d11c88dad1293232"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>centralColumn</b></td></tr>
+<tr class="separator:afd169b49758032b3d11c88dad1293232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c818cdace394508eccc1ba0e3b52b8"><td class="memItemLeft" align="right" valign="top"><a id="aa4c818cdace394508eccc1ba0e3b52b8" name="aa4c818cdace394508eccc1ba0e3b52b8"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>initialManaTowerPrefab</b></td></tr>
+<tr class="separator:aa4c818cdace394508eccc1ba0e3b52b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5802c50977b27e958781123d3fab86"><td class="memItemLeft" align="right" valign="top"><a id="a1f5802c50977b27e958781123d3fab86" name="a1f5802c50977b27e958781123d3fab86"></a>
+<a class="el" href="class_world_info.html">WorldInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>worldInfo</b></td></tr>
+<tr class="separator:a1f5802c50977b27e958781123d3fab86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d2a09ce41201d74b23092dd92bd480a"><td class="memItemLeft" align="right" valign="top"><a id="a5d2a09ce41201d74b23092dd92bd480a" name="a5d2a09ce41201d74b23092dd92bd480a"></a>
+<a class="el" href="class_stage_data.html">StageData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultStageData</b></td></tr>
+<tr class="separator:a5d2a09ce41201d74b23092dd92bd480a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074051abf01c24c45ed4b4715ce0ff60"><td class="memItemLeft" align="right" valign="top"><a id="a074051abf01c24c45ed4b4715ce0ff60" name="a074051abf01c24c45ed4b4715ce0ff60"></a>
+<a class="el" href="class_player_resource_manager.html">PlayerResourceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>playerResourceManager</b></td></tr>
+<tr class="separator:a074051abf01c24c45ed4b4715ce0ff60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ee9be7d44751b521cfd60ac1f9a444"><td class="memItemLeft" align="right" valign="top"><a id="ae3ee9be7d44751b521cfd60ac1f9a444" name="ae3ee9be7d44751b521cfd60ac1f9a444"></a>
+<a class="el" href="class_game_event.html">GameEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>roundBegin</b></td></tr>
+<tr class="separator:ae3ee9be7d44751b521cfd60ac1f9a444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a00f691cf9a6eb6f162bd53ddcd2dc"><td class="memItemLeft" align="right" valign="top"><a id="ae7a00f691cf9a6eb6f162bd53ddcd2dc" name="ae7a00f691cf9a6eb6f162bd53ddcd2dc"></a>
+<a class="el" href="class_game_event.html">GameEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>roundEnd</b></td></tr>
+<tr class="separator:ae7a00f691cf9a6eb6f162bd53ddcd2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7e171494d17367cb986fe1b2b8dfb7"><td class="memItemLeft" align="right" valign="top"><a id="acb7e171494d17367cb986fe1b2b8dfb7" name="acb7e171494d17367cb986fe1b2b8dfb7"></a>
+<a class="el" href="class_camera_controller.html">CameraController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cameraController</b></td></tr>
+<tr class="separator:acb7e171494d17367cb986fe1b2b8dfb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb1be03f1a795cb3a12afbba13effd7"><td class="memItemLeft" align="right" valign="top"><a id="aecb1be03f1a795cb3a12afbba13effd7" name="aecb1be03f1a795cb3a12afbba13effd7"></a>
+<a class="el" href="class_enemy_spawn_controller.html">EnemySpawnController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>enemySpawnController</b></td></tr>
+<tr class="separator:aecb1be03f1a795cb3a12afbba13effd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2241d85e912209a0b3522ed48e31f1b4"><td class="memItemLeft" align="right" valign="top"><a id="a2241d85e912209a0b3522ed48e31f1b4" name="a2241d85e912209a0b3522ed48e31f1b4"></a>
+<a class="el" href="class_target_selection_controller.html">TargetSelectionController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>targetSelectionController</b></td></tr>
+<tr class="separator:a2241d85e912209a0b3522ed48e31f1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a132ca62342be1d86105b7140b4d363b2"><td class="memItemLeft" align="right" valign="top"><a id="a132ca62342be1d86105b7140b4d363b2" name="a132ca62342be1d86105b7140b4d363b2"></a>
+<a class="el" href="class_card_game_controller.html">CardGameController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cardGameController</b></td></tr>
+<tr class="separator:a132ca62342be1d86105b7140b4d363b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c5db2b10e56a5970091773ba4cf107"><td class="memItemLeft" align="right" valign="top"><a id="af1c5db2b10e56a5970091773ba4cf107" name="af1c5db2b10e56a5970091773ba4cf107"></a>
+<a class="el" href="class_minimap_controller.html">MinimapController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>minimapCameraController</b></td></tr>
+<tr class="separator:af1c5db2b10e56a5970091773ba4cf107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfcafcf28045c8de201d7598ac00e984"><td class="memItemLeft" align="right" valign="top"><a id="acfcafcf28045c8de201d7598ac00e984" name="acfcafcf28045c8de201d7598ac00e984"></a>
+<a class="el" href="class_cycle_controller.html">CycleController</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cycleController</b></td></tr>
+<tr class="separator:acfcafcf28045c8de201d7598ac00e984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3482226607bf76721e9ef4b70e8f631b"><td class="memItemLeft" align="right" valign="top"><a id="a3482226607bf76721e9ef4b70e8f631b" name="a3482226607bf76721e9ef4b70e8f631b"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>water</b></td></tr>
+<tr class="separator:a3482226607bf76721e9ef4b70e8f631b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5230470cbf2172e0c0272de662473dc4"><td class="memItemLeft" align="right" valign="top"><a id="a5230470cbf2172e0c0272de662473dc4" name="a5230470cbf2172e0c0272de662473dc4"></a>
 GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>tilesContainer</b></td></tr>
 <tr class="separator:a5230470cbf2172e0c0272de662473dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c0443ed48a5308c0374c6c94186c98e"><td class="memItemLeft" align="right" valign="top"><a id="a8c0443ed48a5308c0374c6c94186c98e" name="a8c0443ed48a5308c0374c6c94186c98e"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>towersContainer</b></td></tr>
+<tr class="separator:a8c0443ed48a5308c0374c6c94186c98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac511a9080a754eb213d208dd216858eb"><td class="memItemLeft" align="right" valign="top"><a id="ac511a9080a754eb213d208dd216858eb" name="ac511a9080a754eb213d208dd216858eb"></a>
 <a class="el" href="class_tile_controller.html">TileController</a>[,]&#160;</td><td class="memItemRight" valign="bottom"><b>Tiles</b></td></tr>
 <tr class="separator:ac511a9080a754eb213d208dd216858eb"><td class="memSeparator" colspan="2">&#160;</td></tr>

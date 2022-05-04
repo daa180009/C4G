@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SlimeSentinel
   m_EditorClassIdentifier: 
   CardTitle: Slime Sentinel
+  CardImage: {fileID: 21300000, guid: 3eb889ebc0af74b4fbe93d949a3bc194, type: 3}
   ManaCosts: 0100000001000000000000000000000000000000
   canBuildWith: 1
   hasLeftBonus: 0
@@ -21,7 +22,9 @@ MonoBehaviour:
   SpellSubtypes: 0
   SkillSubtypes: 0
   CardEffects: []
+  CardEffectsLeft: []
   TowerPrefab: {fileID: 1820236534691553018, guid: f59e3ea2126e75b4ba167962b745df6b, type: 3}
   LeftTowerPrefab: {fileID: 0}
+  additionalDescription: Shoots a projectile forward that damages enemies.
   references:
     version: 1

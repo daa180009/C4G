@@ -1,0 +1,107 @@
+\hypertarget{class_behaviour___area_of_effect}{}\doxysection{Behaviour\+\_\+\+Area\+Of\+Effect Class Reference}
+\label{class_behaviour___area_of_effect}\index{Behaviour\_AreaOfEffect@{Behaviour\_AreaOfEffect}}
+Inheritance diagram for Behaviour\+\_\+\+Area\+Of\+Effect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_behaviour___area_of_effect}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a7f0345ae080995f3830270cd2a51bb4e}\label{class_behaviour___area_of_effect_a7f0345ae080995f3830270cd2a51bb4e}} 
+Animator {\bfseries Tower\+Animator}
+\begin{DoxyCompactList}\small\item\em The animator of the model that represents the tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_abb5f62e20df9ecb836b306815834952e}\label{class_behaviour___area_of_effect_abb5f62e20df9ecb836b306815834952e}} 
+Audio\+Source {\bfseries attack\+Noise}
+\begin{DoxyCompactList}\small\item\em The audio to play when shooting projectile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_ae05aef57e9731cd8574173451a3df065}\label{class_behaviour___area_of_effect_ae05aef57e9731cd8574173451a3df065}} 
+int {\bfseries Attack\+Interval}
+\begin{DoxyCompactList}\small\item\em How long to wait before each attack after the last \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a9f817c41a0a49700bafaa6e820d9b3a7}\label{class_behaviour___area_of_effect_a9f817c41a0a49700bafaa6e820d9b3a7}} 
+int {\bfseries Initial\+Wait} = 0
+\begin{DoxyCompactList}\small\item\em How long to wait when first created in addition to attack interval \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a32fa3fde4cb57bba36e75e3f24002ed1}\label{class_behaviour___area_of_effect_a32fa3fde4cb57bba36e75e3f24002ed1}} 
+int {\bfseries Animation\+Wait} = 5
+\begin{DoxyCompactList}\small\item\em How long before the attack is fired to trigger the animation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_af7c5f0bef9bc9c0d54d0079e1675f1a5}\label{class_behaviour___area_of_effect_af7c5f0bef9bc9c0d54d0079e1675f1a5}} 
+float {\bfseries base\+Damage} = 1f
+\begin{DoxyCompactList}\small\item\em Base amount of damage to do to enemies on hit \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a88bb18cf30d84d0d834ecfd543dfc204}\label{class_behaviour___area_of_effect_a88bb18cf30d84d0d834ecfd543dfc204}} 
+bool {\bfseries apply\+Status} = false
+\begin{DoxyCompactList}\small\item\em Whether or not to apply a status to hit enemies \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a1baa5ba389a2dfa3a081b23e78400f6f}\label{class_behaviour___area_of_effect_a1baa5ba389a2dfa3a081b23e78400f6f}} 
+Card.\+Status {\bfseries status}
+\begin{DoxyCompactList}\small\item\em Which status to apply if so \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_ab35b64ddc071db6429ffd9349d15c47b}\label{class_behaviour___area_of_effect_ab35b64ddc071db6429ffd9349d15c47b}} 
+float {\bfseries duration}
+\begin{DoxyCompactList}\small\item\em How long said status should last upon application \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_ac86b9f52184bededd63e239612fb6528}\label{class_behaviour___area_of_effect_ac86b9f52184bededd63e239612fb6528}} 
+bool {\bfseries Perform\+AOE} = true
+\begin{DoxyCompactList}\small\item\em Whether or not to perform the AOE; if it should only be done on special occasions, turn this off \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a87cfff2b08b206b0da609c2cbccfd7cf}\label{class_behaviour___area_of_effect_a87cfff2b08b206b0da609c2cbccfd7cf}} 
+bool {\bfseries AOEOn\+Death} = false
+\begin{DoxyCompactList}\small\item\em Whether or not to perform the AOE when dying \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a5502a17f59c95089dd44b54779017117}\label{class_behaviour___area_of_effect_a5502a17f59c95089dd44b54779017117}} 
+\mbox{\hyperlink{class_area_of_effect}{Area\+Of\+Effect}} {\bfseries area\+Of\+Effect}
+\begin{DoxyCompactList}\small\item\em The area around the tower to deal damage \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_behaviour___area_of_effect_a506d00b78d32208196b4d071d021d5a3}{Initiate}} ()
+\begin{DoxyCompactList}\small\item\em Call on Start() \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_behaviour___area_of_effect_a72773892b26c891e894ce50f02c4f8a3}{Behave}} ()
+\begin{DoxyCompactList}\small\item\em Called every Fixed\+Update() if the tower is enabled \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_behaviour___area_of_effect_a9ea72854941bcd07aa485c531d7fc6a3}{Died}} ()
+\begin{DoxyCompactList}\small\item\em Call on Death \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a72773892b26c891e894ce50f02c4f8a3}\label{class_behaviour___area_of_effect_a72773892b26c891e894ce50f02c4f8a3}} 
+\index{Behaviour\_AreaOfEffect@{Behaviour\_AreaOfEffect}!Behave@{Behave}}
+\index{Behave@{Behave}!Behaviour\_AreaOfEffect@{Behaviour\_AreaOfEffect}}
+\doxysubsubsection{\texorpdfstring{Behave()}{Behave()}}
+{\footnotesize\ttfamily override void Behaviour\+\_\+\+Area\+Of\+Effect.\+Behave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called every Fixed\+Update() if the tower is enabled 
+
+
+
+Implements \mbox{\hyperlink{class_tower_behaviour_a15f55810ac86b48e1ef0258e24fc5bc8}{Tower\+Behaviour}}.
+
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a9ea72854941bcd07aa485c531d7fc6a3}\label{class_behaviour___area_of_effect_a9ea72854941bcd07aa485c531d7fc6a3}} 
+\index{Behaviour\_AreaOfEffect@{Behaviour\_AreaOfEffect}!Died@{Died}}
+\index{Died@{Died}!Behaviour\_AreaOfEffect@{Behaviour\_AreaOfEffect}}
+\doxysubsubsection{\texorpdfstring{Died()}{Died()}}
+{\footnotesize\ttfamily override void Behaviour\+\_\+\+Area\+Of\+Effect.\+Died (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Call on Death 
+
+
+
+Implements \mbox{\hyperlink{class_tower_behaviour_afe74a2cecac27a5c2766feb096918556}{Tower\+Behaviour}}.
+
+\mbox{\Hypertarget{class_behaviour___area_of_effect_a506d00b78d32208196b4d071d021d5a3}\label{class_behaviour___area_of_effect_a506d00b78d32208196b4d071d021d5a3}} 
+\index{Behaviour\_AreaOfEffect@{Behaviour\_AreaOfEffect}!Initiate@{Initiate}}
+\index{Initiate@{Initiate}!Behaviour\_AreaOfEffect@{Behaviour\_AreaOfEffect}}
+\doxysubsubsection{\texorpdfstring{Initiate()}{Initiate()}}
+{\footnotesize\ttfamily override void Behaviour\+\_\+\+Area\+Of\+Effect.\+Initiate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Call on Start() 
+
+
+
+Implements \mbox{\hyperlink{class_tower_behaviour_a8e8b24394b34ee421a017cf682f02136}{Tower\+Behaviour}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Prefabs/\+Tower/\+Tower\+Behaviours/Behaviour\+\_\+\+Area\+Of\+Effect.\+cs\end{DoxyCompactItemize}

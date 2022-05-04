@@ -13,6 +13,8 @@ public class PlayerResourceManager : ScriptableObject
         }
     }
 
+    public bool isDebug = false;
+
     int lifeTotal;
     public int LifeTotal { get { return lifeTotal; } set { lifeTotal = value; } }
 
@@ -21,6 +23,9 @@ public class PlayerResourceManager : ScriptableObject
 
     int creativityTotal;
     public int CreativityTotal { get { return creativityTotal; } set { creativityTotal = value; } }
+
+    int landPlaysTotal;
+    public int LandPlaysTotal { get { return landPlaysTotal; } set { landPlaysTotal = value; } }
 
     public void OnEnable()
     {
@@ -41,8 +46,22 @@ public class PlayerResourceManager : ScriptableObject
         return returnString;
     }
 
+    public bool CanAfford(CardData data)
+    {
+        if (isDebug)
+            return true;
+
+        if (data.TowerSubtypes.HasFlag(Card.TowerSubtype.Mana) && landPlaysTotal <= 0)
+            return false;
+
+        return CanAfford(data.ManaCostDictionary);
+    }
+
     public bool CanAfford(Dictionary<Mana.ManaType, int> cost)
     {
+        if (isDebug)
+            return true;
+
         int totalUnused = 0;
         foreach (KeyValuePair<Mana.ManaType, int> kvp in cost)
         {
@@ -60,6 +79,14 @@ public class PlayerResourceManager : ScriptableObject
         }
 
         return totalUnused >= cost[Mana.ManaType.None];
+    }
+
+    public void PayCost(CardData data)
+    {
+        if (data.TowerSubtypes.HasFlag(Card.TowerSubtype.Mana))
+            landPlaysTotal -= 1;
+
+        PayCost(data.ManaCostDictionary);
     }
 
     public void PayCost(Dictionary<Mana.ManaType, int> cost)
@@ -99,10 +126,13 @@ public class PlayerResourceManager : ScriptableObject
         lifeTotal = 20;
         wisdomTotal = 0;
         creativityTotal = 0;
+        landPlaysTotal = 1;
     }
 
     public void AddMana(Mana.ManaType type, int amount)
     {
         manaTotal[type] += amount;
+        if (manaTotal[type] <= 0)
+            manaTotal[type] = 0;
     }
 }
